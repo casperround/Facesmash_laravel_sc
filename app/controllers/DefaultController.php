@@ -75,7 +75,9 @@ class DefaultController extends BaseController {
             "password" => Hash::make($password)
         ]);
 
-        return Redirect::route("home");
+        Auth::attempt(["username" => $username, "password" => $password]);
+
+        return Redirect::intended("/home");
 
     }
 
