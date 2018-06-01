@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-8">
                     <form action="{{ URL::route("home.createNewPost") }}" method="POST">
-                        <textarea name="home_post" style="width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day.."></textarea>
+                        <textarea name="home_post" style="width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
                         <button type="submit" class="btn purp-button">Post</button>
                         {{ Form::token() }}
                     </form>
