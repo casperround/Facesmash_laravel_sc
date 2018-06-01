@@ -20,6 +20,11 @@ Route::post('/auth/doRegister', [
     "uses" => "DefaultController@doRegister"
 ]);
 
+Route::get('/auth/logout', [
+    "as" => "auth.logout",
+    "uses" => "DefaultController@doLogout"
+]);
+
 //==============================================
 
 Route::get('/home', [

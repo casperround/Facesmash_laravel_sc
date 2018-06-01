@@ -1,1 +1,1 @@
-<h1>the home page | login success</h1>
+<h1>rod will be happy if you can see this! | login/register success</h1>

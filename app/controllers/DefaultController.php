@@ -16,6 +16,11 @@ class DefaultController extends BaseController {
 	*/
 
     public function index() {
+
+        if (Auth::check()) {
+            return Redirect::route("home");
+        }
+
         return View::make("auth.login");
     }
 
@@ -39,10 +44,38 @@ class DefaultController extends BaseController {
     }
 
     public function register() {
+
+        if (Auth::check()) {
+            return Redirect::route("home");
+        }
+
         return View::make("auth.register");
     }
 
     public function doRegister() {
+
+        $validator = Validator::make(Input::all(), [
+            "username" => "required|min:2|max:16|unique:users,username",
+            "email" => "required",
+            "password" => "required"
+        ]);
+
+        if ($validator->fails())
+        {
+            return Redirect::route("register")->withErrors($validator)->withInput();
+        }
+
+        $username = Input::get("username");
+        $email = Input::get("email");
+        $password = Input::get("password");
+
+        User::create([
+            "username" => $username,
+            "email" => $email,
+            "password" => Hash::make($password)
+        ]);
+
+        return Redirect::route("home");
 
     }
 
@@ -53,6 +86,11 @@ class DefaultController extends BaseController {
     }
 
     public function homePage() {
+
+        if (!Auth::check()) {
+            return Redirect::route("index");
+        }
+
         return View::make("home");
     }
 

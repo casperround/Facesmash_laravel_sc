@@ -4,7 +4,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>{{{ (empty($title) ? "" : $title . " - ") }}}AllStarsQ Staff</title>
+    <title>{{{ (empty($title) ? "" : $title . " - ") }}}FaceSmash</title>
 
     @include("includes.sitewidemeta")
 
