@@ -22,9 +22,9 @@
             <center><span>Videos</span></center>
         </div>
     </a>
-    <a href="profile.php">
+    <a href="{{ URL::route("userProfile", [Auth::user()->username]) }}">
         <div class="Tabets">
-            <center><span>Profile</span></center>
+            <center><span>My Profile</span></center>
         </div>
     </a>
 </div>

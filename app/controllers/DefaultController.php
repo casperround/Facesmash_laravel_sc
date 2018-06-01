@@ -96,4 +96,22 @@ class DefaultController extends BaseController {
         return View::make("home");
     }
 
+    public function userProfilePage($username) {
+
+        $user = User::where("username", "=", $username)->first();
+
+        return View::make("userProfile", [
+            "user" => $user
+        ]);
+
+    }
+
+    public function editMyProfilePage() {
+        return View::make("account.editprofile");
+    }
+
+    public function doEditMyProfile() {
+
+    }
+
 }

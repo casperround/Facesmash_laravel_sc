@@ -32,4 +32,21 @@ Route::get('/home', [
     "uses" => "DefaultController@homePage"
 ]);
 
+//==============================================
 
+Route::get('/profile/{username}', [
+    "as" => "userProfile",
+    "uses" => "DefaultController@userProfilePage"
+]);
+
+//==============================================
+
+Route::get('/account/myProfile', [
+    "as" => "account.myProfile",
+    "uses" => "DefaultController@editMyProfilePage"
+]);
+
+Route::post('/account/myProfile/doEdit', [
+    "as" => "account.myProfile.doEdit",
+    "uses" => "DefaultController@doEditMyProfile"
+]);
