@@ -31,13 +31,13 @@
                     <a class="nav-link" href="discover.php">Discover</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.php">My Profile</a>
+                    <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">My Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">Logout</a>
+                    <a class="nav-link" href="{{ URL::route("auth.logout") }}">Logout</a>
                 </li>
             </ul>
             <form class="form-inline" action="search.php" method="GET">

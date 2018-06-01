@@ -18,17 +18,6 @@
             border-color: #e5e6e9 #dfe0e4 #d0d1d5;
         }
 
-        .purp-button {
-            background-color: #5d3bae;
-            color: white;
-        }
-
-        .purp-button:hover {
-            background-color: #423385;
-            color: white;
-
-        }
-
         .profile-card::before {
             content: '';
             height: 3px;
@@ -179,7 +168,6 @@
                 <a href="#">
                     <img src="{{ URL::to(Auth::user()->profile_img_path) }}">
                 </a>
-
                 <h1>{{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}</h1>
                 <h2>{{{ Auth::user()->username }}}</h2>
             </header>

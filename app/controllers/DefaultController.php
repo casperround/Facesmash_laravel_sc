@@ -114,4 +114,16 @@ class DefaultController extends BaseController {
 
     }
 
+    public function homePageFormPost() {
+
+        if (Input::hasFile("file_upload")) {
+
+        }
+
+        if (Input::has("home_post")) {
+
+        }
+
+    }
+
 }
