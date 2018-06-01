@@ -38,10 +38,22 @@ class DefaultController extends BaseController {
         return Redirect::route("index")->withErrors($validator)->withInput();
     }
 
+    public function register() {
+        return View::make("auth.register");
+    }
+
+    public function doRegister() {
+
+    }
+
     public function doLogout()
     {
         Auth::logout();
         return Redirect::route("index");
+    }
+
+    public function homePage() {
+        return View::make("home");
     }
 
 }
