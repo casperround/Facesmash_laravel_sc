@@ -118,11 +118,31 @@ class DefaultController extends BaseController {
 
         if (Input::hasFile("file_upload")) {
 
+
+
         }
 
         if (Input::has("home_post")) {
 
+            $home_post = Input::get("home_post");
+            $author_id = Auth::user()->id;
+            $post_id = str_random(10);
+            $media_type = "text";
+            $post_time = date("H:i:s");
+            $post_date = date("d-m-Y");
+
+            Posts::create([
+                "post_id" => $post_id,
+                "author_id" => $author_id,
+                "text" => $home_post,
+                "post_time" => $post_time,
+                "post_date" => $post_date,
+                "media_type" => $media_type
+            ]);
+
         }
+
+        return Redirect::route("home");
 
     }
 

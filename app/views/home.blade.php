@@ -48,14 +48,14 @@
         <div class="Post_Container">
             <div class="row">
                 <div class="col-8">
-                    <form action="{{ URL::route("auth.doRegister") }}" method="POST">
+                    <form action="{{ URL::route("home.createNewPost") }}" method="POST">
                         <textarea name="home_post" style="width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day.."></textarea>
                         <button type="submit" class="btn purp-button">Post</button>
                         {{ Form::token() }}
                     </form>
                 </div>
                 <div class="col">
-                    <form action="{{ URL::route("auth.doRegister") }}" method="POST">
+                    <form action="{{ URL::route("home.createNewPost") }}" method="POST">
                         <div class="form-group">
                             <input class="form-control" type="file" name="file_upload">
                         </div>

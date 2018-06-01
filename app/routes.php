@@ -32,6 +32,11 @@ Route::get('/home', [
     "uses" => "DefaultController@homePage"
 ]);
 
+Route::post('/home/createNewPost', [
+    "as" => "home.createNewPost",
+    "uses" => "DefaultController@homePageFormPost"
+]);
+
 //==============================================
 
 Route::get('/profile/{username}', [
