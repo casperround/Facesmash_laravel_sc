@@ -154,7 +154,7 @@ class DefaultController extends BaseController {
 //Discover Page Controller
 //==============================================
     public function discoverPage() {
-        return View::make("discoverPage");
+        return View::make("discover");
     }
 
     public function discoverChannel() {
