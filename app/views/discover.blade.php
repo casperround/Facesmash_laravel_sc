@@ -39,26 +39,25 @@
                     <a href="{{ URL::route("discover.channel") }}"><button class="btn btn-outline-info" style="width:100%;">Channels</button></a>
                 </div>
             </div>
-
             <br>
-
                 <div class="card-columns">
                     @foreach(Posts::all() as $post)
-                        <div class="card">
-                            @if ($post->media_type == "image")
-                                <img class="card-img-top" src="{{ URL::to("") }}" alt="Card image cap">
-                            @elseif($post->media_type == "video")
-                                <video class="card-img-top" src="" controls alt="Card image cap"></video>
-                            @elseif ($post->media_type == "text")
-                            @endif
-                            <div class="card-body" style="color: black">
-                                <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
-                                <p class="card-text">{{{ $post->text }}}</p>
+                        <div class="col-md">
+                            <div class="card">
+                                @if ($post->media_type == "image")
+                                    <img class="card-img-top" src="{{ URL::to("") }}" alt="Card image cap">
+                                @elseif($post->media_type == "video")
+                                    <video class="card-img-top" src="" controls alt="Card image cap"></video>
+                                @elseif ($post->media_type == "text")
+                                @endif
+                                <div class="card-body" style="color: black">
+                                    <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                    <p class="card-text">{{{ $post->text }}}</p>
+                                </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-
         </div>
 
     @if (Auth::check())
