@@ -28,7 +28,7 @@
                     <a class="nav-link" href="{{ URL::route("home") }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::route("discover") }}">Discover</a>
+                    <a class="nav-link" href="{{ URL::route("discover") }}" >Discover</a>
                 </li>
                 @if (Auth::check())
                     <li class="nav-item">
