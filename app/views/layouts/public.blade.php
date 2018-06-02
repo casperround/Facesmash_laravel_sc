@@ -36,7 +36,7 @@
                     </li>
                 @endif
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="{{ URL::route("contact") }}">Contact</a>
                     </li>
                 @if (Auth::check())
                     <li class="nav-item">
