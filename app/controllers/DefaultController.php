@@ -154,7 +154,7 @@ class DefaultController extends BaseController {
 //Discover Page Controller
 //==============================================
     public function discoverPage() {
-        return View::make("discover");
+        return View::make("discoverPage");
     }
 
     public function discoverChannel() {
@@ -167,7 +167,7 @@ class DefaultController extends BaseController {
         return View::make("discoverGroup");
     }
     public function discoverPagePage() {
-        return View::make("discoverPage");
+        return View::make("discoverPagesPage");
     }
     public function discoverPhoto() {
         return View::make("discoverPhoto");
