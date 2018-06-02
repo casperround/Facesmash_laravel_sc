@@ -14,24 +14,24 @@
         </div></br>
         <div class="row">
             <div class="col-4">
-                <a href="dpictures.php"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
+                <a href="{{ URL::route("discoverPhoto") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
             </div>
             <div class="col-4">
-                <a href="dvideos.php"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
+                <a href="{{ URL::route("discoverVideo") }}"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
             </div>
             <div class="col-4">
-                <a href="dgifs.php"><button class="btn btn-outline-info" style="width:100%;">Gif's</button></a>
+                <a href="{{ URL::route("discoverGif") }}"><button class="btn btn-outline-info" style="width:100%;">Gif's</button></a>
             </div>
         </div></br>
         <div class="row">
             <div class="col-4">
-                <a href="dpage.php"><button class="btn btn-outline-info" style="width:100%;">Pages</button></a>
+                <a href="{{ URL::route("discoverPagePage") }}"><button class="btn btn-outline-info" style="width:100%;">Pages</button></a>
             </div>
             <div class="col-4">
-                <a href="dgroup.php"><button class="btn btn-outline-info" style="width:100%;">Groups</button></a>
+                <a href="{{ URL::route("discoverGroup") }}"><button class="btn btn-outline-info" style="width:100%;">Groups</button></a>
             </div>
             <div class="col-4">
-                <a href="dchannel.php"><button class="btn btn-outline-info" style="width:100%;">Channels</button></a>
+                <a href="{{ URL::route("discoverChannel") }}"><button class="btn btn-outline-info" style="width:100%;">Channels</button></a>
             </div>
         </div></br>
 
