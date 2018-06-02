@@ -189,7 +189,7 @@ class DefaultController extends BaseController {
         return View::make("userGroups");
     }
     public function userChannelsPage() {
-        return View::make("userchannels");
+        return View::make("channels.userchannel");
     }
 
 }
