@@ -28,4 +28,24 @@
             <center><span>My Profile</span></center>
         </div>
     </a>
+    <a href="{{ URL::route("userPages") }}">
+        <div class="Tabets">
+            <center><span>My Pages</span></center>
+        </div>
+    </a>
+    <a href="{{ URL::route("userGroups") }}">
+        <div class="Tabets">
+            <center><span>My Groups</span></center>
+        </div>
+    </a>
+    <a href="{{ URL::route("userEvents") }}">
+        <div class="Tabets">
+            <center><span>My Events</span></center>
+        </div>
+    </a>
+    <a href="{{ URL::route("userChannels") }}">
+        <div class="Tabets">
+            <center><span>My Channels</span></center>
+        </div>
+    </a>
 </div>
