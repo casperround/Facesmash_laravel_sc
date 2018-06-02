@@ -6,14 +6,6 @@
             @endif
 
             <style class="cp-pen-styles">
-                #container {
-                    margin: auto;
-                    width: 400px;
-                    height: 400px;
-                    background-color: #f0f0f0;
-                    position: relative;
-                    display: flex;
-                }
 
                 #z_button {
                     background-color: #d44949;
@@ -64,7 +56,6 @@
             </div>
 
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Add Page</i></a>
 
                 <div class="card-columns">
 
