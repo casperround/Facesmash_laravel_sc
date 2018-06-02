@@ -35,14 +35,22 @@
         <br>
 
         <div class="card-columns">
-            <div class="card">
-                <video class="card-img-top" src="uploads/<?=$user_groups['post_id']?>.<?=$user_groups['file_format']?>" controls alt="Card image cap"></video>
-                <img class="card-img-top" src="uploads/<?=$user_groups['post_id']?>.<?=$user_groups['file_format']?>" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title"><?=$userloaded->firstname?> <?=$userloaded->lastname?> <?=$userloaded->username?></h4>
-                    <p class="card-text"><?=$user_groups['MediaTxt']?></p>
+
+            @foreach(Posts::all() as $post)
+                <div class="card">
+                    @if ($post->media_type == "image")
+                        <img class="card-img-top" src="{{ URL::to("") }}" alt="Card image cap">
+                    @elseif($post->media_type == "video")
+                        <video class="card-img-top" src="" controls alt="Card image cap"></video>
+                    @elseif ($post->media_type == "text")
+                    @endif
+                    <div class="card-body" style="color: black">
+                        <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                        <p class="card-text">{{{ $post->text }}}</p>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
         </div>
 
     </div>
