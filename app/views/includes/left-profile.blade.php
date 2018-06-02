@@ -2,9 +2,9 @@
     <div class="Profile_Header">
         <div class="P_Head">
             <center>
-                <img class="Profile_Img" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
-                <br/>
-                <span>{{{ Auth::user()->username }}}</span>
+                <img style="margin-left: 5px" class="Profile_Img" src="{{ URL::to(Auth::user()->profile_img_path) }}">
+                <br>
+                <h4>{{{ Auth::user()->username }}}</h4>
             </center>
         </div>
     </div>
