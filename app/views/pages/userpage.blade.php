@@ -45,7 +45,6 @@
                 .z_menu:hover {
                     text-decoration: underline;
                 }</style
-            <div id="container">
                 <div id="z_button" tabindex="0">
                     <div id="z_plus">+</div>
                 </div>
@@ -53,7 +52,6 @@
                 <a href="#" onclick="alert('clicked')" class="z_menu">Like</a>
                 <a href="#" onclick="alert('clicked')" class="z_menu">Subscribe</a>
                 <a href="#" onclick="alert('clicked')" class="z_menu">Share</a>
-            </div>
 
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
 
