@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => "Discover Videos", "sidebar" => false])
+@extends('layouts.public', ["title" => "Public Videos", "sidebar" => false])
 
 @section("content")
     @if (Auth::check())

@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => "Discover Gifs", "sidebar" => false])
+@extends('layouts.public', ["title" => "Public Gifs", "sidebar" => false])
 
 @section("content")
     @if (Auth::check())
