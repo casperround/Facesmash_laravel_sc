@@ -5,7 +5,11 @@
     <style>
 
     </style>
-    <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+    @if (Auth::check())
+        <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+            @endif
+            <div class="col-12" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+                @yield("content")
         <div class="jumbotron jumbotron-fluid" style="height:20%;">
             <div class="container" style="height:40%;color:black;">
                 <h1 class="display-3">Discover</h1>
@@ -40,10 +44,9 @@
 
 
             <div class="card">
-                <img class="card-img-top" src="uploads/<?=$user_groups['post_id']?>.<?=$user_groups['file_format']?>" alt="Card image cap">
+                <img class="card-img-top" src="https://yt3.ggpht.com/rzDx_onoaduW8LF7ev8AQWnMfo57R2494bPVk88kZPAg66xRv4zoAHLbTS4xe8nkJByks6hr-A=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title"><?=$userloaded->firstname?> <?=$userloaded->lastname?> <?=$userloaded->username?></h4>
-                    <p class="card-text"><?=$user_groups['MediaTxt']?></p>
+                    <p class="card-text">Casper Round</p>
                 </div>
             </div>
 
