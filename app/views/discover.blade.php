@@ -3,6 +3,8 @@
 @section("content")
     @if (Auth::check())
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+            @else
+            <div class="container-fluid">
             @endif
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                 @include("includes.discover-top")
@@ -27,6 +29,9 @@
             </div>
 
     @if (Auth::check())
+        </div>
+    @else
+
         </div>
     @endif
 @stop
