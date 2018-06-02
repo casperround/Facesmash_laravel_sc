@@ -130,7 +130,7 @@ class DefaultController extends BaseController {
             $media_type = "text";
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
-            $visability = Input::get("visability");
+            $visibility = Input::get("visibility");
 
             Posts::create([
                 "post_id" => $post_id,
@@ -138,6 +138,7 @@ class DefaultController extends BaseController {
                 "text" => $home_post,
                 "post_time" => $post_time,
                 "post_date" => $post_date,
+                "visibility" => $visibility,
                 "media_type" => $media_type
             ]);
 
