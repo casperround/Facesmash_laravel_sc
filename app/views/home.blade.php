@@ -50,6 +50,15 @@
                 <div class="col-8">
                     <form action="{{ URL::route("home.createNewPost") }}" method="POST">
                         <textarea name="home_post" style="width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
+                        <div class="col-2">
+                            <select name="visability">
+                                <option value="1">Public</option>
+                                <option value="2">Friends & Friends of friends</option>
+                                <option value="3">Friends</option>
+                                <option value="4" selected>Only me</option>
+                            </select>
+
+                        </div>
                         <button type="submit" class="btn purp-button">Post</button>
                         {{ Form::token() }}
                     </form>
