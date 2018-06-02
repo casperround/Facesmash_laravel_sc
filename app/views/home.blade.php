@@ -83,7 +83,7 @@
                 </div>
                 <div class="card-group" style="color:black;">
                     <div class="card" style="padding:15px;">
-                        testdadadawdadwad
+                        {{ $post->text }}
                     </div>
                 </div>
             </div>
