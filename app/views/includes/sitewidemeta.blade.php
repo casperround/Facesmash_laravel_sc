@@ -11,3 +11,5 @@
 <meta name="theme-color" content="#ffffff">
 <meta content="Casper Round" name="author">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
