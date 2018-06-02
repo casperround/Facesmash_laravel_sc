@@ -5,7 +5,8 @@
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
             @endif
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                <button>Add Page</button>
+                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">Add Page</i></a>
+
                 <div class="card-columns">
 
                     <div class="col-md">
