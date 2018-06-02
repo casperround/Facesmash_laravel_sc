@@ -165,7 +165,7 @@ class DefaultController extends BaseController {
     public function discoverGroupPage() {
         return View::make("discover.group");
     }
-    public function discoverPagePage() {
+    public function discoverPagesPage() {
         return View::make("discover.page");
     }
     public function discoverPhotoPage() {
