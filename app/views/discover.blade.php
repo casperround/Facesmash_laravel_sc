@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => "Home", "sidebar" => true])
+@extends('layouts.public', ["title" => "Home", "sidebar" => false])
 
 @section("content")
 
