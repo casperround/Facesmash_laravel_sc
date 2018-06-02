@@ -28,7 +28,7 @@
                     <a class="nav-link" href="{{ URL::route("home") }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="discover.php">Discover</a>
+                    <a class="nav-link" href="{{ URL::route("discover") }}">Discover</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">My Profile</a>
