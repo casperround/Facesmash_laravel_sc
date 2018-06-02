@@ -30,9 +30,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL::route("discover") }}">Discover</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">My Profile</a>
-                </li>
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">My Profile</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
@@ -83,17 +85,19 @@
 </style>
 
 <div class="row">
-
-    @include("includes.left-profile")
+    @if (Auth::check())
+        @include("includes.left-profile")
+    @endif
 
     @yield("content")
 
 </div>
 
-<div class="col-2 Back" style="margin-top:60px;padding-top:10px;overflow-y:scroll;height:100vh;padding:0px;box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-">
-    @include("includes.chat-container")
+@if (Auth::check())
+<div class="col-2 Back" style="margin-top:60px;padding-top:10px;overflow-y:scroll;height:100vh;padding:0px;box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);">
+        @include("includes.chat-container")
 </div>
+@endif
 
 
 <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

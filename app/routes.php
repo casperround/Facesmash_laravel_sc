@@ -55,10 +55,10 @@ Route::post('/account/myProfile/doEdit', [
     "as" => "account.myProfile.doEdit",
     "uses" => "DefaultController@doEditMyProfile"
 ]);
-#
+
 //==============================================
 
-Route::get('/discover', [
-    "as" => "discover",
-    "uses" => "DefaultController@discoverPage"
+Route::get('/contact', [
+    "as" => "contact",
+    "uses" => "DefaultController@contactPage"
 ]);
