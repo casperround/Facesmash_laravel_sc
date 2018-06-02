@@ -35,13 +35,18 @@
                         <a class="nav-link" href="{{ URL::route("userProfile", [Auth::user()->username]) }}">My Profile</a>
                     </li>
                 @endif
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ URL::route("auth.logout") }}">Logout</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL::route("auth.logout") }}">Logout</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL::route("index") }}">Login</a>
+                    </li>
+                @endif
             </ul>
             <form class="form-inline" action="search.php" method="GET">
                 <input class="form-control mr-sm-2" type="text" name="query" placeholder="Search" aria-label="Search">
