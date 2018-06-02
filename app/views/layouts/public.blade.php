@@ -95,7 +95,11 @@
 
 @if (Auth::check())
 <div class="col-2 Back" style="margin-top:60px;padding-top:10px;overflow-y:scroll;height:100vh;padding:0px;box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);">
-        @include("includes.chat-container")
+        @if (Auth::check())
+            @include("includes.chat-container")
+        @endif
+
+        @yield("content")
 </div>
 @endif
 
