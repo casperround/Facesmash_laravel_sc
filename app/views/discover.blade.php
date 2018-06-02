@@ -3,35 +3,7 @@
 @section("content")
 
     <style>
-        .Profile_Header {
-            height:100px;
-            width:100%;
-            background: url(images/cover.jpg) no-repeat center;
 
-            background-size: cover;
-        }
-        .Tabets {
-            height:40px;
-            width:100%;
-            transition: background 0.2s;
-        }
-        .Tabets:hover {
-            background: #656D78;
-            transition: background 0.2s;
-        }
-        .P_Head {
-            height:50%;
-            padding:10px;
-            position: relative;
-
-        }
-        .Profile_Img {
-            border-radius: 50px;
-            height:50px;
-            width:50px;
-            margin-left: auto;
-            margin-right:auto;
-        }
     </style>
     <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
         <div class="jumbotron jumbotron-fluid" style="height:20%;">
