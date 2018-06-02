@@ -102,3 +102,24 @@ Route::get('/discover/video', [
     "as" => "discover.video",
     "uses" => "DefaultController@discoverVideoPage"
 ]);
+//==============================================
+//User Pages,Groups,Events,Channels Routes
+//==============================================
+
+
+Route::get('/pages', [
+    "as" => "userPages",
+    "uses" => "DefaultController@userPagesPage"
+]);
+Route::get('/groups', [
+    "as" => "userGroups",
+    "uses" => "DefaultController@userGroupsPage"
+]);
+Route::get('/events', [
+    "as" => "userEvents",
+    "uses" => "DefaultController@userEventsPage"
+]);
+Route::get('/channels', [
+    "as" => "userChannels",
+    "uses" => "DefaultController@userChannelsPage"
+]);
