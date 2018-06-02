@@ -73,8 +73,12 @@
                         <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
                     </div>
                     <div class="col-2">
+                        <span>{{Auth::user()->username}}</span>
+                    </div>
+                    <div class="col-2">
                         <span>{{ $post->post_date }}</span>
                     </div>
+
                 </div>
                 <div class="card-group" style="color:black;">
                     <div class="card">
