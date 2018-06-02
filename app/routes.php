@@ -108,18 +108,18 @@ Route::get('/discover/video', [
 
 
 Route::get('/pages', [
-    "as" => "userPages",
+    "as" => "pages.userpage",
     "uses" => "DefaultController@userPagesPage"
 ]);
 Route::get('/groups', [
-    "as" => "userGroups",
+    "as" => "group.usergroup",
     "uses" => "DefaultController@userGroupsPage"
 ]);
 Route::get('/events', [
-    "as" => "userEvents",
+    "as" => "event.userevent",
     "uses" => "DefaultController@userEventsPage"
 ]);
 Route::get('/channels', [
-    "as" => "userChannels",
+    "as" => "channel.userchannel",
     "uses" => "DefaultController@userChannelsPage"
 ]);
