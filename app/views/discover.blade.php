@@ -8,8 +8,7 @@
     @if (Auth::check())
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
     @endif
-            <div class="col-12" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
-    @yield("content")
+         <div class="col-12" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
         <div class="jumbotron jumbotron-fluid" style="height:20%;">
             <div class="container" style="height:40%;color:black;">
                 <h1 class="display-3">Discover</h1>
