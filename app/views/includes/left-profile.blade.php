@@ -33,17 +33,17 @@
             <center><span>My Pages</span></center>
         </div>
     </a>
-    <a href="{{ URL::route("userGroups") }}">
+    <a href="{{ URL::route("groups.usergroup") }}">
         <div class="Tabets">
             <center><span>My Groups</span></center>
         </div>
     </a>
-    <a href="{{ URL::route("userEvents") }}">
+    <a href="{{ URL::route("events.userevent") }}">
         <div class="Tabets">
             <center><span>My Events</span></center>
         </div>
     </a>
-    <a href="{{ URL::route("userChannels") }}">
+    <a href="{{ URL::route("channels.userchannel") }}">
         <div class="Tabets">
             <center><span>My Channels</span></center>
         </div>
