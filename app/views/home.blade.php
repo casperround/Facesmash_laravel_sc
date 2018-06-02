@@ -66,13 +66,14 @@
                 </div>
             </div>
         </div>
+        @foreach(Posts::where("author_id", "=", Auth::user()->id)->get() as $post)
             <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                 <div class="row" style="width:100%;margin:0px;position: relative;">
                     <div class="col-1">
-                        <img class="img"  style="height:40px;width:40px;border-radius: 50px;" src="uploads/"/>
+                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
                     </div>
                     <div class="col-2">
-                        <span>test on date</span>
+                        <span>{{ $post->post_date }}</span>
                     </div>
                 </div>
                 <div class="card-group" style="color:black;">
@@ -86,6 +87,6 @@
                     </div>
                 </div>
             </div>
-
+        @endforeach
         </div>
 @stop
