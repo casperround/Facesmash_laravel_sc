@@ -46,7 +46,7 @@
             <div class="card">
                 <img class="card-img-top" src="https://yt3.ggpht.com/rzDx_onoaduW8LF7ev8AQWnMfo57R2494bPVk88kZPAg66xRv4zoAHLbTS4xe8nkJByks6hr-A=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no" alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text">Casper Round</p>
+                    <h4 class="card-title">Casper Round</h4>
                 </div>
             </div>
 
