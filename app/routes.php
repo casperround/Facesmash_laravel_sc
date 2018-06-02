@@ -79,26 +79,26 @@ Route::get('/discover', [
 ]);
 
 Route::get('/discover/channel', [
-    "as" => "discoverChannel",
+    "as" => "discover.channel",
     "uses" => "DefaultController@discoverChannelPage"
 ]);
 Route::get('/discover/gif', [
-    "as" => "discoverGif",
+    "as" => "discover.gif",
     "uses" => "DefaultController@discoverGifPage"
 ]);
 Route::get('/discover/group', [
-    "as" => "discoverGroup",
+    "as" => "discover.group",
     "uses" => "DefaultController@discoverGroupPage"
 ]);
 Route::get('/discover/page', [
-    "as" => "discoverPage",
-    "uses" => "DefaultController@discoverPagePage"
+    "as" => "discover.page",
+    "uses" => "DefaultController@discoverPagesPage"
 ]);
 Route::get('/discover/photo', [
-    "as" => "discoverPhoto",
+    "as" => "discover.photo",
     "uses" => "DefaultController@discoverPhotoPage"
 ]);
 Route::get('/discover/video', [
-    "as" => "discoverVideo",
+    "as" => "discover.video",
     "uses" => "DefaultController@discoverVideoPage"
 ]);
