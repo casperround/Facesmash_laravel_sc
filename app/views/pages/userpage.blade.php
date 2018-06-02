@@ -5,7 +5,7 @@
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
             @endif
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                @include("includes.discover-top")
+                <button>Add Page</button>
                 <div class="card-columns">
 
                     <div class="col-md">
