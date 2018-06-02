@@ -40,19 +40,12 @@
                 </div></br>
                 <div class="card-columns">
 
-
-
-
                     <div class="card">
                         <img class="card-img-top" src="https://www.facesmash.co.uk/uploads/59da1a267adc8.gif" alt="Card image cap">
                         <div class="card-body">
 
                         </div>
                     </div>
-
-
-
-
                 </div>
 
             </div>
