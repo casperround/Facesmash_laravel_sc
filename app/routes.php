@@ -62,3 +62,10 @@ Route::get('/contact', [
     "as" => "contact",
     "uses" => "DefaultController@contactPage"
 ]);
+
+//==============================================
+
+Route::get('/discover', [
+    "as" => "discover",
+    "uses" => "DefaultController@discoverPage"
+]);

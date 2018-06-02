@@ -149,5 +149,8 @@ class DefaultController extends BaseController {
     public function contactPage() {
         return View::make("contact");
     }
+    public function discoverPage() {
+        return View::make("discover");
+    }
 
 }
