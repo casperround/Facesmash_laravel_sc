@@ -1,4 +1,3 @@
-<div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
     <div class="jumbotron jumbotron-fluid" style="height:20%;background-color: #efefef">
         <div class="container" style="height:40%;color:black;">
             <h1 class="display-3">Discover</h1>
