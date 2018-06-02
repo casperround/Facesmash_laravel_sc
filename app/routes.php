@@ -112,14 +112,14 @@ Route::get('/pages', [
     "uses" => "DefaultController@userPagesPage"
 ]);
 Route::get('/groups', [
-    "as" => "group.usergroup",
+    "as" => "groups.usergroup",
     "uses" => "DefaultController@userGroupsPage"
 ]);
 Route::get('/events', [
-    "as" => "event.userevent",
+    "as" => "events.userevent",
     "uses" => "DefaultController@userEventsPage"
 ]);
 Route::get('/channels', [
-    "as" => "channel.userchannel",
+    "as" => "channels.userchannel",
     "uses" => "DefaultController@userChannelsPage"
 ]);

@@ -180,13 +180,13 @@ class DefaultController extends BaseController {
 //User Pages,Groups,Events,Channels Controller
 //==============================================
     public function userPagesPage() {
-        return View::make("page.userpage");
+        return View::make("pages.userpage");
     }
     public function userEventsPage() {
-        return View::make("event.userevent");
+        return View::make("events.userevent");
     }
     public function userGroupsPage() {
-        return View::make("group.usergroup");
+        return View::make("groups.usergroup");
     }
     public function userChannelsPage() {
         return View::make("channels.userchannel");
