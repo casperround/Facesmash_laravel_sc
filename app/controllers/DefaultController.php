@@ -156,22 +156,22 @@ class DefaultController extends BaseController {
     public function discoverPage() {
         return View::make("discover");
     }
-    public function discoverChannel() {
+    public function discoverChannelPage() {
         return View::make("discoverChannel");
     }
-    public function discoverGif() {
+    public function discoverGifPage() {
         return View::make("discoverGif");
     }
-    public function discoverGroup() {
+    public function discoverGroupPage() {
         return View::make("discoverGroup");
     }
     public function discoverPagePage() {
         return View::make("discoverPagesPage");
     }
-    public function discoverPhoto() {
+    public function discoverPhotoPage() {
         return View::make("discoverPhoto");
     }
-    public function discoverVideo() {
+    public function discoverVideoPage() {
         return View::make("discoverVideo");
     }
 
