@@ -176,5 +176,20 @@ class DefaultController extends BaseController {
     public function discoverVideoPage() {
         return View::make("discover.video");
     }
+//==============================================
+//User Pages,Groups,Events,Channels Controller
+//==============================================
+    public function userPagesPage() {
+        return View::make("userPages");
+    }
+    public function userEventsPage() {
+        return View::make("userEvents");
+    }
+    public function userGroupsPage() {
+        return View::make("userGroups");
+    }
+    public function userChannelsPage() {
+        return View::make("userChannels");
+    }
 
 }
