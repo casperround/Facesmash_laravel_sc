@@ -149,8 +149,31 @@ class DefaultController extends BaseController {
     public function contactPage() {
         return View::make("contact");
     }
+
+//==============================================
+//Discover Page Controller
+//==============================================
     public function discoverPage() {
         return View::make("discover");
+    }
+
+    public function discoverChannel() {
+        return View::make("discoverChannel");
+    }
+    public function discoverGif() {
+        return View::make("discoverGif");
+    }
+    public function discoverGroup() {
+        return View::make("discoverGroup");
+    }
+    public function discoverPagePage() {
+        return View::make("discoverPage");
+    }
+    public function discoverPhoto() {
+        return View::make("discoverPhoto");
+    }
+    public function discoverVideo() {
+        return View::make("discoverVideo");
     }
 
 }
