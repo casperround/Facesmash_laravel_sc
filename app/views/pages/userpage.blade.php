@@ -224,9 +224,8 @@
                                     </option>
                                 </select><br/>
 
-
-
-                                <input type="submit" name="login" value="Create Page" class="button">
+                                <button type="submit" class="btn purp-button">Create!</button>
+                                {{ Form::token() }}
 
                             </form>
                             <!-- modal close button -->

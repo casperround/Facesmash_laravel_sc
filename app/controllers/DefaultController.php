@@ -183,30 +183,33 @@ class DefaultController extends BaseController {
         return View::make("pages.userpage");
     }
     public function userPagesNewPage() {
-            $unique_pagename = Input::get("unique_pagename");
-            $uid = Auth::user()->id;
-            $about = Input::get("about");
-            $website = Input::get("website");
-            $twitter = Input::get("twitter");
-            $facebook = Input::get("facebook");
-            $youtube = Input::get("youtube");
-            $category = Input::get("category");
-            $post_time = date("H:i:s");
-            $post_date = date("d-m-Y");
 
-            Pages::create([
-                "unique_pagename" => $unique_pagename,
-                "uid" => $uid,
-                "about" => $about,
-                "website" => $website,
-                "twitter" => $twitter,
-                "facebook" => $facebook,
-                "youtube" => $youtube,
-                "category" => $category,
-                "post_time" => $post_time,
-                "post_date" => $post_date
-            ]);
-            return Redirect::route("pages");
+        $unique_pagename = Input::get("unique_pagename");
+        $uid = str_random(10);
+        $owner_id = Auth::user()->id;
+        $about = Input::get("about");
+        $website = Input::get("website");
+        $twitter = Input::get("twitter");
+        $facebook = Input::get("facebook");
+        $youtube = Input::get("youtube");
+        $category = Input::get("category");
+        $post_time = date("H:i:s");
+        $post_date = date("d-m-Y");
+
+        Pages::create([
+            "unique_pagename" => $unique_pagename,
+            "uid" => $uid,
+            "owner_id" => $owner_id,
+            "about" => $about,
+            "website" => $website,
+            "twitter" => $twitter,
+            "facebook" => $facebook,
+            "youtube" => $youtube,
+            "category" => $category,
+            "post_time" => $post_time,
+            "post_date" => $post_date
+        ]);
+        return Redirect::route("pages");
     }
 
 
