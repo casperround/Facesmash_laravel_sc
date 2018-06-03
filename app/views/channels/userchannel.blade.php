@@ -10,7 +10,7 @@
                 <div class="info">
                     <div class="buttons">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            Launch demo modal
+                            Create a new channel
                         </button>
                     </div>
                 </div>
