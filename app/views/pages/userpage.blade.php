@@ -193,7 +193,7 @@
             <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
                 <div class="modal__dialog">
                     <div class="modal__content">
-                        <form action="{{ URL::route("auth.doLogin") }}" method="POST">
+                        <form action="{{ URL::route("home.createNewPost") }}" method="POST">
 
                             <label for="unique_pagename">Page Name</label>
                             <input type="text" id="unique_pagename" name="unique_pagename" class="username" required>
@@ -227,7 +227,6 @@
 
                             <input type="submit" name="npage" value="Create" class="button">
 
-                            <a href="{{ URL::route("register") }}"><p class="button_side">Or Register</p></a>
                         </form>
                         <!-- modal close button -->
                         <a href="" class="modal__close demo-close">

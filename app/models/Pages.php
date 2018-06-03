@@ -11,7 +11,7 @@ class Pages extends Eloquent
 
     protected $table = 'pages';
 
-    protected $fillable = ["id", "uid", "unique_pagename", "owner_id", "category", "about", "website", "twitter", "facebook", "youtube", "discord_invite", "banner_path", "page_img_path"];
+    protected $fillable = ["id", "uid", "unique_pagename", "owner_id", "category", "about", "website", "twitter", "facebook", "youtube", "discord_invite", "banner_path", "page_img_path","post_date","post_time"];
 
     public $timestamps = false;
 
