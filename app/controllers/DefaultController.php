@@ -183,10 +183,7 @@ class DefaultController extends BaseController {
         return View::make("pages.userpage");
     }
     public function userPagesNewPage() {
-        debug_to_console( "Test" );
-
-        echo "test";
-        $unique_pagename = Input::get("unique_pagename");
+            $unique_pagename = Input::get("unique_pagename");
             $uid = Auth::user()->id;
             $about = Input::get("about");
             $website = Input::get("website");
@@ -197,7 +194,7 @@ class DefaultController extends BaseController {
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
 
-            pages::create([
+            Pages::create([
                 "unique_pagename" => $unique_pagename,
                 "uid" => $uid,
                 "about" => $about,
