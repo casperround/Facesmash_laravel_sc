@@ -161,9 +161,18 @@
             <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
                 <div class="modal__dialog">
                     <div class="modal__content">
-                        <h1>Modal</h1>
-                        <p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
+                        <form action="{{ URL::route("auth.doLogin") }}" method="POST">
 
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" class="username" required>
+
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" required>
+
+                            <input type="submit" name="login" value="Login" class="button">
+
+                            <a href="{{ URL::route("register") }}"><p class="button_side">Or Register</p></a>
+                        </form>
                         <!-- modal close button -->
                         <a href="" class="modal__close demo-close">
                             <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
