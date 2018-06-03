@@ -184,6 +184,13 @@ class DefaultController extends BaseController {
     }
     public function userPagesNewPage() {
 
+        $validator = Validator::make(Input::all(), [
+            "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
+        ]);
+        if ($validator->fails())
+        {
+            return Redirect::route("pages.pageview")->withErrors($validator)->withInput();
+        }
         $unique_pagename = Input::get("unique_pagename");
         $uid = str_random(10);
         $owner_id = Auth::user()->id;
@@ -216,6 +223,9 @@ class DefaultController extends BaseController {
 
 
     }
+
+
+
 
 //==============================================
 // Events Controller
