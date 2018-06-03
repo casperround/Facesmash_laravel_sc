@@ -225,7 +225,7 @@
 
 
 
-                            <input type="submit" name="npage" value="Create" class="button">
+                            <button>Create</button>
 
                         </form>
                         <!-- modal close button -->
