@@ -89,7 +89,7 @@
 
                 <div class="card-columns">
                     <div class="col-md">
-                        @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $channels)
+                        @foreach(Channels::where("owner_id", "=", Auth::user()->id)->get() as $channels)
                             <a href="{{ URL::route("channelsview", $channels->unique_channelname) }}"><div class="card">
                                     <img class="card-img-top" src="" alt="Card image cap">
                                     <div class="card-body">
