@@ -216,7 +216,7 @@ class DefaultController extends BaseController {
             "post_time" => $post_time,
             "post_date" => $post_date
         ]);
-        return Redirect::route("pages");
+        return Redirect::route("pages.userpage");
     }
     public function pagesviewPage($unique_pagename) {
         return View::make("pages.pageview");
