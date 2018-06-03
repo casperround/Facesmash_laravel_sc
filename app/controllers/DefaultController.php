@@ -247,6 +247,13 @@ class DefaultController extends BaseController {
     }
     public function userChannelsNewPage() {
 
+        $validator = Validator::make(Input::all(), [
+            "unique_channelname" => "required|min:2|max:16|unique:pages,unique_channelname"
+        ]);
+        if ($validator->fails())
+        {
+            return Redirect::route("channels")->withErrors($validator)->withInput();
+        }
         $unique_channelname = Input::get("unique_channelname");
         $uid = str_random(10);
         $owner_id = Auth::user()->id;

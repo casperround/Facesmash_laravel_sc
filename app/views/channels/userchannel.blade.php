@@ -12,6 +12,11 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Create a new channel
                         </button>
+                        @if ($errors->has('unique_channelname'))
+                            @foreach ($errors->get('unique_channelname') as $error)
+                                <p class="text-danger">{{ $error }}</p>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
 
