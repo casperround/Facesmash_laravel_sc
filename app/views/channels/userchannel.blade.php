@@ -89,11 +89,11 @@
 
                 <div class="card-columns">
                     <div class="col-md">
-                        @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $pages)
-                            <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
+                        @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $channels)
+                            <a href="{{ URL::route("channelsview", $channels->unique_channelname) }}"><div class="card">
                                     <img class="card-img-top" src="" alt="Card image cap">
                                     <div class="card-body">
-                                        <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                                        <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $channels->unique_channelname }}</p></center>
                                     </div>
                                 </div></a>
                         @endforeach
