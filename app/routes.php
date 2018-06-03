@@ -103,7 +103,7 @@ Route::get('/discover/video', [
     "uses" => "DefaultController@discoverVideoPage"
 ]);
 //==============================================
-//User Pages,Groups,Events,Channels Routes
+// Pages Routes
 //==============================================
 
 
@@ -119,16 +119,32 @@ Route::post('/pages/userPagesNewPage', [
     "as" => "pages.userPagesNewPage",
     "uses" => "DefaultController@userPagesNewPage"
 ]);
-
+//==============================================
+// Groups Routes
+//==============================================
 Route::get('/groups', [
     "as" => "groups.usergroup",
     "uses" => "DefaultController@userGroupsPage"
 ]);
+//==============================================
+// Events Routes
+//==============================================
 Route::get('/events', [
     "as" => "events.userevent",
     "uses" => "DefaultController@userEventsPage"
 ]);
+//==============================================
+// channels Routes
+//==============================================
 Route::get('/channels', [
     "as" => "channels.userchannel",
     "uses" => "DefaultController@userChannelsPage"
+]);
+Route::get('/channels/{unique_pagename}', [
+    "as" => "channelsview",
+    "uses" => "DefaultController@channelsviewPage"
+]);
+Route::post('/channels/userChannelsNewPage', [
+    "as" => "channels.userChannelsNewPage",
+    "uses" => "DefaultController@userChannelsNewPage"
 ]);
