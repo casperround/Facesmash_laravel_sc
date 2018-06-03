@@ -212,7 +212,7 @@
 
                             <label for="youtube">Youtube Channel Name</label>
                             <input type="text" id="youtube" name="youtube" class="username" required>
-
+                            <label for="category">Page Category</label>
                             <select name="category">
                                 <option value="1">Local Business or Place</option>
                                 <option value="2">Company Organization or Institution</option>
@@ -221,11 +221,11 @@
                                 <option value="5" selected>Entertainment</option>
                                 <option value="6" selected>Cause or Community
                                 </option>
-                            </select>
+                            </select><br/>
 
 
 
-                            <input type="submit" name="login" value="Login" class="button">
+                            <input type="submit" name="npage" value="Create" class="button">
 
                             <a href="{{ URL::route("register") }}"><p class="button_side">Or Register</p></a>
                         </form>
