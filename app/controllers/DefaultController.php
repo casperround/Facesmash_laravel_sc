@@ -211,11 +211,6 @@ class DefaultController extends BaseController {
         ]);
         return Redirect::route("pages");
     }
-    public function userPage($unique_pagename) {
-        return View::make("page.pageview");
-
-
-    }
 
 
     public function userEventsPage() {
