@@ -6,7 +6,7 @@
             @endif
 
 
-            @foreach(Channels::where("owner_id", "=", Auth::user()->id)->get() as $channels)
+            @foreach(Channels::where("unique_channelname", "=", $channels->unique_channelname)->get() as $channels)
             <div class="card">
                 <img class="card-img-top" src="{{ $channels->unique_channelname }}" alt="Card image cap">
                 <div class="card-body">
