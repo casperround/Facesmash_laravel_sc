@@ -179,7 +179,7 @@ class DefaultController extends BaseController {
 //==============================================
 //User Pages,Groups,Events,Channels Controller
 //==============================================
-    public function userPagesPage() {
+    public function pagesPage() {
         return View::make("pages");
     }
     public function userPagesNewPage() {
