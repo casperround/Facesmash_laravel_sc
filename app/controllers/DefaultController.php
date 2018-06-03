@@ -179,8 +179,8 @@ class DefaultController extends BaseController {
 //==============================================
 //User Pages,Groups,Events,Channels Controller
 //==============================================
-    public function pagesPage() {
-        return View::make("pages");
+    public function userPagesPage() {
+        return View::make("pages.userpage");
     }
     public function userPagesNewPage() {
             $unique_pagename = Input::get("unique_pagename");
