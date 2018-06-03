@@ -151,7 +151,7 @@
                 <div class="info">
                     <div class="buttons">
                         <p>
-                            <a href="" data-modal="#modal" class="modal__trigger">Modal 1</a>
+                            <a style="color:white;" href="" data-modal="#modal" class="modal__trigger">Create Page</a>
                         </p>
                     </div>
                 </div>
