@@ -108,7 +108,7 @@ Route::get('/discover/video', [
 
 
 Route::get('/pages', [
-    "as" => "pages.userpage",
+    "as" => "pages",
     "uses" => "DefaultController@userPagesPage"
 ]);
 Route::post('/pages/userPagesNewPage', [

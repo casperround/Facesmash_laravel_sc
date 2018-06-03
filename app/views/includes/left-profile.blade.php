@@ -28,7 +28,7 @@
             <center><span>My Profile</span></center>
         </div>
     </a>
-    <a href="{{ URL::route("pages.userpage") }}">
+    <a href="{{ URL::route("pages") }}">
         <div class="Tabets">
             <center><span>My Pages</span></center>
         </div>
