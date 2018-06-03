@@ -88,17 +88,16 @@
 
 
                 <div class="card-columns">
-
                     <div class="col-md">
-                        <div class="card">
-                            <video class="card-img-top" src=""></video>
-                            <div class="card-body" style="color: black">
-                                <h4 class="card-title">Author Username | Posted Date</h4>
-                                <p class="card-text">Post Text if any</p>
-                            </div>
-                        </div>
+                        @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $pages)
+                                <div class="card">
+                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <div class="card-body">
+                                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                                    </div>
+                                </div>
+                            @endforeach
                     </div>
-
                 </div>
             </div>
             <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
