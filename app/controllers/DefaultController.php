@@ -177,7 +177,7 @@ class DefaultController extends BaseController {
         return View::make("discover.video");
     }
 //==============================================
-//User Pages,Groups,Events,Channels Controller
+// Pages Controller
 //==============================================
     public function userPagesPage() {
         return View::make("pages.userpage");
@@ -217,13 +217,21 @@ class DefaultController extends BaseController {
 
     }
 
-
+//==============================================
+// Events Controller
+//==============================================
     public function userEventsPage() {
         return View::make("events.userevent");
     }
+//==============================================
+// Groups Controller
+//==============================================
     public function userGroupsPage() {
         return View::make("groups.usergroup");
     }
+//==============================================
+// Channels Controller
+//==============================================
     public function userChannelsPage() {
         return View::make("channels.userchannel");
     }
@@ -255,5 +263,10 @@ class DefaultController extends BaseController {
             "post_date" => $post_date
         ]);
         return Redirect::route("channels");
+    }
+    public function channelsviewPage($unique_channelname) {
+        return View::make("channels.channelview");
+
+
     }
 }
