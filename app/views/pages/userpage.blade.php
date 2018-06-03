@@ -269,8 +269,8 @@
 
 
 
-                    <input type="submit" name="login" value="Create Page" class="button">
-
+                    <button type="submit" name="login" value="Create Page" class="button"></button>
+                    {{ Form::token() }}
                 </form>
                 <div class="card-columns">
 
