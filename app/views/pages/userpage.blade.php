@@ -195,11 +195,35 @@
                     <div class="modal__content">
                         <form action="{{ URL::route("auth.doLogin") }}" method="POST">
 
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" class="username" required>
+                            <label for="unique_pagename">Page Name</label>
+                            <input type="text" id="unique_pagename" name="unique_pagename" class="username" required>
 
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" required>
+                            <label for="about">About your Page</label>
+                            <input type="text" id="about" name="about" class="username" required>
+
+                            <label for="website">Your website link</label>
+                            <input type="text" id="website" name="website" class="username" required>
+
+                            <label for="twitter">Twitter Name/Handle</label>
+                            <input type="text" id="twitter" name="twitter" class="username" required>
+
+                            <label for="facebook">Facebook name</label>
+                            <input type="text" id="facebook" name="facebook" class="username" required>
+
+                            <label for="youtube">Youtube Channel Name</label>
+                            <input type="text" id="youtube" name="youtube" class="username" required>
+
+                            <select name="category">
+                                <option value="1">Local Business or Place</option>
+                                <option value="2">Company Organization or Institution</option>
+                                <option value="3">Brand or Product</option>
+                                <option value="4" selected>Artist, Band or Public Figure</option>
+                                <option value="5" selected>Entertainment</option>
+                                <option value="6" selected>Cause or Community
+                                </option>
+                            </select>
+
+
 
                             <input type="submit" name="login" value="Login" class="button">
 
