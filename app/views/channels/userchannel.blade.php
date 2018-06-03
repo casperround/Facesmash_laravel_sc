@@ -28,11 +28,11 @@
                                 </button>
                             </div>
                             <div class="modal-body" style="color: black">
-                                <form action="{{ URL::route("pages.userPagesNewPage") }}" method="POST">
+                                <form action="{{ URL::route("channels.userChannelsNewPage") }}" method="POST">
 
                                     <div class="form-group">
-                                        <label for="unique_pagename">Page Name</label>
-                                        <input type="text" id="unique_pagename" name="unique_pagename" class="form-control" required>
+                                        <label for="unique_pagename">Channel Name</label>
+                                        <input type="text" id="unique_channelname" name="unique_channelname" class="form-control" required>
                                     </div>
 
                                     <div class="form-group">
