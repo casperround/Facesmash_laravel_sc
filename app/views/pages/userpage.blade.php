@@ -178,11 +178,8 @@
                     <div class="buttons">
                         <p>
                             <a href="" data-modal="#modal" class="modal__trigger">Modal 1</a>
-                            <a href="" data-modal="#modal2" class="modal__trigger">Modal 2</a>
-                            <a href="" data-modal="#modal3" class="modal__trigger">Modal 3</a>
                         </p>
                     </div>
-                    <p>Click a button to activate a modal.<br><a href="http://ettrics.com/code/material-design-modal/" target="_blank" class="link">Read the how-to on Ettrics.com</a></p>
                 </div>
 
 
