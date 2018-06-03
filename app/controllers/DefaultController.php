@@ -185,7 +185,7 @@ class DefaultController extends BaseController {
     public function userPagesNewPage() {
         debug_to_console( "Test" );
 
-
+        echo "test";
         $unique_pagename = Input::get("unique_pagename");
             $uid = Auth::user()->id;
             $about = Input::get("about");
