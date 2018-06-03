@@ -5,234 +5,83 @@
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
             @endif
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                <style>
-                    .modal {
-                        will-change: visibility, opacity;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        overflow-y: auto;
-                        overflow-x: hidden;
-                        z-index: 1000;
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                        transition-delay: $modal-delay;
-                    }
-                    .modal--active {
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                    .modal--align-top {
-                        align-items: flex-start;
-                    }
-                    .modal__bg {
-                        background: transparent;
-                    }
-                    .modal__dialog {
-                        max-width: 600px;
-                        padding: 1.2rem;
-                    }
-                    .modal__content {
-                        will-change: transform, opacity;
-                        position: relative;
-                        padding: 2.4rem;
-                        background: #34495E;
-                        background-clip: padding-box;
-                        box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
-                        opacity: 0;
-                        transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
-                    }
-                    .modal__content--active {
-                        opacity: 1;
-                    }
-                    .modal__close {
-                        z-index: 1100;
-                        cursor: pointer;
-                    }
-                    .modal__trigger {
-                        position: relative;
-                        display: inline-block;
-                        padding: 1.2rem 2.4rem;
-                        color: rgba(0,0,0,0.7);
-                        line-height: 1;
-                        cursor: pointer;
-                        background: #34495E;
-                        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
-                        -webkit-tap-highlight-color: rgba(0,0,0,0);
-                        -webkit-user-select: none;
-                        -moz-user-select: none;
-                        -ms-user-select: none;
-                        user-select: none;
-                        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                    }
-                    .modal__trigger--active {
-                        z-index: 10;
-                    }
-                    .modal__trigger:hover {
-                        background: #34495E;
-                    }
-                    #modal__temp {
-                        will-change: transform, opacity;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: #34495E;
-                        -webkit-transform: none;
-                        transform: none;
-                        opacity: 1;
-                        transition: opacity 0.1s ease-out, -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                        transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                        transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                    }
-                    .demo-btns header {
-                        padding: 7vh 10vw;
-                        background: #ffebee;
-                        display: flex;
-                        align-items: center;
-                    }
-                    .demo-btns header h1 {
-                        margin: 0;
-                        color: rgba(0,0,0,0.54);
-                        font-weight: 300;
-                    }
-                    .demo-btns .info {
-                        background: #f44336;
-                        padding: 3vh 10vw;
-                        height: 70vh;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-flow: column wrap;
-                    }
-                    .demo-btns p {
-                        text-align: center;
-                        color: #fff;
-                    }
-                    .demo-btns .link {
-                        font-size: 20px;
-                    }
-                    .demo-btns .modal__trigger {
-                        margin-right: 3px;
-                    }
-                    @media (max-width: 640px) {
-                        .demo-btns .modal__trigger {
-                            margin-bottom: 0.8rem;
-                        }
-                    }
-                    .demo-close {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        margin: 1.2rem;
-                        padding: 0.6rem;
-                        background: rgba(0,0,0,0.3);
-                        border-radius: 50%;
-                        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-                    }
-                    .demo-close svg {
-                        width: 24px;
-                        fill: #fff;
-                        pointer-events: none;
-                        vertical-align: top;
-                    }
-                    .demo-close:hover {
-                        background: rgba(0,0,0,0.6);
-                    }
-                    form {
-                        padding: 20px 0;
-                        position: relative;
-                        z-index: 2;
-                    }
-                    form input {
-                        -webkit-appearance: none;
-                        -moz-appearance: none;
-                        appearance: none;
-                        outline: 0;
-                        border: 1px solid rgba(255, 255, 255, 0.4);
-                        background-color: rgba(255, 255, 255, 0.2);
-                        width: 250px;
-                        border-radius: 3px;
-                        padding: 10px 15px;
-                        margin: 0 auto 10px auto;
-                        display: block;
-                        text-align: center;
-                        font-size: 18px;
-                        color: white;
-                        -webkit-transition-duration: 0.25s;
-                        transition-duration: 0.25s;
-                        font-weight: 300;
-                    }
-                    form input:hover {
-                        background-color: rgba(255, 255, 255, 0.4);
-                    }
-                    form input:focus {
-                        background-color: white;
-                        width: 300px;
-                        color: #53e3a6;
-                    }
-                </style>
+
 
                 <div class="info">
                     <div class="buttons">
-                        <p>
-                            <a style="color:white;" href="" data-modal="#modal" class="modal__trigger">Create Page</a>
-                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                        </button>
                     </div>
                 </div>
 
 
 
                 <!-- Modal -->
-                <div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true">
-                    <div class="modal__dialog">
-                        <div class="modal__content">
-                            <form action="{{ URL::route("pages.userPagesNewPage") }}" method="POST">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"><span style="color: black">New Page</span></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="color: black">
+                                <form action="{{ URL::route("pages.userPagesNewPage") }}" method="POST">
 
-                                <label for="unique_pagename">Page Name</label>
-                                <input type="text" id="unique_pagename" name="unique_pagename" class="username" required>
+                                    <div class="form-group">
+                                        <label for="unique_pagename">Page Name</label>
+                                        <input type="text" id="unique_pagename" name="unique_pagename" class="form-control" required>
+                                    </div>
 
-                                <label for="about">About your Page</label>
-                                <input type="text" id="about" name="about" class="username" required>
+                                    <div class="form-group">
+                                        <label for="about">About your Page</label>
+                                        <input type="text" id="about" name="about" class="form-control" required>
+                                    </div>
 
-                                <label for="website">Your website link</label>
-                                <input type="text" id="website" name="website" class="username" required>
 
-                                <label for="twitter">Twitter Name/Handle</label>
-                                <input type="text" id="twitter" name="twitter" class="username" required>
+                                    <div class="form-group">
+                                        <label for="website">Your website link</label>
+                                        <input type="text" id="website" name="website" class="form-control" required>
+                                    </div>
 
-                                <label for="facebook">Facebook name</label>
-                                <input type="text" id="facebook" name="facebook" class="username" required>
 
-                                <label for="youtube">Youtube Channel Name</label>
-                                <input type="text" id="youtube" name="youtube" class="username" required>
-                                <label for="category">Page Category</label>
-                                <select name="category">
-                                    <option value="1">Local Business or Place</option>
-                                    <option value="2">Company Organization or Institution</option>
-                                    <option value="3">Brand or Product</option>
-                                    <option value="4" selected>Artist, Band or Public Figure</option>
-                                    <option value="5" selected>Entertainment</option>
-                                    <option value="6" selected>Cause or Community
-                                    </option>
-                                </select><br/>
+                                    <div class="form-group">
+                                        <label for="twitter">Twitter Name/Handle</label>
+                                        <input type="text" id="twitter" name="twitter" class="form-control" required>
+                                    </div>
 
-                                <button type="submit" class="btn purp-button">Create!</button>
-                                {{ Form::token() }}
 
-                            </form>
-                            <!-- modal close button -->
-                            <a href="" class="modal__close demo-close">
-                                <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-                            </a>
+                                    <div class="form-group">
+                                        <label for="facebook">Facebook name</label>
+                                        <input type="text" id="facebook" name="facebook" class="form-control" required>
+                                    </div>
 
+
+                                    <div class="form-group">
+                                        <label for="youtube">Youtube Channel Name</label>
+                                        <input type="text" id="youtube" name="youtube" class="form-control" required>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="category">Page Category</label>
+                                        <select name="category" class="form-control">
+                                            <option value="1">Local Business or Place</option>
+                                            <option value="2">Company Organization or Institution</option>
+                                            <option value="3">Brand or Product</option>
+                                            <option value="4" selected>Artist, Band or Public Figure</option>
+                                            <option value="5" selected>Entertainment</option>
+                                            <option value="6" selected>Cause or Community
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" name="login" value="Create Page" class="btn btn-primary">Create</button>
+                                    {{ Form::token() }}
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
