@@ -42,7 +42,7 @@
         will-change: transform, opacity;
         position: relative;
         padding: 2.4rem;
-        background: #ffebee;
+        background: #34495E;
         background-clip: padding-box;
         box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
         opacity: 0;
@@ -62,7 +62,7 @@
         color: rgba(0,0,0,0.7);
         line-height: 1;
         cursor: pointer;
-        background: #ffebee;
+        background: #34495E;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
         -webkit-tap-highlight-color: rgba(0,0,0,0);
         -webkit-user-select: none;
