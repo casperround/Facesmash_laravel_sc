@@ -75,7 +75,7 @@
         z-index: 10;
     }
     .modal__trigger:hover {
-        background: #e5d3d6;
+        background: #34495E;
     }
     #modal__temp {
         will-change: transform, opacity;
@@ -84,7 +84,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: #ffebee;
+        background: #34495E;
         -webkit-transform: none;
         transform: none;
         opacity: 1;
