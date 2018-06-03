@@ -189,7 +189,7 @@ class DefaultController extends BaseController {
         ]);
         if ($validator->fails())
         {
-            return Redirect::route("pages.pageview")->withErrors($validator)->withInput();
+            return Redirect::route("pages")->withErrors($validator)->withInput();
         }
         $unique_pagename = Input::get("unique_pagename");
         $uid = str_random(10);
@@ -219,7 +219,7 @@ class DefaultController extends BaseController {
         return Redirect::route("pages");
     }
     public function pagesviewPage($unique_pagename) {
-        return View::make("pagesview");
+        return View::make("pages.pageview");
 
 
     }
