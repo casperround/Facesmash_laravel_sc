@@ -5,34 +5,8 @@
   padding: 0;
   font-weight: 300;
 }
-.Navbar {
-	width:100%;
-	height:60px;
-	background:#5d3bae;
-	z-index: 100;
-	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-	position: fixed;
-}
-.Back {
-	background:#434A54;
-	height:100vh;
-}
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  background: #5d3bae;
-  font-weight: 300;
-  overflow:hidden;
-}
 
-a:hover {
-  text-decoration: none;
-  color:inherit;
-}
-a {
-  text-decoration: none;
-  color:inherit;
-}
+
 .modal {
   will-change: visibility, opacity;
   display: flex;
@@ -173,6 +147,35 @@ a {
 .demo-close:hover {
   background: rgba(0,0,0,0.6);
 }
+.Navbar {
+	width:100%;
+	height:60px;
+	background:#5d3bae;
+	z-index: 100;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	position: fixed;
+}
+.Back {
+	background:#434A54;
+	height:100vh;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  background: #5d3bae;
+  font-weight: 300;
+  overflow:hidden;
+}
+
+a:hover {
+  text-decoration: none;
+  color:inherit;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
 .wrapper {
   background: #5d3bae;
   background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
