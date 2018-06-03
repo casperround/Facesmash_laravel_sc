@@ -2,12 +2,10 @@
 
 @section("content")
     @if (Auth::check())
+        <a data-toggle="modal" href="#normalModal" class="btn btn-default">Normal</a>
 
-        <!-- Button trigger modal -->
-        <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Launch demo modal</a>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="normalModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -15,7 +13,7 @@
                         <h4 class="modal-title">Modal title</h4>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <p>One fine body&hellip;</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -43,7 +41,15 @@
 
                 </div>
             </div>
+            <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'></script>
+            <script >// when .modal-wide opened, set content-body height based on browser height; 200 is appx height of modal padding, modal title and button bar
 
+                $(".modal-wide").on("show.bs.modal", function() {
+                    var height = $(window).height() - 200;
+                    $(this).find(".modal-body").css("max-height", height);
+                });
+                //# sourceURL=pen.js
+            </script>
             @if (Auth::check())
         </div>
     @endif
