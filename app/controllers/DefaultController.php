@@ -282,7 +282,9 @@ class DefaultController extends BaseController {
         return Redirect::route("channels.userchannel");
     }
     public function channelsviewPage($unique_channelname) {
-        return View::make("channels.channelview");
+        return View::make("channels.channelview", [
+            "unique_channelname" => $unique_channelname
+        ]);
 
 
     }
