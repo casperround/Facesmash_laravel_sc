@@ -252,7 +252,7 @@ class DefaultController extends BaseController {
         ]);
         if ($validator->fails())
         {
-            return Redirect::route("channels")->withErrors($validator)->withInput();
+            return Redirect::route("channels.userchannel")->withErrors($validator)->withInput();
         }
         $unique_channelname = Input::get("unique_channelname");
         $uid = str_random(10);
@@ -279,7 +279,7 @@ class DefaultController extends BaseController {
             "post_time" => $post_time,
             "post_date" => $post_date
         ]);
-        return Redirect::route("channels");
+        return Redirect::route("channels.userchannel");
     }
     public function channelsviewPage($unique_channelname) {
         return View::make("channels.channelview");
