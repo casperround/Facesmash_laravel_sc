@@ -140,7 +140,7 @@ Route::get('/channels', [
     "as" => "channels.userchannel",
     "uses" => "DefaultController@userChannelsPage"
 ]);
-Route::get('/channels/{unique_pagename}', [
+Route::get('/channels/{unique_channelname}', [
     "as" => "channelsview",
     "uses" => "DefaultController@channelsviewPage"
 ]);
