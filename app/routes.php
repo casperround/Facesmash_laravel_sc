@@ -111,6 +111,10 @@ Route::get('/pages', [
     "as" => "pages.userpage",
     "uses" => "DefaultController@userPagesPage"
 ]);
+Route::get('/pages/{unique_pagename}', [
+    "as" => "userPage",
+    "uses" => "DefaultController@userPage"
+]);
 Route::post('/pages/userPagesNewPage', [
     "as" => "pages.userPagesNewPage",
     "uses" => "DefaultController@userPagesNewPage"
