@@ -225,7 +225,7 @@
 
 
 
-                            <button>Create</button>
+                            <input type="submit" name="login" value="Create Page" class="button">
 
                         </form>
                         <!-- modal close button -->
