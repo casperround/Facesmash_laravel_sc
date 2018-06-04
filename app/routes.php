@@ -133,6 +133,14 @@ Route::get('/events', [
     "as" => "events.userevent",
     "uses" => "DefaultController@userEventsPage"
 ]);
+Route::get('/events/{unique_eventname}', [
+    "as" => "eventsview",
+    "uses" => "DefaultController@eventsviewPage"
+]);
+Route::post('/events/userEventsNewPage', [
+    "as" => "events.userEventsNewPage",
+    "uses" => "DefaultController@userEventsNewPage"
+]);
 //==============================================
 // channels Routes
 //==============================================
