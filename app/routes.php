@@ -126,6 +126,14 @@ Route::get('/groups', [
     "as" => "groups.usergroup",
     "uses" => "DefaultController@userGroupsPage"
 ]);
+Route::get('/groups/{unique_groupname}', [
+    "as" => "groupsview",
+    "uses" => "DefaultController@groupsviewPage"
+]);
+Route::post('/groups/userGroupsNewPage', [
+    "as" => "groups.userGroupsNewPage",
+    "uses" => "DefaultController@userGroupsNewPage"
+]);
 //==============================================
 // Events Routes
 //==============================================
