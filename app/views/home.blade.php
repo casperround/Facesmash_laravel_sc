@@ -59,20 +59,14 @@
                             </select>
 
                         </div>
+                        <div class="form-group">
+                            <input class="form-control" type="file" name="file_upload">
+                        </div>
                         <button type="submit" class="btn purp-button">Post</button>
                         {{ Form::token() }}
                     </form>
                 </div>
-                <div class="col">
-                    <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}"  method="POST">
-                        <div class="form-group">
-                            <input class="form-control" type="file" name="file_upload">
-                        </div>
-                        <button type="submit" class="btn purp-button">Upload</button>
 
-                        {{ Form::token() }}
-                    </form>
-                </div>
             </div>
         </div>
         @foreach(Posts::where("author_id", "=", Auth::user()->id)->get() as $post)
