@@ -67,10 +67,7 @@
                 <div class="col">
                     <div class="form-group">
                         <input class="form-control" type="file" onchange="readURL(this);" name="file_upload">
-                        <img id="blah" src="#" style="width: 150px;
-    height: auto;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
-    margin: 20px;" alt="your image" />
+                        <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image" />
                         <script>
                             function readURL(input) {
                                 if (input.files && input.files[0]) {
