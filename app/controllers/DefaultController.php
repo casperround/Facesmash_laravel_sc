@@ -255,7 +255,7 @@ class DefaultController extends BaseController {
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
 
-        Pages::create([
+        Events::create([
             "unique_eventname" => $unique_eventname,
             "uid" => $uid,
             "owner_id" => $owner_id,
@@ -303,7 +303,7 @@ class DefaultController extends BaseController {
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
 
-        Pages::create([
+        Groups::create([
             "unique_groupname" => $unique_groupname,
             "uid" => $uid,
             "owner_id" => $owner_id,
