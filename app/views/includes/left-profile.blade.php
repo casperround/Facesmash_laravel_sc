@@ -8,6 +8,11 @@
             </center>
         </div>
     </div>
+    <a href="{{ URL::route("userProfile", [Auth::user()->username]) }}">
+        <div class="Tabets">
+            <center><span>My Profile</span></center>
+        </div>
+    </a>
     <a href="{{ URL::route("home") }}">
         <div class="Tabets">
             <center><span>Home</span></center>
@@ -21,11 +26,6 @@
     <a href="{{ URL::route("videos.uservideo") }}">
         <div class="Tabets">
             <center><span>Videos</span></center>
-        </div>
-    </a>
-    <a href="{{ URL::route("userProfile", [Auth::user()->username]) }}">
-        <div class="Tabets">
-            <center><span>My Profile</span></center>
         </div>
     </a>
     <a href="{{ URL::route("pages.userpage") }}">
