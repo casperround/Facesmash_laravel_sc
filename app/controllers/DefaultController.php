@@ -234,12 +234,96 @@ class DefaultController extends BaseController {
     public function userEventsPage() {
         return View::make("events.userevent");
     }
+    public function userEventsNewPage() {
+
+        $validator = Validator::make(Input::all(), [
+            "unique_eventname" => "required|min:2|max:16|unique:events,unique_eventname"
+        ]);
+        if ($validator->fails())
+        {
+            return Redirect::route("events.userevent")->withErrors($validator)->withInput();
+        }
+        $unique_eventname = Input::get("unique_eventname");
+        $uid = str_random(10);
+        $owner_id = Auth::user()->id;
+        $about = Input::get("about");
+        $website = Input::get("website");
+        $twitter = Input::get("twitter");
+        $facebook = Input::get("facebook");
+        $youtube = Input::get("youtube");
+        $category = Input::get("category");
+        $post_time = date("H:i:s");
+        $post_date = date("d-m-Y");
+
+        Pages::create([
+            "unique_eventname" => $unique_eventname,
+            "uid" => $uid,
+            "owner_id" => $owner_id,
+            "about" => $about,
+            "website" => $website,
+            "twitter" => $twitter,
+            "facebook" => $facebook,
+            "youtube" => $youtube,
+            "category" => $category,
+            "post_time" => $post_time,
+            "post_date" => $post_date
+        ]);
+        return Redirect::route("events.userevent");
+    }
+    public function eventsviewPage($unique_eventname) {
+        return View::make("events.eventview");
+
+
+    }
+
 //==============================================
 // Groups Controller
 //==============================================
     public function userGroupsPage() {
         return View::make("groups.usergroup");
     }
+    public function userGroupsNewPage() {
+
+        $validator = Validator::make(Input::all(), [
+            "unique_groupname" => "required|min:2|max:16|unique:groups,unique_groupname"
+        ]);
+        if ($validator->fails())
+        {
+            return Redirect::route("groups.usergroup")->withErrors($validator)->withInput();
+        }
+        $unique_groupname = Input::get("unique_groupname");
+        $uid = str_random(10);
+        $owner_id = Auth::user()->id;
+        $about = Input::get("about");
+        $website = Input::get("website");
+        $twitter = Input::get("twitter");
+        $facebook = Input::get("facebook");
+        $youtube = Input::get("youtube");
+        $category = Input::get("category");
+        $post_time = date("H:i:s");
+        $post_date = date("d-m-Y");
+
+        Pages::create([
+            "unique_groupname" => $unique_groupname,
+            "uid" => $uid,
+            "owner_id" => $owner_id,
+            "about" => $about,
+            "website" => $website,
+            "twitter" => $twitter,
+            "facebook" => $facebook,
+            "youtube" => $youtube,
+            "category" => $category,
+            "post_time" => $post_time,
+            "post_date" => $post_date
+        ]);
+        return Redirect::route("groups.usergroup");
+    }
+    public function groupsviewPage($unique_groupname) {
+        return View::make("groups.groupview");
+
+
+    }
+
 //==============================================
 // Channels Controller
 //==============================================
