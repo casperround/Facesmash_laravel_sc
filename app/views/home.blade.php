@@ -66,7 +66,7 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <input class="form-control" type="file" name="file_upload">
+                        <input class="form-control" type="file" onchange="readURL(this);" name="file_upload">
                         <img id="blah" src="#" alt="your image" />
                         <script>
                             function readURL(input) {
