@@ -11,7 +11,7 @@
                     <img class="card-img-top" src="{{ $groups->unique_groupname }}" alt="Card image cap">
                     <div class="card-body">
 
-                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $groups->unique_groupname }}</p></center>
+                        <center><p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $groups->unique_groupname }}</p></center>
                     </div>
                 </div>
             @endforeach

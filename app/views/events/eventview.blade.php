@@ -11,7 +11,7 @@
                     <img class="card-img-top" src="{{ $events->unique_eventname }}" alt="Card image cap">
                     <div class="card-body">
 
-                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $events->unique_eventname }}</p></center>
+                        <center><p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $events->unique_eventname }}</p></center>
                     </div>
                 </div>
             @endforeach
