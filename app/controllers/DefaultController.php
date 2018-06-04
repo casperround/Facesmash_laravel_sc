@@ -271,8 +271,9 @@ class DefaultController extends BaseController {
         return Redirect::route("events.userevent");
     }
     public function eventsviewPage($unique_eventname) {
-        return View::make("events.eventview");
-
+        return View::make("events.eventview", [
+            "unique_eventname" => $unique_eventname
+        ]);
 
     }
 
@@ -319,8 +320,9 @@ class DefaultController extends BaseController {
         return Redirect::route("groups.usergroup");
     }
     public function groupsviewPage($unique_groupname) {
-        return View::make("groups.groupview");
-
+        return View::make("events.eventview", [
+            "unique_eventname" => $unique_eventname
+        ]);
 
     }
 
