@@ -64,7 +64,7 @@
                     </form>
                 </div>
                 <div class="col">
-                    <form action="{{ URL::route("home.createNewPost") }}" method="POST">
+                    <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}"  method="POST">
                         <div class="form-group">
                             <input class="form-control" type="file" name="file_upload">
                         </div>

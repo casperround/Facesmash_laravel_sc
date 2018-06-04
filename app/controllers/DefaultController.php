@@ -118,7 +118,33 @@ class DefaultController extends BaseController {
 
         if (Input::hasFile("file_upload")) {
 
+            $uid = str_random(10);
 
+            $savePath = 'data_store/post_media/';
+            $file = Input::file('file_upload');
+            $fileExtension = $file->getClientOriginalExtension();
+            $filename = $uid . '.' . $file->getClientOriginalExtension();
+
+            $file->move($savePath, $filename);
+            $filePath = $savePath . $filename;
+
+            $media_type = $fileExtension;
+
+            $home_post = Input::get("home_post");
+            $author_id = Auth::user()->id;
+            $post_time = date("H:i:s");
+            $post_date = date("d-m-Y");
+
+            Posts::create([
+                "post_id" => $uid,
+                "author_id" => $author_id,
+                "text" => $home_post,
+                "post_time" => $post_time,
+                "post_date" => $post_date,
+                "file_path" => $filePath,
+                "file_extension" => $fileExtension,
+                "media_type" => $media_type
+            ]);
 
         }
 
