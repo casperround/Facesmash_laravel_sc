@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => "My Pages", "sidebar" => false])
+@extends('layouts.public', ["title" => "My Events", "sidebar" => false])
 
 @section("content")
     @if (Auth::check())
@@ -6,12 +6,12 @@
             @endif
 
 
-            @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->get() as $pages)
+            @foreach(Events::where("unique_eventname", "=", $unique_eventname)->get() as $events)
                 <div class="card">
-                    <img class="card-img-top" src="{{ $pages->unique_pagename }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ $events->unique_eventname }}" alt="Card image cap">
                     <div class="card-body">
 
-                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $events->unique_eventname }}</p></center>
                     </div>
                 </div>
             @endforeach
