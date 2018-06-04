@@ -66,6 +66,7 @@
                 <div class="col">
                     <div class="form-group">
                         <input class="form-control" type="file" name="file_upload">
+                        <img id="blah" src="#" alt="your image" />
                     </div>
                 </div>
             </div>
