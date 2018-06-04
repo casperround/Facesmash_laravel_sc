@@ -33,7 +33,7 @@
                                 </button>
                             </div>
                             <div class="modal-body" style="color: black">
-                                <form action="{{ URL::route("groups.userEventsNewPage") }}" method="POST">
+                                <form action="{{ URL::route("groups.userGroupsNewPage") }}" method="POST">
 
                                     <div class="form-group">
                                         <label for="unique_pagename">Event Name</label>
