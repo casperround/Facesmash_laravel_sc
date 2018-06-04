@@ -42,13 +42,13 @@
 
 
             @foreach(Channels::all() as $channels)
-                <div class="card">
+                <a href="{{ URL::route("channelsview", $channels->unique_channelname) }}"><div class="card">
                     <img class="card-img-top" src="{{ $channels->unique_channelname }}" alt="Card image cap">
                     <div class="card-body">
 
-                        <center><p style="font-size:20px;font-weight:bold;" class="card-text">{{ $channels->unique_channelname }}</p></center>
+                        <center><p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_channelname }}</p></center>
                     </div>
-                </div>
+                    </div></a>
             @endforeach
 
 
