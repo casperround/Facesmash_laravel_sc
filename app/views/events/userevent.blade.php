@@ -94,11 +94,11 @@
 
                 <div class="card-columns">
                     <div class="col-md">
-                        @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $pages)
-                            <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
+                        @foreach(Events::where("owner_id", "=", Auth::user()->id)->get() as $events)
+                            <a href="{{ URL::route("eventsview", $pages->unique_eventname) }}"><div class="card">
                                     <img class="card-img-top" src="" alt="Card image cap">
                                     <div class="card-body">
-                                        <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                                        <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $events->unique_eventname }}</p></center>
                                     </div>
                                 </div></a>
                         @endforeach
