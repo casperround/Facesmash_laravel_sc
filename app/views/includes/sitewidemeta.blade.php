@@ -10,3 +10,6 @@
 <meta property="og:image" content="{{ URL::to("") }}">
 <meta name="theme-color" content="#ffffff">
 <meta content="Casper Round" name="author">
+<link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
