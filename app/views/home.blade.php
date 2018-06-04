@@ -118,7 +118,7 @@
                         </div>
                         <div class="card-group" style="color:black;">
                             <div class="card">
-                                <img src="public/{{ $post->file_path }}">
+                                <img src="../public/{{ $post->file_path }}">
                             </div>
                         </div>
                         <div class="card-group" style="color:black;">
