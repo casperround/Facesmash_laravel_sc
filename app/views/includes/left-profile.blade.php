@@ -13,12 +13,12 @@
             <center><span>Home</span></center>
         </div>
     </a>
-    <a href="pictures.php">
+    <a href="{{ URL::route("pictures.userpicture") }}">
         <div class="Tabets">
             <center><span>Pictures</span></center>
         </div>
     </a>
-    <a href="videos.php">
+    <a href="{{ URL::route("videos.uservideo") }}">
         <div class="Tabets">
             <center><span>Videos</span></center>
         </div>

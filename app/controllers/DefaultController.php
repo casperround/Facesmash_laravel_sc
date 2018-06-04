@@ -376,4 +376,31 @@ class DefaultController extends BaseController {
 
 
     }
+
+//==============================================
+// Pictures Controller
+//==============================================
+    public function userPicturesPage() {
+        return View::make("pictures.userpicture");
+    }
+    public function picturesviewPage($unique_picturename) {
+        return View::make("pictures.pictureview", [
+            "unique_picturename" => $unique_picturename
+        ]);
+
+
+    }
+//==============================================
+// Videos Controller
+//==============================================
+    public function userVideosPage() {
+        return View::make("videos.uservideo");
+    }
+    public function videosviewPage($unique_videoname) {
+        return View::make("videos.videoview", [
+            "unique_videoname" => $unique_videoname
+        ]);
+
+
+    }
 }

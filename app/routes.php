@@ -164,3 +164,33 @@ Route::post('/channels/userChannelsNewPage', [
     "as" => "channels.userChannelsNewPage",
     "uses" => "DefaultController@userChannelsNewPage"
 ]);
+//==============================================
+// Pictures Routes
+//==============================================
+Route::get('/pictures', [
+    "as" => "pictures.userpicture",
+    "uses" => "DefaultController@userPicturesPage"
+]);
+Route::get('/pictures/{unique_picturename}', [
+    "as" => "picturesview",
+    "uses" => "DefaultController@picturesviewPage"
+]);
+Route::post('/pictures/userPicturesNewPage', [
+    "as" => "pictures.userPicturesNewPage",
+    "uses" => "DefaultController@userPicturesNewPage"
+]);
+//==============================================
+// Videos Routes
+//==============================================
+Route::get('/videos', [
+    "as" => "videos.uservideo",
+    "uses" => "DefaultController@userVideosPage"
+]);
+Route::get('/videos/{unique_videoname}', [
+    "as" => "videosview",
+    "uses" => "DefaultController@videosviewPage"
+]);
+Route::post('/videos/userVideosNewPage', [
+    "as" => "videos.userVideosNewPage",
+    "uses" => "DefaultController@userVideosNewPage"
+]);
