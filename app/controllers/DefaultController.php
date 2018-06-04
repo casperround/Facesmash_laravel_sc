@@ -320,8 +320,8 @@ class DefaultController extends BaseController {
         return Redirect::route("groups.usergroup");
     }
     public function groupsviewPage($unique_groupname) {
-        return View::make("events.eventview", [
-            "unique_eventname" => $unique_eventname
+        return View::make("groups.groupview", [
+            "unique_groupname" => $unique_groupname
         ]);
 
     }
