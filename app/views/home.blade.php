@@ -102,7 +102,7 @@
                 </div>
             </div>
             @endif
-                @if ($post->media_type == 'png')
+                @if ($post->media_type == 'jpg')
                     <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                         <div class="row" style="width:100%;margin:0px;position: relative;">
                             <div class="col-1">
