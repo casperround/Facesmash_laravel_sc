@@ -171,10 +171,10 @@ class DefaultController extends BaseController {
         return View::make("discover.page");
     }
     public function discoverPhotoPage() {
-        return View::make("discover.photo");
+        return View::make("discover.photos");
     }
     public function discoverVideoPage() {
-        return View::make("discover.video");
+        return View::make("discover.videos");
     }
 //==============================================
 // Pages Controller

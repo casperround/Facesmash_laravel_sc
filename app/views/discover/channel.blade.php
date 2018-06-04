@@ -18,10 +18,10 @@
         </div></br>
         <div class="row">
             <div class="col-4">
-                <a href="{{ URL::route("discover.photo") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
+                <a href="{{ URL::route("photos") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
             </div>
             <div class="col-4">
-                <a href="{{ URL::route("discover.video") }}"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
+                <a href="{{ URL::route("videos") }}"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
             </div>
             <div class="col-4">
                 <a href="{{ URL::route("discover.gif") }}"><button class="btn btn-outline-info" style="width:100%;">Gif's</button></a>

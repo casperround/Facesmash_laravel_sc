@@ -14,7 +14,7 @@
                             <div class="card">
                                 @if ($post->media_type == "image")
                                     <img class="card-img-top" src="{{ URL::to("") }}" alt="Card image cap">
-                                @elseif($post->media_type == "video")
+                                @elseif($post->media_type == "videos")
                                     <video class="card-img-top" src="" controls alt="Card image cap"></video>
                                 @elseif ($post->media_type == "text")
                                 @endif

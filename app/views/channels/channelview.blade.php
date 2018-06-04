@@ -26,8 +26,8 @@
                     {{--</li><br/>--}}
                     {{----}}
                     <script>
-                        //For video
-                        $(".youtube-video").click(function(e){
+                        //For videos
+                        $(".youtube-videos").click(function(e){
                             $(this).children('a').html('<div class="vid"><iframe width="420" height="315" src="https://www.youtube.com/embed/'+ $(this).attr('id') +'?autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
                             return false;
                             e.preventDefault();
@@ -45,8 +45,8 @@
             </div>
 
             <script>
-                //For video
-                $(".youtube-video").click(function(e){
+                //For videos
+                $(".youtube-videos").click(function(e){
                     $(this).children('a').html('<div class="vid"><iframe width="420" height="315" src="https://www.youtube.com/embed/'+ $(this).attr('id') +'?autoplay=1" frameborder="0" allowfullscreen></iframe></div>');
                     return false;
                     e.preventDefault();
