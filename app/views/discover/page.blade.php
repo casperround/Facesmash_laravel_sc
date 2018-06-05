@@ -1,61 +1,26 @@
-@extends('layouts.public', ["title" => "Public Pages", "sidebar" => false])
+@extends('layouts.public', ["title" => "Discover pages", "sidebar" => false])
 
 @section("content")
-
-    <style>
-
-    </style>
     @if (Auth::check())
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
             @endif
-            <div class="col-12" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
-                @yield("content")
-                <div class="jumbotron jumbotron-fluid" style="height:20%;">
-                    <div class="container" style="height:40%;color:black;">
-                        <h1 class="display-3">Discover</h1>
-                        <p class="lead">Discover more content from people around the world!</p>
-                    </div>
-                </div></br>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="{{ URL::route("photos") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
-                    </div>
-                    <div class="col-4">
-                        <a href="{{ URL::route("videos") }}"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
-                    </div>
-                    <div class="col-4">
-                        <a href="{{ URL::route("discover.gif") }}"><button class="btn btn-outline-info" style="width:100%;">Gif's</button></a>
-                    </div>
-                </div></br>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="{{ URL::route("discover.page") }}"><button class="btn btn-outline-info" style="width:100%;">Pages</button></a>
-                    </div>
-                    <div class="col-4">
-                        <a href="{{ URL::route("discover.group") }}"><button class="btn btn-outline-info" style="width:100%;">Groups</button></a>
-                    </div>
-                    <div class="col-4">
-                        <a href="{{ URL::route("discover.channel") }}"><button class="btn btn-outline-info" style="width:100%;">Channels</button></a>
-                    </div>
-                </div></br>
+            <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
+                @include("includes.discover-top")
                 <div class="card-columns">
-
-
-
-
-                    <div class="card">
-                        <img class="card-img-top" src="https://www.facesmash.co.uk/uploads/55529055162cf.png" alt="Card image cap">
-                        <div class="card-body">
-
-                            <h4 class="card-title">Facesmash</h4>
-                            <p class="card-text"></p>
+                    @foreach(Pages::where("visibility", "=", "1")->get() as $pages)
+                        <div class="col-md">
+                                <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
+                                        <img class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                                        </div>
+                                    </div></a>
                         </div>
-                    </div>
-
-
-
-
+                    @endforeach
                 </div>
-
             </div>
+
+            @if (Auth::check())
+        </div>
+    @endif
 @stop
