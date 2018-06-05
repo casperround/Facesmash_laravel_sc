@@ -67,7 +67,7 @@
                                                     @if ($post->author_id == $pages->owner_id)
                                                         <span>{{ $pages->unique_pagename }}</span>
                                                     @else
-                                                        <span>{{User::where("id", "=", $thing->author_id)->pluck("username");}}</span>
+                                                        <span>{{User::where("id", "=", $post->author_id)->pluck("username");}}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
@@ -95,7 +95,7 @@
                                                     @if ($post->author_id == $pages->owner_id)
                                                         <span>{{ $pages->unique_pagename }}</span>
                                                     @else
-                                                        <span>{{User::where("id", "=", $thing->author_id)->pluck("username");}}</span>
+                                                        <span>{{User::where("id", "=", $post->author_id)->pluck("username");}}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
