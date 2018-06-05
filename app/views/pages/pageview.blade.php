@@ -15,8 +15,8 @@
                     </div>
                 </div>
             @endforeach
-            <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                <div class="card-columns">
+            {{--<div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">--}}
+                {{--<div class="card-columns">--}}
 
                     {{--<a href="#'. $youtube_load['uid'] .'" title="'. $youtube_load['title'] .'">--}}
                     {{--<img style="width:100%;height:auto;" src="'. $youtube_load['thumbnail'] .'" alt="'. $youtube_load['title'] .'" class="img-responsive" height="130px" />--}}
@@ -26,9 +26,9 @@
                     {{--</li><br/>--}}
                     {{----}}
 
-                </div>
+                {{--</div>--}}
 
-            </div>
+            {{--</div>--}}
 
 
             @if (Auth::check())
