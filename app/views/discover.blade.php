@@ -14,7 +14,7 @@
                                 <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
                                         <img class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
                                         <div class="card-body">
-                                            <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                                            <center><i style="color:black" class="far fa-file-alt"></i><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
                                         </div>
                                     </div></a>
                             </div>
@@ -26,6 +26,7 @@
                                 <div class="card">
                                     <div class="card-body" style="color: black">
                                         <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                        <i style="color:black" class="far fa-portrait"></i>
                                         <p class="card-text">{{{ $post->text }}}</p>
                                     </div>
                                 </div>
@@ -37,6 +38,7 @@
                                             <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
                                             <div class="card-body" style="color: black">
                                                 <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                                <i style="color:black" class="far fa-image"></i>
                                                 <p class="card-text">{{{ $post->text }}}</p>
                                             </div>
                                         </div>
