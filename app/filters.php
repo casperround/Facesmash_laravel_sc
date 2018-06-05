@@ -70,6 +70,23 @@ Route::filter('guest', function()
 	if (Auth::check()) return Redirect::to('/');
 });
 
+Route::filter('auth.admin', function()
+{
+    if (Auth::check())
+    {
+        if (Auth::user()->role != "admin")
+        {
+            return Redirect::route("index");
+        }
+    } else
+    {
+        return Redirect::route("index");
+    }
+});
+
+Route::when('admin/*', 'auth.admin');
+
+
 /*
 |--------------------------------------------------------------------------
 | CSRF Protection Filter
