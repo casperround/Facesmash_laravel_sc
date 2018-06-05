@@ -62,7 +62,7 @@
                         </div>
 
                         <button type="submit" class="btn purp-button">Post</button>
-                        {{ Form::token() }}
+
                 </div>
                 <div class="col">
                         <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
@@ -83,6 +83,7 @@
                                 }
                             }
                         </script>
+                    {{ Form::token() }}
                 </div>
             </div>
             </form>
