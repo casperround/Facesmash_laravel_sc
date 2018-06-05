@@ -33,7 +33,7 @@
                                 </button>
                             </div>
                             <div class="modal-body" style="color: black">
-                                <form action="{{ URL::route("pages.userPagesNewPage") }}" method="POST">
+                                <form enctype="multipart/form-data"  action="{{ URL::route("pages.userPagesNewPage") }}" method="POST">
 
                                     <div class="form-group">
                                         <label for="unique_pagename">Page Name</label>
