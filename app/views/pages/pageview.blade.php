@@ -64,7 +64,11 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
-                                                    <span>{{Auth::user()->username}}</span>
+                                                    @if ($post->author_id == $pages->owner_id)
+                                                        <span>{{ $pages->unique_pagename }}</span>
+                                                    @else
+                                                        <span>{{Auth::user()->username}}</span>
+                                                    @endif
                                                 </div>
                                                 <div class="col-2">
                                                     <span>{{ $post->post_date }}</span>
