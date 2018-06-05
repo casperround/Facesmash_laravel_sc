@@ -19,7 +19,6 @@
                                             </center>
                                         </div>
                                     </div>
-                                @endforeach
                                     <div class="Post_Container">
                                         <form enctype="multipart/form-data" action="{{ URL::route("pages.createNewPost") }}" method="POST">
                                             <div class="row">
@@ -58,6 +57,8 @@
                                             </div>
                                         </form>
                                     </div>
+                                @endforeach
+
                         </div>
 
                         @if (Auth::check())
