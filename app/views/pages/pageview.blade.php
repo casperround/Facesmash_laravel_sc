@@ -6,7 +6,7 @@
             @endif
 
 
-            @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->get() as $pages)
+            @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->limit(1)->get() as $pages)
                 <div class="card">
                     <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($pages->page_img_path) }}" alt="Card image cap">
                     <div class="card-body">
