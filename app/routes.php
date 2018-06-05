@@ -134,6 +134,10 @@ Route::post('/pages/userPagesNewPage', [
     "as" => "pages.userPagesNewPage",
     "uses" => "DefaultController@userPagesNewPage"
 ]);
+Route::post('/pages/createNewPost', [
+    "as" => "pages.createNewPost",
+    "uses" => "DefaultController@pagesPageFormPost"
+]);
 //==============================================
 // Groups Routes
 //==============================================
