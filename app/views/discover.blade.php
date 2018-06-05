@@ -26,7 +26,7 @@
                                 <div class="card">
                                     <div class="card-body" style="color: black">
                                         <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
-                                        <i style="color:black" class="far fa-portrait"></i>
+                                        <i style="color:black" class="far fa-pencil-alt"></i>
                                         <p class="card-text">{{{ $post->text }}}</p>
                                     </div>
                                 </div>
