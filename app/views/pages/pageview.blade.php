@@ -33,7 +33,6 @@
             {{--</div>--}}
 
 
-            @if (Auth::check())
         </div>
     @endif
 @stop
