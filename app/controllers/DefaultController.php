@@ -412,8 +412,9 @@ class DefaultController extends BaseController {
 
         }
 
-        return Redirect::route("home");
-
+        return Redirect::route("pages.pageview", [
+            "unique_pagename" => $unique_pagename
+        ]);
     }
 
 
