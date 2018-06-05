@@ -147,7 +147,7 @@ class DefaultController extends BaseController {
 
         }
 
-        elseif (Input::has("home_post")) {
+        else {
 
             $home_post = Input::get("home_post");
             $author_id = Auth::user()->id;
