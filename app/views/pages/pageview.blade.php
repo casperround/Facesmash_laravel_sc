@@ -10,7 +10,6 @@
                         @endif
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                                 @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->limit(1)->get() as $pages)
-                                    $relation_id = $pages->relation_id
                                     <div class="card">
                                         <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($pages->page_img_path) }}" alt="Card image cap">
                                         <div class="card-body">
@@ -53,7 +52,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                @foreach(Posts::where("relation_id", "=", $relation_id)->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+                                @foreach(Posts::where("relation_id", "=", $pages->relation_id)->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
                                     @if ($post->media_type == 'text')
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
