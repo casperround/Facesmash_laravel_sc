@@ -217,42 +217,107 @@ class DefaultController extends BaseController {
         return View::make("pages.userpage");
     }
     public function userPagesNewPage() {
+        if (Input::hasFile("file_upload_profile") OR Input::hasFile("file_upload_banner")) {
+            $validator = Validator::make(Input::all(), [
+                "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
+            ]);
+            if ($validator->fails())
+            {
+                return Redirect::route("pages.userpage")->withErrors($validator)->withInput();
+            }
 
-        $validator = Validator::make(Input::all(), [
-            "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
-        ]);
-        if ($validator->fails())
-        {
-            return Redirect::route("pages.userpage")->withErrors($validator)->withInput();
+            //==============================================
+            //Profile Img upload
+            //==============================================
+            $savePath_profile = 'data_store/post_media/';
+            $file_profile = Input::file('file_upload_profile');
+            $fileExtension_profile = $file_profile->getClientOriginalExtension();
+            $filename_profile = $uid . '.' . $file_profile->getClientOriginalExtension();
+            $file_profile->move($savePath_profile, $filename_profile);
+            $page_img_path = $savePath_profile . $filename_profile;
+            $file_extension_profile = $fileExtension_profile;
+            //==============================================
+            //Banner Img upload
+            //==============================================
+            $savePath_banner = 'data_store/post_media/';
+            $file_banner = Input::file('file_upload_banner');
+            $fileExtension_banner = $file_banner->getClientOriginalExtension();
+            $filename_banner = $uid . '.' . $file_banner->getClientOriginalExtension();
+            $file_banner->move($savePath_banner, $filename_banner);
+            $banner_img_path = $savePath_banner . $filename_banner;
+            $file_extension_banner = $fileExtension_banner;
+
+            $unique_pagename = Input::get("unique_pagename");
+            $uid = str_random(10);
+            $owner_id = Auth::user()->id;
+            $about = Input::get("about");
+            $website = Input::get("website");
+            $twitter = Input::get("twitter");
+            $facebook = Input::get("facebook");
+            $youtube = Input::get("youtube");
+            $category = Input::get("category");
+            $post_time = date("H:i:s");
+            $post_date = date("d-m-Y");
+            $visibility = Input::get("visibility");
+
+            $page_img_path = Input::get("page_img_path");
+            $file_extension_profile = Input::get("file_extension_profile");
+
+            $banner_img_path = Input::get("banner_img_path");
+            $file_extension_banner = Input::get("file_extension_banner");
+
+
+            Pages::create([
+                "unique_pagename" => $unique_pagename,
+                "uid" => $uid,
+                "owner_id" => $owner_id,
+                "about" => $about,
+                "website" => $website,
+                "twitter" => $twitter,
+                "facebook" => $facebook,
+                "youtube" => $youtube,
+                "category" => $category,
+                "post_time" => $post_time,
+                "visibility" => $visibility,
+                "post_date" => $post_date,
+                "page_img_path" => $page_img_path,
+                "file_extension_profile" => $file_extension_profile,
+                "banner_img_path" => $banner_img_path,
+                "file_extension_banner" => $file_extension_banner
+            ]);
+            return Redirect::route("pages.userpage");
         }
-        $unique_pagename = Input::get("unique_pagename");
-        $uid = str_random(10);
-        $owner_id = Auth::user()->id;
-        $about = Input::get("about");
-        $website = Input::get("website");
-        $twitter = Input::get("twitter");
-        $facebook = Input::get("facebook");
-        $youtube = Input::get("youtube");
-        $category = Input::get("category");
-        $post_time = date("H:i:s");
-        $post_date = date("d-m-Y");
-        $visibility = Input::get("visibility");
 
-        Pages::create([
-            "unique_pagename" => $unique_pagename,
-            "uid" => $uid,
-            "owner_id" => $owner_id,
-            "about" => $about,
-            "website" => $website,
-            "twitter" => $twitter,
-            "facebook" => $facebook,
-            "youtube" => $youtube,
-            "category" => $category,
-            "post_time" => $post_time,
-            "visibility" => $visibility,
-            "post_date" => $post_date
-        ]);
-        return Redirect::route("pages.userpage");
+        else {
+
+            $home_post = Input::get("home_post");
+            $author_id = Auth::user()->id;
+            $post_id = str_random(10);
+            $media_type = "text";
+            $post_time = date("H:i:s");
+            $post_date = date("d-m-Y");
+            $visibility = Input::get("visibility");
+
+            Posts::create([
+                "post_id" => $post_id,
+                "author_id" => $author_id,
+                "text" => $home_post,
+                "post_time" => $post_time,
+                "post_date" => $post_date,
+                "visibility" => $visibility,
+                "media_type" => $media_type
+            ]);
+
+        }
+
+
+
+
+
+
+
+
+
     }
     public function pagesviewPage($unique_pagename) {
         return View::make("pages.pageview", [
