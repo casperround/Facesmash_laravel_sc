@@ -119,7 +119,7 @@
                     <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                         <div class="row" style="width:100%;margin:0px;position: relative;">
                             <div class="col-1">
-                                <img style="width: 100%;height: auto;padding: 10px;" class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
+                                <img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
                             </div>
                             <div class="col-2">
                                 <span>{{Auth::user()->username}}</span>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="card-group" style="color:black;">
                             <div class="card">
-                                <img src="{{ $post->file_path }}">
+                                <img style="width: 100%;height: auto;padding: 10px;" src="{{ $post->file_path }}">
                             </div>
                         </div>
                     </div>
