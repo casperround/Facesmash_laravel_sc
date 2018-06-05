@@ -33,7 +33,7 @@
                     <div class="m-stack m-stack--ver m-stack--general">
                         <div class="m-stack__item m-stack__item--middle m-brand__logo">
                             <a href="index.html" class="m-brand__logo-wrapper">
-                                <img alt="" src="{{ URL::to("") }}/assets/demo/demo12/media/img/logo/logo.png"/>
+                                <img alt="" height="50" style="margin-left: 60px" src="{{ URL::to("/assets/img/logo-whiteonly.png") }}"/>
                             </a>
                         </div>
                         <div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -143,7 +143,7 @@
         </div>
     </div>
 </div>
-<script src="{{ URL::to("/assets/staff_assets/base/vendors.bundle.js") }}" type="text/javascript"></script>
+<script src="{{ URL::to("/assets/staff_assets/vendors/base/vendors.bundle.js") }}" type="text/javascript"></script>
 <script src="{{ URL::to("/assets/staff_assets/demo/demo12/base/scripts.bundle.js") }}" type="text/javascript"></script>
 </body>
 </html>
