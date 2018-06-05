@@ -120,6 +120,7 @@ class DefaultController extends BaseController {
             $author_id = Auth::user()->id;
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
+            $relation = "feed";
             $visibility = Input::get("visibility");
 
 
@@ -131,6 +132,7 @@ class DefaultController extends BaseController {
                 "post_date" => $post_date,
                 "visibility" => $visibility,
                 "file_path" => $filePath,
+                "relation" => $relation,
                 "file_extension" => $fileExtension,
                 "media_type" => $media_type
             ]);
@@ -145,6 +147,7 @@ class DefaultController extends BaseController {
             $media_type = "text";
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
+            $relation = "feed";
             $visibility = Input::get("visibility");
 
             Posts::create([
@@ -153,6 +156,7 @@ class DefaultController extends BaseController {
                 "text" => $home_post,
                 "post_time" => $post_time,
                 "post_date" => $post_date,
+                "relation" => $relation,
                 "visibility" => $visibility,
                 "media_type" => $media_type
             ]);
@@ -362,7 +366,7 @@ class DefaultController extends BaseController {
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
-            $relation = "feed";
+            $relation = "page";
             $relation_id = Input::get("relation_id");
 
 
@@ -391,6 +395,8 @@ class DefaultController extends BaseController {
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
+            $relation = "page";
+            $relation_id = Input::get("relation_id");
 
             Posts::create([
                 "post_id" => $post_id,
@@ -399,6 +405,8 @@ class DefaultController extends BaseController {
                 "post_time" => $post_time,
                 "post_date" => $post_date,
                 "visibility" => $visibility,
+                "relation" => $relation,
+                "relation_id" => $relation_id,
                 "media_type" => $media_type
             ]);
 
