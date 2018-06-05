@@ -230,20 +230,22 @@ class DefaultController extends BaseController {
             //==============================================
             //Profile Img upload
             //==============================================
+            $uidp = str_random(10);
             $savePath_profile = 'data_store/post_media/';
             $file_profile = Input::file('file_upload_profile');
             $fileExtension_profile = $file_profile->getClientOriginalExtension();
-            $filename_profile = $uid . '.' . $file_profile->getClientOriginalExtension();
+            $filename_profile = $uidp . '.' . $file_profile->getClientOriginalExtension();
             $file_profile->move($savePath_profile, $filename_profile);
             $page_img_path = $savePath_profile . $filename_profile;
             $file_extension_profile = $fileExtension_profile;
             //==============================================
             //Banner Img upload
             //==============================================
+            $uidb = str_random(10);
             $savePath_banner = 'data_store/post_media/';
             $file_banner = Input::file('file_upload_banner');
             $fileExtension_banner = $file_banner->getClientOriginalExtension();
-            $filename_banner = $uid . '.' . $file_banner->getClientOriginalExtension();
+            $filename_banner = $uidb . '.' . $file_banner->getClientOriginalExtension();
             $file_banner->move($savePath_banner, $filename_banner);
             $banner_img_path = $savePath_banner . $filename_banner;
             $file_extension_banner = $fileExtension_banner;
