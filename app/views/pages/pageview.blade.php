@@ -18,17 +18,17 @@
                 </div>
             @endforeach
             {{--<div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">--}}
-                {{--<div class="card-columns">--}}
+            {{--<div class="card-columns">--}}
 
-                    {{--<a href="#'. $youtube_load['uid'] .'" title="'. $youtube_load['title'] .'">--}}
-                    {{--<img style="width:100%;height:auto;" src="'. $youtube_load['thumbnail'] .'" alt="'. $youtube_load['title'] .'" class="img-responsive" height="130px" />--}}
-                    {{--<h2>'. $youtube_load['title'] .'</h2>--}}
-                    {{--<span class="glyphicon glyphicon-play-circle"></span>--}}
-                    {{--</a>--}}
-                    {{--</li><br/>--}}
-                    {{----}}
+            {{--<a href="#'. $youtube_load['uid'] .'" title="'. $youtube_load['title'] .'">--}}
+            {{--<img style="width:100%;height:auto;" src="'. $youtube_load['thumbnail'] .'" alt="'. $youtube_load['title'] .'" class="img-responsive" height="130px" />--}}
+            {{--<h2>'. $youtube_load['title'] .'</h2>--}}
+            {{--<span class="glyphicon glyphicon-play-circle"></span>--}}
+            {{--</a>--}}
+            {{--</li><br/>--}}
+            {{----}}
 
-                {{--</div>--}}
+            {{--</div>--}}
 
             {{--</div>--}}
 
