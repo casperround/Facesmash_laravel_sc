@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-4">
-            <a href="{{ URL::route("discover.photo") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures</button></a>
+            <a href="{{ URL::route("discover.photo") }}"><button class="btn btn-outline-info" style="width:100%;">Pictures<center><i style="color:#ED5565" class="far fa-file-alt"></i></center></button></a>
         </div>
         <div class="col-4">
             <a href="{{ URL::route("discover.video") }}"><button class="btn btn-outline-info" style="width:100%;">Videos</button></a>
