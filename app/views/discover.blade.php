@@ -22,10 +22,12 @@
                         @endif
                         @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
                                 <div class="col-md">
-                                    <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
-                                    <div class="card-body" style="color: black">
-                                        <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
-                                        <p class="card-text">{{{ $post->text }}}</p>
+                                    <div class="card">
+                                        <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
+                                        <div class="card-body" style="color: black">
+                                            <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                            <p class="card-text">{{{ $post->text }}}</p>
+                                        </div>
                                     </div>
                                 </div>
                         @endif
