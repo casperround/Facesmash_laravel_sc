@@ -9,7 +9,8 @@
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                 @include("includes.discover-top")
                 <div class="card-columns">
-                    @foreach(Posts::all() as $post)
+                        @foreach(Posts::where("visibility", "=", "4")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+
                         @if ($post->media_type == 'text')
                         <div class="col-md">
                             <div class="card">
