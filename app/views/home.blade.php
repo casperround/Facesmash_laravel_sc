@@ -130,13 +130,13 @@
 
                         </div>
                         <div class="card-group" style="color:black;">
-                            <div class="card">
-                                <img src="{{ $post->file_path }}">
+                            <div class="card" style="padding:15px;">
+                                {{ $post->text }}
                             </div>
                         </div>
                         <div class="card-group" style="color:black;">
-                            <div class="card" style="padding:15px;">
-                                {{ $post->text }}
+                            <div class="card">
+                                <img src="{{ $post->file_path }}">
                             </div>
                         </div>
                     </div>
