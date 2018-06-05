@@ -184,19 +184,6 @@ class DefaultController extends BaseController {
         return View::make("discover");
     }
 
-
-
-
-    public function userVideosPage() {
-        return View::make("videos.uservideo");
-    }
-    public function videosviewPage($unique_videoname) {
-        return View::make("videos.videoview", [
-            "unique_videoname" => $unique_videoname
-        ]);
-
-
-    }
 //==============================================
 //Discover Channel Controller
 //==============================================
