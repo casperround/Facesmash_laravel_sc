@@ -217,6 +217,7 @@ class DefaultController extends BaseController {
         return View::make("pages.userpage");
     }
     public function userPagesNewPage() {
+
         if (Input::hasFile("file_upload_profile") OR Input::hasFile("file_upload_banner")) {
             $validator = Validator::make(Input::all(), [
                 "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
@@ -289,25 +290,41 @@ class DefaultController extends BaseController {
         }
 
         else {
-
-            $home_post = Input::get("home_post");
-            $author_id = Auth::user()->id;
-            $post_id = str_random(10);
-            $media_type = "text";
+            $validator = Validator::make(Input::all(), [
+                "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
+            ]);
+            if ($validator->fails())
+            {
+                return Redirect::route("pages.userpage")->withErrors($validator)->withInput();
+            }
+            $unique_pagename = Input::get("unique_pagename");
+            $uid = str_random(10);
+            $owner_id = Auth::user()->id;
+            $about = Input::get("about");
+            $website = Input::get("website");
+            $twitter = Input::get("twitter");
+            $facebook = Input::get("facebook");
+            $youtube = Input::get("youtube");
+            $category = Input::get("category");
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
 
-            Posts::create([
-                "post_id" => $post_id,
-                "author_id" => $author_id,
-                "text" => $home_post,
+            Pages::create([
+                "unique_pagename" => $unique_pagename,
+                "uid" => $uid,
+                "owner_id" => $owner_id,
+                "about" => $about,
+                "website" => $website,
+                "twitter" => $twitter,
+                "facebook" => $facebook,
+                "youtube" => $youtube,
+                "category" => $category,
                 "post_time" => $post_time,
-                "post_date" => $post_date,
                 "visibility" => $visibility,
-                "media_type" => $media_type
+                "post_date" => $post_date
             ]);
-
+            return Redirect::route("pages.userpage");
         }
 
 
