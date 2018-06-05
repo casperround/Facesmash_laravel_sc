@@ -412,7 +412,7 @@ class DefaultController extends BaseController {
 
         }
 
-        return Redirect::route("pages.pageview", [
+        return Redirect::route("pagesview", [
             "unique_pagename" => Input::get("unique_pagename")
         ]);
     }
