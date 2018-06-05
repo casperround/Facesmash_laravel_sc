@@ -32,7 +32,7 @@
                 <div class="m-stack__item m-brand  m-brand--skin-dark ">
                     <div class="m-stack m-stack--ver m-stack--general">
                         <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                            <a href="index.html" class="m-brand__logo-wrapper">
+                            <a href="{{ URL::route("admin.index") }}" class="m-brand__logo-wrapper">
                                 <img alt="" height="50" style="margin-left: 60px" src="{{ URL::to("/assets/img/logo-whiteonly.png") }}"/>
                             </a>
                         </div>
@@ -100,7 +100,7 @@
                                                             </span>
                                                         </li>
                                                         <li class="m-nav__item">
-                                                            <a href="snippets/pages/user/login-1.html" class="btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+                                                            <a href="{{ URL::route("auth.logout") }}" class="btn m-btn--pill btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
                                                                 Logout
                                                             </a>
                                                         </li>
@@ -125,7 +125,7 @@
             <div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " m-menu-vertical="1" m-menu-scrollable="0" m-menu-dropdown-timeout="500"  >
                 <ul class="m-menu__nav ">
                     <li class="m-menu__item " aria-haspopup="true" >
-                        <a href="index.html" class="m-menu__link ">
+                        <a href="{{ URL::route("admin.index") }}" class="m-menu__link ">
                             <span class="m-menu__item-here"></span>
                             <i class="m-menu__link-icon flaticon-line-graph"></i>
                             <span class="m-menu__link-text">
