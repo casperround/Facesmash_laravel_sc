@@ -226,7 +226,7 @@ class DefaultController extends BaseController {
             {
                 return Redirect::route("pages.userpage")->withErrors($validator)->withInput();
             }
-
+            $uid = str_random(10);
             //==============================================
             //Profile Img upload
             //==============================================
@@ -249,7 +249,6 @@ class DefaultController extends BaseController {
             $file_extension_banner = $fileExtension_banner;
 
             $unique_pagename = Input::get("unique_pagename");
-            $uid = str_random(10);
             $owner_id = Auth::user()->id;
             $about = Input::get("about");
             $website = Input::get("website");
