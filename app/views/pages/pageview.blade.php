@@ -95,7 +95,7 @@
                                             </div>
                                             <div class="card-group" style="color:black;">
                                                 <div class="card">
-                                                    <img style="width: 100%;height: auto;padding: 10px;" src="{{ $post->file_path }}">
+                                                    <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
                                             </div>
                                         </div>
