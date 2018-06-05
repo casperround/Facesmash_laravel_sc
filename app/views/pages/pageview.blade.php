@@ -15,7 +15,7 @@
                                         <div class="card-body">
                                             <center>
                                                 <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
-                                                <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $pages->relation_id }}</p>
+                                                <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $pages->unique_pagename }}</p>
                                             </center>
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                @foreach(Posts::where("relation_id", "=", $pages->relation_id)->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+                                @foreach(Posts::where("relation_id", "=", $pages->id)->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
                                     @if ($post->media_type == 'text')
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
