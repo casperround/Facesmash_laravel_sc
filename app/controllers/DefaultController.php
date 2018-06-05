@@ -129,7 +129,6 @@ class DefaultController extends BaseController {
             $filePath = $savePath . $filename;
 
             $media_type = $fileExtension;
-
             $home_post = Input::get("home_post");
             $author_id = Auth::user()->id;
             $post_time = date("H:i:s");
@@ -148,7 +147,7 @@ class DefaultController extends BaseController {
 
         }
 
-        if (Input::has("home_post")) {
+        elseif (Input::has("home_post")) {
 
             $home_post = Input::get("home_post");
             $author_id = Auth::user()->id;
