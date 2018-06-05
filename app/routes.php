@@ -209,3 +209,10 @@ Route::post('/videos/userVideosNewPage', [
     "as" => "videos.userVideosNewPage",
     "uses" => "DefaultController@userVideosNewPage"
 ]);
+//==============================================
+// Admin Routes
+//==============================================
+Route::get('/admin', [
+    "as" => "admin.index",
+    "uses" => "AdminController@index"
+]);
