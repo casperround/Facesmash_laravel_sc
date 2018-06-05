@@ -7,7 +7,7 @@
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                 @include("includes.discover-top")
                 <div class="card-columns">
-                    @foreach(Posts::where("media_type", "=", "jpg", "OR", "media_type", "=", "JPG", "OR", "media_type", "=", "png", "OR" "media_type", "=", "PNG")->get() as $post)
+                    @foreach(Posts::where("media_type", "=", "jpg")->get() as $post)
                         <div class="col-md">
                             <div class="card">
                                 <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
