@@ -178,26 +178,58 @@ class DefaultController extends BaseController {
     }
 
 //==============================================
-//Discover Page Controller
+//Discover Controller
 //==============================================
     public function discoverPage() {
         return View::make("discover");
     }
+
+
+
+
+    public function userVideosPage() {
+        return View::make("videos.uservideo");
+    }
+    public function videosviewPage($unique_videoname) {
+        return View::make("videos.videoview", [
+            "unique_videoname" => $unique_videoname
+        ]);
+
+
+    }
+//==============================================
+//Discover Channel Controller
+//==============================================
     public function discoverChannelPage() {
         return View::make("discover.channel");
     }
+//==============================================
+//Discover Gif Controller
+//==============================================
     public function discoverGifPage() {
         return View::make("discover.gif");
     }
+//==============================================
+//Discover Group Controller
+//==============================================
     public function discoverGroupPage() {
         return View::make("discover.group");
     }
+//==============================================
+//Discover Page Controller
+//==============================================
     public function discoverPagesPage() {
         return View::make("discover.page");
     }
+//==============================================
+//Discover Photo Controller
+//==============================================
     public function discoverPhotoPage() {
-        return View::make("discover.photos");
+        return View::make("discover.photo");
     }
+//==============================================
+//Discover Video Controller
+//==============================================
     public function discoverVideoPage() {
         return View::make("discover.videos");
     }

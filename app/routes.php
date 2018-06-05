@@ -69,35 +69,50 @@ Route::get('/contact', [
     "uses" => "DefaultController@contactPage"
 ]);
 //==============================================
-//Discover Page Routes
+//Discover Routes
 //==============================================
-
-
 Route::get('/discover', [
     "as" => "discover",
     "uses" => "DefaultController@discoverPage"
 ]);
-
+//==============================================
+//Discover Channel Routes
+//==============================================
 Route::get('/discover/channel', [
     "as" => "discover.channel",
     "uses" => "DefaultController@discoverChannelPage"
 ]);
+//==============================================
+//Discover Gif Routes
+//==============================================
 Route::get('/discover/gif', [
     "as" => "discover.gif",
     "uses" => "DefaultController@discoverGifPage"
 ]);
+//==============================================
+//Discover Group Routes
+//==============================================
 Route::get('/discover/group', [
     "as" => "discover.group",
     "uses" => "DefaultController@discoverGroupPage"
 ]);
+//==============================================
+//Discover Page Routes
+//==============================================
 Route::get('/discover/page', [
     "as" => "discover.page",
     "uses" => "DefaultController@discoverPagesPage"
 ]);
+//==============================================
+//Discover Photo Routes
+//==============================================
 Route::get('/discover/photo', [
     "as" => "discover.photo",
     "uses" => "DefaultController@discoverPhotoPage"
 ]);
+//==============================================
+//Discover Video Routes
+//==============================================
 Route::get('/discover/video', [
     "as" => "discover.video",
     "uses" => "DefaultController@discoverVideoPage"
