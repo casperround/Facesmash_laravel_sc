@@ -15,6 +15,7 @@
                                         <div class="card-body">
                                             <center>
                                                 <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
+                                                <i style="color:black" class="far fa-file-alt"></i>
                                                 <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $pages->unique_pagename }}</p>
                                             </center>
                                         </div>
