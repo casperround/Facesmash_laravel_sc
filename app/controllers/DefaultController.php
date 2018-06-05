@@ -363,7 +363,7 @@ class DefaultController extends BaseController {
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
             $relation = "feed";
-            $relation_id = ;
+            $relation_id = Input::get("relation_id");
 
 
             Posts::create([
