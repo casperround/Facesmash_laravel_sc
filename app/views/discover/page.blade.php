@@ -9,7 +9,7 @@
                 <div class="card-columns">
                     @foreach(Pages::all() as $pages)
                         <div class="col-md">
-                            <div class="card">
+                            <div class="card" style="margin-bottom:0px;">
                                 <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
                                         <img class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
                                         <div class="card-body">
