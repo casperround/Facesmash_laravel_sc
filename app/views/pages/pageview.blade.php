@@ -68,6 +68,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
+                                                    <i style="color:#FFCE54" class="fas fa-pencil-alt"></i>
                                                     @if ($post->author_id == $pages->owner_id)
                                                         <span>{{ $pages->unique_pagename }}</span>
                                                     @else
