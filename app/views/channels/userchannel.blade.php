@@ -7,7 +7,7 @@
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
 
 
-                <div class="info" style="margin-bottom: 10px">
+                <div class="info">
                     <div class="buttons">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Create a new channel
