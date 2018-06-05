@@ -66,23 +66,7 @@
                 </div>
                 <div class="col">
                         <input name="file_upload" class="form-control" type="file" >
-                        <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image" />
-                        <script>
-                            function readURL(input) {
-                                if (input.files && input.files[0]) {
-                                    var reader = new FileReader();
 
-                                    reader.onload = function (e) {
-                                        $('#blah')
-                                            .attr('src', e.target.result)
-                                            .width(150)
-                                            .height(auto);
-                                    };
-
-                                    reader.readAsDataURL(input.files[0]);
-                                }
-                            }
-                        </script>
                     {{ Form::token() }}
                 </div>
             </div>
