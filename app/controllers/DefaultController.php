@@ -362,6 +362,8 @@ class DefaultController extends BaseController {
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
+            $relation = "feed";
+            $relation_id = ;
 
 
             Posts::create([
@@ -373,6 +375,8 @@ class DefaultController extends BaseController {
                 "visibility" => $visibility,
                 "file_path" => $filePath,
                 "file_extension" => $fileExtension,
+                "relation" => $relation,
+                "relation_id" => $relation_id,
                 "media_type" => $media_type
             ]);
 

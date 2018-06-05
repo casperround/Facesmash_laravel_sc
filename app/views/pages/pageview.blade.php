@@ -28,6 +28,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
+                                                    <input name="relation_id" type="hidden" value="{{ $pages->id }}" >
                                                     <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
                                                     <script>
                                                         function readURL(input) {
