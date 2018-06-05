@@ -6,7 +6,11 @@
  * Time: 22:17
  */
 
-class AdminController
+class AdminController extends BaseController
 {
+
+    public function index() {
+        return View::make("admin.index");
+    }
 
 }
