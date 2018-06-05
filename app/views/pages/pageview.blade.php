@@ -60,7 +60,7 @@
                                                     @if ($post->author_id == $pages->owner_id)
                                                     <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($pages->page_img_path) }}"/>
                                                     @else
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
+                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{User::where("id", "=", $post->author_id)->pluck("profile_img_path");}}"/>
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
@@ -89,7 +89,7 @@
                                                     @if ($post->author_id == $pages->owner_id)
                                                         <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($pages->page_img_path) }}"/>
                                                     @else
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to(Auth::user()->profile_img_path) }}"/>
+                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{User::where("id", "=", $post->author_id)->pluck("profile_img_path");}}"/>
                                                     @endif                                                </div>
                                                 <div class="col-2">
                                                     @if ($post->author_id == $pages->owner_id)
