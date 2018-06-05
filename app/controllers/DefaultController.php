@@ -142,7 +142,7 @@ class DefaultController extends BaseController {
                 "text" => $home_post,
                 "post_time" => $post_time,
                 "post_date" => $post_date,
-\1                "visibility" => $visibility,
+                "visibility" => $visibility,
                 "file_path" => $filePath,
                 "file_extension" => $fileExtension,
                 "media_type" => $media_type
