@@ -218,7 +218,7 @@ class DefaultController extends BaseController {
     }
     public function userPagesNewPage() {
 
-        if (Input::hasFile("file_upload_banner")) {
+        if (Input::hasFile("file_upload_banner") OR Input::hasFile("file_upload_profile")) {
             $validator = Validator::make(Input::all(), [
                 "unique_pagename" => "required|min:2|max:16|unique:pages,unique_pagename"
             ]);
