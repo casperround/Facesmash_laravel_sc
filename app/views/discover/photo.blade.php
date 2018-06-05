@@ -12,8 +12,8 @@
                             <div class="card">
                                 <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
                                 <div class="card-body" style="color: black">
-                                    <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
-                                    <p class="card-text">{{{ $post->author_id }}}</p>
+                                    <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                    <p class="card-text">{{{ $post->text }}}</p>
                                 </div>
                             </div>
                         </div>
