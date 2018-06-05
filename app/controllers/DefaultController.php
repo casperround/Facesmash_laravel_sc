@@ -236,6 +236,7 @@ class DefaultController extends BaseController {
         $category = Input::get("category");
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
+        $visibility = Input::get("visibility");
 
         Pages::create([
             "unique_pagename" => $unique_pagename,
@@ -248,6 +249,7 @@ class DefaultController extends BaseController {
             "youtube" => $youtube,
             "category" => $category,
             "post_time" => $post_time,
+            "visibility" => $visibility,
             "post_date" => $post_date
         ]);
         return Redirect::route("pages.userpage");
@@ -289,6 +291,7 @@ class DefaultController extends BaseController {
         $category = Input::get("category");
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
+        $visibility = Input::get("visibility");
 
         Events::create([
             "unique_eventname" => $unique_eventname,
@@ -301,6 +304,7 @@ class DefaultController extends BaseController {
             "youtube" => $youtube,
             "category" => $category,
             "post_time" => $post_time,
+            "visibility" => $visibility,
             "post_date" => $post_date
         ]);
         return Redirect::route("events.userevent");
@@ -338,6 +342,7 @@ class DefaultController extends BaseController {
         $category = Input::get("category");
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
+        $visibility = Input::get("visibility");
 
         Groups::create([
             "unique_groupname" => $unique_groupname,
@@ -350,6 +355,7 @@ class DefaultController extends BaseController {
             "youtube" => $youtube,
             "category" => $category,
             "post_time" => $post_time,
+            "visibility" => $visibility,
             "post_date" => $post_date
         ]);
         return Redirect::route("groups.usergroup");
@@ -387,6 +393,7 @@ class DefaultController extends BaseController {
         $category = Input::get("category");
         $post_time = date("H:i:s");
         $post_date = date("d-m-Y");
+        $visibility = Input::get("visibility");
 
         Channels::create([
             "unique_channelname" => $unique_channelname,
@@ -399,6 +406,7 @@ class DefaultController extends BaseController {
             "youtube" => $youtube,
             "category" => $category,
             "post_time" => $post_time,
+            "visibility" => $visibility,
             "post_date" => $post_date
         ]);
         return Redirect::route("channels.userchannel");

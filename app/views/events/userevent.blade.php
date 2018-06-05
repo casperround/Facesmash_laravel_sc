@@ -68,7 +68,14 @@
                                         <label for="youtube">Youtube Channel Name</label>
                                         <input type="text" id="youtube" name="youtube" class="form-control" required>
                                     </div>
-
+                                    <div class="form-group">
+                                        <select class="form-control" name="visibility">
+                                            <option value="1">Public</option>
+                                            <option value="2">Friends & Friends of friends</option>
+                                            <option value="3">Friends</option>
+                                            <option value="4" selected>Only me</option>
+                                        </select>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="category">Page Category</label>
