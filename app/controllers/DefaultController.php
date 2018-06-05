@@ -133,6 +133,8 @@ class DefaultController extends BaseController {
             $author_id = Auth::user()->id;
             $post_time = date("H:i:s");
             $post_date = date("d-m-Y");
+            $visibility = Input::get("visibility");
+
 
             Posts::create([
                 "post_id" => $uid,
@@ -140,6 +142,7 @@ class DefaultController extends BaseController {
                 "text" => $home_post,
                 "post_time" => $post_time,
                 "post_date" => $post_date,
+\1                "visibility" => $visibility,
                 "file_path" => $filePath,
                 "file_extension" => $fileExtension,
                 "media_type" => $media_type
