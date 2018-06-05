@@ -88,7 +88,7 @@
             </div>
             </form>
         </div>
-        @foreach(Posts::where("author_id", "=", Auth::user()->id)->post_timeDescending()->get() as $post)
+        @foreach(Posts::where("author_id", "=", Auth::user()->id)->orderBy('post_time', 'DESC')->get() as $post)
             @if ($post->media_type == 'text')
             <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                 <div class="row" style="width:100%;margin:0px;position: relative;">
