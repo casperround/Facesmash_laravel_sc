@@ -138,7 +138,7 @@
                     <div class="col-md">
                         @foreach(Pages::where("owner_id", "=", Auth::user()->id)->get() as $pages)
                                     <a href="{{ URL::route("pagesview", $pages->unique_pagename) }}"><div class="card">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
                                     <div class="card-body">
                                         <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $pages->unique_pagename }}</p></center>
                                     </div>
