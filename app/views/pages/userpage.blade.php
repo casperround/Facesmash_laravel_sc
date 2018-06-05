@@ -106,12 +106,12 @@
                                                 reader.readAsDataURL(input.files[0]);
                                             }
                                         }
-                                    </script>
+                                    </script><br/>
                                     <label for="category">Page Photo</label>
-                                    <input name="file_upload_profile" class="form-control" type="file" onchange="readURL(this);" >
+                                    <input name="file_upload_profile" class="form-control" type="file" onchange="readURLL(this);" >
                                     <img id="profile" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
                                     <script>
-                                        function readURL(input) {
+                                        function readURLL(input) {
                                             if (input.files && input.files[0]) {
                                                 var reader = new FileReader();
 
