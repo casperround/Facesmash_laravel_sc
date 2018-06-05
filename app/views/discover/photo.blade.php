@@ -15,11 +15,6 @@
                                     <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
                                     <p class="card-text">{{{ $post->text }}}</p>
                                 </div>
-                                <div class="card-group" style="color:black;">
-                                    <div class="card">
-                                        <img style="width: 100%;height: auto;padding: 10px;" src="{{ $post->file_path }}">
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     @endforeach
