@@ -1,7 +1,7 @@
 @extends('layouts.public', ["title" => "My Pages", "sidebar" => false])
 
 @section("content")
-        <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+        <div class="col-12" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
 
 
             @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->limit(1)->get() as $pages)
