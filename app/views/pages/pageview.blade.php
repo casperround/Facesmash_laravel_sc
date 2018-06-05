@@ -7,7 +7,6 @@
                 <div class="container-fluid">
                     @endif
                     <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-                        @include("includes.discover-top")
                         <div class="card-columns">
                             @foreach(Pages::where("unique_pagename", "=", $unique_pagename)->limit(1)->get() as $pages)
                                 <div class="card">
