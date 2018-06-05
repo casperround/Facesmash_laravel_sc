@@ -10,8 +10,10 @@
                 <div class="card">
                     <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($pages->page_img_path) }}" alt="Card image cap">
                     <div class="card-body">
-                        <img class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
-                        <center><p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $pages->unique_pagename }}</p></center>
+                        <center>
+                            <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($pages->banner_img_path) }}" alt="Card image cap">
+                            <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $pages->unique_pagename }}</p>
+                        </center>
                     </div>
                 </div>
             @endforeach
