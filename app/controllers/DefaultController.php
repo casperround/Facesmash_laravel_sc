@@ -346,7 +346,7 @@ class DefaultController extends BaseController {
 
 
 
-    public function pagePageFormPost() {
+    public function pagesPageFormPost() {
 
         if (Input::hasFile("file_upload")) {
 
