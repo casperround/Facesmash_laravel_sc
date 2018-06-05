@@ -10,7 +10,14 @@ class AdminController extends BaseController
 {
 
     public function index() {
-        return View::make("admin.index");
+
+        $totalSiteUsers = User::all()->count();
+        $newest100Users = User::orderBy("id", "DESC")->limit(100)->get();
+
+        return View::make("admin.index", [
+            "totalSiteUsers" => $totalSiteUsers,
+            "newest100Users" => $newest100Users,
+        ]);
     }
 
 }
