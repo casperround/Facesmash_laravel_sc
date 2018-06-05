@@ -104,11 +104,6 @@
 
                 </div>
                 <div class="card-group" style="color:black;">
-                    <div class="card">
-                        <img src="">
-                    </div>
-                </div>
-                <div class="card-group" style="color:black;">
                     <div class="card" style="padding:15px;">
                         {{ $post->text }}
                     </div>
