@@ -38,7 +38,7 @@
                                             <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
                                             <div class="card-body" style="color: black">
                                                 <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
-                                                <center></center><i style="color:#48CFAD" class="far fa-image"></i></div>
+                                                <center><i style="color:#48CFAD" class="far fa-image"></i></center></div>
                                                 <p class="card-text">{{{ $post->text }}}</p>
                                             </div>
                                         </div>
