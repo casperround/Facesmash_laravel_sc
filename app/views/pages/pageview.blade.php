@@ -22,7 +22,7 @@
                                 @endforeach
                         </div>
                         <div class="Post_Container">
-                            <form enctype="multipart/form-data" action="{{ URL::route("page.createNewPost") }}" method="POST">
+                            <form enctype="multipart/form-data" action="{{ URL::route("pages.createNewPost") }}" method="POST">
                                 <div class="row">
                                     <div class="col-8">
                                         <textarea name="home_post" style="width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
