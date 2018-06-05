@@ -19,7 +19,9 @@
                                             </center>
                                         </div>
                                     </div>
-                                    <div class="Post_Container">
+                                @if (Auth::check())
+
+                                <div class="Post_Container">
                                         <form enctype="multipart/form-data" action="{{ URL::route("pages.createNewPost") }}" method="POST">
                                             <div class="row">
                                                 <div class="col-8">
@@ -52,6 +54,7 @@
                                             </div>
                                         </form>
                                     </div>
+                                @endif
                                 @foreach(Posts::where("relation_id", "=", $pages->id)->where("relation", "=", "page")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
                                     @if ($post->media_type == 'text')
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
