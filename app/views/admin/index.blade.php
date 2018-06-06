@@ -119,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="m-portlet m-portlet--full-height  m-portlet--unair">
                 <div class="m-portlet__head">
                     <div class="m-portlet__head-caption">
@@ -174,6 +174,62 @@
                         {{{ $discoverChannelViews['3dayVisitors'] }}},
                         {{{ $discoverChannelViews['yesterdayVisitors'] }}},
                         {{{ $discoverChannelViews['todayVisitors'] }}}
+                    ],
+                }, {
+                    label: 'Gif Views',
+                    fill: false,
+                    backgroundColor: "#00c622",
+                    borderColor: "#00C622",
+                    data: [
+                        {{{ $discoverGifViews['7dayVisitors'] }}},
+                        {{{ $discoverGifViews['6dayVisitors'] }}},
+                        {{{ $discoverGifViews['5dayVisitors'] }}},
+                        {{{ $discoverGifViews['4dayVisitors'] }}},
+                        {{{ $discoverGifViews['3dayVisitors'] }}},
+                        {{{ $discoverGifViews['yesterdayVisitors'] }}},
+                        {{{ $discoverGifViews['todayVisitors'] }}}
+                    ],
+                }, {
+                    label: 'Group Views',
+                    fill: false,
+                    backgroundColor: "#c6b600",
+                    borderColor: "#c6b600",
+                    data: [
+                        {{{ $discoverGroupViews['7dayVisitors'] }}},
+                        {{{ $discoverGroupViews['6dayVisitors'] }}},
+                        {{{ $discoverGroupViews['5dayVisitors'] }}},
+                        {{{ $discoverGroupViews['4dayVisitors'] }}},
+                        {{{ $discoverGroupViews['3dayVisitors'] }}},
+                        {{{ $discoverGroupViews['yesterdayVisitors'] }}},
+                        {{{ $discoverGroupViews['todayVisitors'] }}}
+                    ],
+                }, {
+                    label: 'Page Views',
+                    fill: false,
+                    backgroundColor: "#c60393",
+                    borderColor: "#c60393",
+                    data: [
+                        {{{ $discoverPagesViews['7dayVisitors'] }}},
+                        {{{ $discoverPagesViews['6dayVisitors'] }}},
+                        {{{ $discoverPagesViews['5dayVisitors'] }}},
+                        {{{ $discoverPagesViews['4dayVisitors'] }}},
+                        {{{ $discoverPagesViews['3dayVisitors'] }}},
+                        {{{ $discoverPagesViews['yesterdayVisitors'] }}},
+                        {{{ $discoverPagesViews['todayVisitors'] }}}
+                    ],
+                }, {
+                    label: 'Photo Views',
+                    fill: false,
+                    backgroundColor: "#88aaff",
+                    borderColor: "#88aaff",
+                    data: [
+                        {{{ $discoverPhotoViews['7dayVisitors'] }}},
+                        {{{ $discoverPhotoViews['6dayVisitors'] }}},
+                        {{{ $discoverPhotoViews['5dayVisitors'] }}},
+                        {{{ $discoverPhotoViews['4dayVisitors'] }}},
+                        {{{ $discoverPhotoViews['3dayVisitors'] }}},
+                        {{{ $discoverPhotoViews['yesterdayVisitors'] }}},
+                        {{{ $discoverPhotoViews['todayVisitors'] }}}
                     ],
                 }]
             },
