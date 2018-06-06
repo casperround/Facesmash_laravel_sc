@@ -183,6 +183,10 @@ Route::post('/channels/userChannelsNewPage', [
     "as" => "channels.userChannelsNewPage",
     "uses" => "DefaultController@userChannelsNewPage"
 ]);
+Route::post('/channels/createNewPost', [
+    "as" => "channels.createNewPost",
+    "uses" => "DefaultController@channelsPageFormPost"
+]);
 //==============================================
 // Pictures Routes
 //==============================================
