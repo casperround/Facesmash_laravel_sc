@@ -428,8 +428,12 @@ class DefaultController extends BaseController {
 
 
     }
-    public function pagesviewPage($unique_pagename,$page_img_path,$id,$banner_img_path) {
-        return View::make("pages.pageview", [
+
+    public function pagesViewPage($unique_page) {
+
+        $page = Pages::where("unique_pagename", "=", $unique_page)->get();
+
+        return View::make("pageview", [
             "unique_pagename" => $unique_pagename,
             "page_img_path" => $page_img_path,
             "id" => $id,
@@ -437,7 +441,6 @@ class DefaultController extends BaseController {
         ]);
 
     }
-
 
 
     public function pagesPageFormPost() {
