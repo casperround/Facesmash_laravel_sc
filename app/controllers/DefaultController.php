@@ -228,6 +228,7 @@ class DefaultController extends BaseController {
         return View::make("pages.userpage", [
             "unique_pagename" => $unique_pagename,
             "page_img_path" => $page_img_path,
+            "id" => $id,
             "banner_img_path" => $banner_img_path
         ]);
     }
