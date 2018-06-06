@@ -70,6 +70,8 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label for="category">Visibility</label>
+
                                         <select class="form-control" name="visibility">
                                             <option value="1" selected>Public</option>
                                             <option value="2">Friends & Friends of friends</option>
