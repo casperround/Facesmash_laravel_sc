@@ -529,50 +529,131 @@ class DefaultController extends BaseController {
     }
     public function userChannelsNewPage() {
 
-        $validator = Validator::make(Input::all(), [
-            "unique_channelname" => "required|min:2|max:16|unique:channels,unique_channelname"
-        ]);
-        if ($validator->fails())
-        {
-            return Redirect::route("channels.userchannel")->withErrors($validator)->withInput();
-        }
-        $unique_channelname = Input::get("unique_channelname");
-        $uid = str_random(10);
-        $owner_id = Auth::user()->id;
-        $about = Input::get("about");
-        $website = Input::get("website");
-        $twitter = Input::get("twitter");
-        $facebook = Input::get("facebook");
-        $youtube = Input::get("youtube");
-        $category = Input::get("category");
-        $post_time = date("H:i:s");
-        $post_date = date("d-m-Y");
-        $visibility = Input::get("visibility");
+        if (Input::hasFile("file_upload_banner") OR Input::hasFile("file_upload_profile")) {
+            $validator = Validator::make(Input::all(), [
+                "unique_channelname" => "required|min:2|max:16|unique:channels,unique_channelname"
+            ]);
+            if ($validator->fails())
+            {
+                return Redirect::route("channels.userchannel")->withErrors($validator)->withInput();
+            }
+            $uid = str_random(10);
+            //==============================================
+            //Profile Img upload
+            //==============================================
+            $uidp = str_random(10);
+            $savePath_profile = 'data_store/post_media/';
+            $file_profile = Input::file('file_upload_profile');
+            $fileExtension_profile = $file_profile->getClientOriginalExtension();
+            $filename_profile = $uidp . '.' . $file_profile->getClientOriginalExtension();
+            $file_profile->move($savePath_profile, $filename_profile);
+            $page_img_path = $savePath_profile . $filename_profile;
+            $file_extension_profile = $fileExtension_profile;
+            //==============================================
+            //Banner Img upload
+            //==============================================
+            $uidb = str_random(10);
+            $savePath_banner = 'data_store/post_media/';
+            $file_banner = Input::file('file_upload_banner');
+            $fileExtension_banner = $file_banner->getClientOriginalExtension();
+            $filename_banner = $uidb . '.' . $file_banner->getClientOriginalExtension();
+            $file_banner->move($savePath_banner, $filename_banner);
+            $banner_img_path = $savePath_banner . $filename_banner;
+            $file_extension_banner = $fileExtension_banner;
 
-        Channels::create([
-            "unique_channelname" => $unique_channelname,
-            "uid" => $uid,
-            "owner_id" => $owner_id,
-            "about" => $about,
-            "website" => $website,
-            "twitter" => $twitter,
-            "facebook" => $facebook,
-            "youtube" => $youtube,
-            "category" => $category,
-            "post_time" => $post_time,
-            "visibility" => $visibility,
-            "post_date" => $post_date
-        ]);
-        return Redirect::route("channels.userchannel");
+            $unique_channelname = Input::get("unique_channelname");
+            $owner_id = Auth::user()->id;
+            $about = Input::get("about");
+            $website = Input::get("website");
+            $twitter = Input::get("twitter");
+            $facebook = Input::get("facebook");
+            $youtube = Input::get("youtube");
+            $category = Input::get("category");
+            $post_time = date("H:i:s");
+            $channel_type = Input::get("channel_type");
+            $post_date = date("d-m-Y");
+            $visibility = Input::get("visibility");
+
+
+
+
+            Channels::create([
+                "unique_channelname" => $unique_channelname,
+                "uid" => $uid,
+                "owner_id" => $owner_id,
+                "about" => $about,
+                "website" => $website,
+                "twitter" => $twitter,
+                "facebook" => $facebook,
+                "youtube" => $youtube,
+                "category" => $category,
+                "post_time" => $post_time,
+                "visibility" => $visibility,
+                "post_date" => $post_date,
+                "channel_type" => $channel_type,
+                "page_img_path" => $page_img_path,
+                "file_extension_profile" => $file_extension_profile,
+                "banner_img_path" => $banner_img_path,
+                "file_extension_banner" => $file_extension_banner
+            ]);
+            return Redirect::route("channels.userchannel");
+        }
+
+        else {
+            $validator = Validator::make(Input::all(), [
+                "unique_channelname" => "required|min:2|max:16|unique:pages,unique_channelname"
+            ]);
+            if ($validator->fails())
+            {
+                return Redirect::route("channels.userchannel")->withErrors($validator)->withInput();
+            }
+            $unique_channelname = Input::get("unique_channelname");
+            $uid = str_random(10);
+            $owner_id = Auth::user()->id;
+            $about = Input::get("about");
+            $website = Input::get("website");
+            $twitter = Input::get("twitter");
+            $facebook = Input::get("facebook");
+            $youtube = Input::get("youtube");
+            $category = Input::get("category");
+            $post_time = date("H:i:s");
+            $post_date = date("d-m-Y");
+            $visibility = Input::get("visibility");
+            $channel_type = Input::get("channel_type");
+
+            Channels::create([
+                "unique_channelname" => $unique_channelname,
+                "uid" => $uid,
+                "owner_id" => $owner_id,
+                "about" => $about,
+                "website" => $website,
+                "twitter" => $twitter,
+                "facebook" => $facebook,
+                "youtube" => $youtube,
+                "category" => $category,
+                "post_time" => $post_time,
+                "visibility" => $visibility,
+                "channel_type" => $channel_type,
+                "post_date" => $post_date
+            ]);
+            return Redirect::route("channels.userchannel");
+        }
+
+
+
+
+
+
+
+
+
     }
     public function channelsviewPage($unique_channelname) {
         return View::make("channels.channelview", [
             "unique_channelname" => $unique_channelname
         ]);
 
-
     }
-
 //==============================================
 // Pictures Controller
 //==============================================

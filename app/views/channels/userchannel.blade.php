@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="category">Type of channel</label>
-                                        <select name="category" class="form-control">
+                                        <select name="channel_type" class="form-control">
                                             <option value="1" selected>Video</option>
                                             <option value="2">Photography</option>
                                             <option value="3">Music</option>
