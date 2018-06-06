@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::to("assets/css/style.css") }}">
 
     @include("includes.sitewidemeta")
+
+    @yield("in-head")
 </head>
 
 <body>
