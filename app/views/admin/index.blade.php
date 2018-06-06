@@ -231,6 +231,20 @@
                         {{{ $discoverPhotoViews['yesterdayVisitors'] }}},
                         {{{ $discoverPhotoViews['todayVisitors'] }}}
                     ],
+                }, {
+                    label: 'Video Views',
+                    fill: false,
+                    backgroundColor: "#ff5000",
+                    borderColor: "#ff5000",
+                    data: [
+                        {{{ $discoverVideoViews['7dayVisitors'] }}},
+                        {{{ $discoverVideoViews['6dayVisitors'] }}},
+                        {{{ $discoverVideoViews['5dayVisitors'] }}},
+                        {{{ $discoverVideoViews['4dayVisitors'] }}},
+                        {{{ $discoverVideoViews['3dayVisitors'] }}},
+                        {{{ $discoverVideoViews['yesterdayVisitors'] }}},
+                        {{{ $discoverVideoViews['todayVisitors'] }}}
+                    ],
                 }]
             },
             options: {

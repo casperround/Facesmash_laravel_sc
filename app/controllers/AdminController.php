@@ -71,6 +71,16 @@ class AdminController extends BaseController
             "7dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("discover_page", "=", "photo")->count(),
         ];
 
+        $discoverVideoViews = [
+            "todayVisitors" => OpenDiscoverViews::where("date", "=", date("Y-m-d"))->where("discover_page", "=", "video")->count(),
+            "yesterdayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("discover_page", "=", "video")->count(),
+            "3dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("discover_page", "=", "video")->count(),
+            "4dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("discover_page", "=", "video")->count(),
+            "5dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("discover_page", "=", "video")->count(),
+            "6dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("discover_page", "=", "video")->count(),
+            "7dayVisitors" => OpenDiscoverViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("discover_page", "=", "video")->count(),
+        ];
+
 
         $totalSiteUsers = User::all()->count();
         $newest100Users = User::orderBy("id", "DESC")->limit(100)->get();
@@ -83,7 +93,8 @@ class AdminController extends BaseController
             "discoverGifViews" => $discoverGifViews,
             "discoverGroupViews" => $discoverGroupViews,
             "discoverPagesViews" => $discoverPagesViews,
-            "discoverPhotoViews" => $discoverPhotoViews
+            "discoverPhotoViews" => $discoverPhotoViews,
+            "discoverVideoViews" => $discoverVideoViews
         ]);
     }
 
