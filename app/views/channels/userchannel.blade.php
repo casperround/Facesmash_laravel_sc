@@ -71,25 +71,72 @@
 
                                     <div class="form-group">
                                         <select class="form-control" name="visibility">
-                                            <option value="1">Public</option>
+                                            <option value="1" selected>Public</option>
                                             <option value="2">Friends & Friends of friends</option>
                                             <option value="3">Friends</option>
-                                            <option value="4" selected>Only me</option>
+                                            <option value="4">Only me</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="category">Page Category</label>
+                                        <label for="category">Channel Category</label>
                                         <select name="category" class="form-control">
-                                            <option value="1">Local Business or Place</option>
+                                            <option value="1" selected>Local Business or Place</option>
                                             <option value="2">Company Organization or Institution</option>
                                             <option value="3">Brand or Product</option>
-                                            <option value="4" selected>Artist, Band or Public Figure</option>
-                                            <option value="5" selected>Entertainment</option>
-                                            <option value="6" selected>Cause or Community
+                                            <option value="4">Artist, Band or Public Figure</option>
+                                            <option value="5">Entertainment</option>
+                                            <option value="6">Cause or Community
                                             </option>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="category">Type of channel</label>
+                                        <select name="category" class="form-control">
+                                            <option value="1" selected>Video</option>
+                                            <option value="2">Photography</option>
+                                            <option value="3">Music</option>
+                                            <option value="4">Art</option>
+                                            <option value="5">Entertainment</option>
+                                            <option value="6">Cause or Community
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <label for="category">Cover Photo</label>
+                                    <input name="file_upload_banner" class="form-control" type="file" onchange="readURL(this);" >
+                                    <img id="cover" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
+                                    <script>
+                                        function readURL(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
 
+                                                reader.onload = function (e) {
+                                                    $('#cover')
+                                                        .attr('src', e.target.result)
+                                                        .width(150)
+                                                        .height(auto);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+                                    </script><br/>
+                                    <label for="category">Channel Photo</label>
+                                    <input name="file_upload_profile" class="form-control" type="file" onchange="readURLL(this);" >
+                                    <img id="profile" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
+                                    <script>
+                                        function readURLL(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#profile')
+                                                        .attr('src', e.target.result)
+                                                        .width(150)
+                                                        .height(auto);
+                                                };
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+                                    </script>
                                     <button type="submit" name="login" value="Create Page" class="btn btn-primary">Create</button>
                                     {{ Form::token() }}
                                 </form>
