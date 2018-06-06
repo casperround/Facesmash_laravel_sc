@@ -435,9 +435,9 @@ class DefaultController extends BaseController {
 
         return View::make("pageview", [
             "unique_pagename" => $unique_pagename,
-            "page_img_path" => $page_img_path,
-            "id" => $id,
-            "banner_img_path" => $banner_img_path
+            "page_img_path" => $page->page_img_path,
+            "id" => $page->id,
+            "banner_img_path" => $page->banner_img_path
         ]);
 
     }
