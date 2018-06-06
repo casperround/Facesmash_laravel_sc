@@ -60,8 +60,8 @@
 
                                 @foreach(Posts::where("relation_id", "=", $channels->id)->where("relation", "=", "channel")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
                                     @if ($post->media_type == 'mp4' OR $post->media_type == 'MP4')
-                                        <div class="col-md-3" style="padding:1px;margin:10px;display:inline-block;background:white;box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:white;border-radius: 5px;margin-top:20px;">
-                                            <div class="row" style="width:auto;margin:5px;border-radius:10px;background:#5d3bae;color:white;position: relative;">
+                                        <div class="col-md-3" style="max-width: 23%;padding:1px;margin:10px;display:inline-block;background:white;box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:white;border-radius: 5px;margin-top:20px;">
+                                            <div class="row" style="width:auto;margin:5px;border-radius:10px;background:#5d3bae;box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);color:white;position: relative;">
                                                 <div class="col-4">
                                                     @if ($post->author_id == $channels->owner_id)
                                                         <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($channels->channel_img_path) }}"/>
@@ -82,12 +82,12 @@
 
                                             </div>
                                             <div class="card-group" style="color:black;">
-                                                <div class="card" style="background:white;border:0px;padding:15px;color:black;">
+                                                <div class="card" style="background:#efefef;border:0px;padding:15px;color:black;">
                                                     {{ $post->text }}
                                                 </div>
                                             </div>
-                                            <div class="card-group" style="background:white;border:0px;color:black;">
-                                                <div class="card" style="background:white;border:0px;">
+                                            <div class="card-group" style="background:#efefef;border:0px;color:black;">
+                                                <div class="card" style="background:#efefef;border:0px;">
                                                     <video controls style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
                                             </div>
