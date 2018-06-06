@@ -15,7 +15,7 @@
                                     <div class="card-body">
                                         <center>
                                             <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
-                                            <i style="color:#ED5565" class="far fa-file-alt"></i>
+                                            <i style="color:#A0D468" class="fas fa-tv"></i>
                                             <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_channelname }}</p>
                                         </center>
                                     </div>
@@ -67,7 +67,7 @@
                                                         <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{URL::to(User::where("id", "=", $post->author_id)->limit(1)->pluck("profile_img_path"))}}"/>
                                                     @endif                                                </div>
                                                 <div class="col-4">
-                                                    <i style="color:#48CFAD" class="far fa-image"></i>
+                                                    <i style="color:#AC92EC" class="fas fa-video"></i>
                                                     @if ($post->author_id == $channels->owner_id)
                                                         <span>{{ $channels->unique_channelname }}</span>
                                                     @else
