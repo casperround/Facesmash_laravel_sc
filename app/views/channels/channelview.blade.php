@@ -80,11 +80,11 @@
 
                                             </div>
                                             <div class="card-group" style="color:black;">
-                                                <div class="card" style="padding:15px;">
+                                                <div class="card" style="background:#A0D468;border:0px;padding:15px;">
                                                     {{ $post->text }}
                                                 </div>
                                             </div>
-                                            <div class="card-group" style="color:black;">
+                                            <div class="card-group" style="background:#A0D468;border:0px;color:black;">
                                                 <div class="card">
                                                     <video controls style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
