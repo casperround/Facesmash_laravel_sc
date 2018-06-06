@@ -20,12 +20,12 @@
                         @endif
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                                     <div class="card">
-                                        <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($page_img_path) }}" alt="Card image cap">
+                                        <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($page->page_img_path) }}" alt="Card image cap">
                                         <div class="card-body">
                                             <center>
-                                                <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($banner_img_path) }}" alt="Card image cap">
+                                                <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($page->banner_img_path) }}" alt="Card image cap">
                                                 <i style="color:#ED5565" class="far fa-file-alt"></i>
-                                                <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $unique_pagename }}</p>
+                                                <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $page->unique_pagename }}</p>
                                             </center>
                                         </div>
                                     </div>
@@ -40,8 +40,8 @@
                                                 </div>
                                                 <div class="col">
                                                     <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
-                                                    <input name="relation_id" type="hidden" value="{{ $id }}" >
-                                                    <input name="unique_pagename" type="hidden" value="{{ $unique_pagename }}" >
+                                                    <input name="relation_id" type="hidden" value="{{ $page->id }}" >
+                                                    <input name="unique_pagename" type="hidden" value="{{ $page->unique_pagename }}" >
 
                                                     <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
                                                     <script>
