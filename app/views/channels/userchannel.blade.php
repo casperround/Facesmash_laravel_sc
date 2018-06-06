@@ -41,7 +41,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="about">About your Page</label>
+                                        <label for="about">About your Channel</label>
                                         <input type="text" id="about" name="about" class="form-control" required>
                                     </div>
 
