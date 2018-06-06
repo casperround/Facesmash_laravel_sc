@@ -711,9 +711,6 @@ class DefaultController extends BaseController {
 
         }
 
-        return Redirect::route("channelsview", [
-            "unique_channelname" => Input::get("unique_channelname")
-        ]);
     }
 
 //==============================================
