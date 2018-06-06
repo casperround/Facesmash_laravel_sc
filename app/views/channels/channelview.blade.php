@@ -16,7 +16,7 @@
                                         <center>
                                             <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
                                             <i style="color:#ED5565" class="far fa-file-alt"></i>
-                                            <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_pagename }}</p>
+                                            <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_channelname }}</p>
                                         </center>
                                     </div>
                                 </div>
