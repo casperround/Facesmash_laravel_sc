@@ -225,8 +225,13 @@ class DefaultController extends BaseController {
 // Pages Controller
 //==============================================
     public function userPagesPage() {
-        return View::make("pages.userpage");
+        return View::make("pages.userpage", [
+            "unique_pagename" => $unique_pagename,
+            "page_img_path" => $page_img_path,
+            "banner_img_path" => $banner_img_path
+        ]);
     }
+
     public function userPagesNewPage() {
 
         if (Input::hasFile("file_upload_banner") OR Input::hasFile("file_upload_profile")) {
