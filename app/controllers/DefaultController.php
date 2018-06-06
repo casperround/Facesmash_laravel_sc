@@ -591,7 +591,7 @@ class DefaultController extends BaseController {
                 "visibility" => $visibility,
                 "post_date" => $post_date,
                 "channel_type" => $channel_type,
-                "page_img_path" => $page_img_path,
+                "channel_img_path" => $page_img_path,
                 "file_extension_profile" => $file_extension_profile,
                 "banner_img_path" => $banner_img_path,
                 "file_extension_banner" => $file_extension_banner
