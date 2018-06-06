@@ -152,7 +152,7 @@
                     <div class="col-md">
                         @foreach(Channels::where("owner_id", "=", Auth::user()->id)->get() as $channels)
                             <a href="{{ URL::route("channelsview", $channels->unique_channelname) }}"><div class="card">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <img class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
                                     <div class="card-body">
                                         <center><p style="font-size:20px;font-weight:bold;color:black;" class="card-text">{{ $channels->unique_channelname }}</p></center>
                                     </div>
