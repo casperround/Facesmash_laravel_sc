@@ -2,7 +2,7 @@
 @section("in-head")
     <meta property="og:url" content="https://www.facesmash.co.uk/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{{ $page->unique_pagename }}}">
+    <meta property="og:title" content="{{ $page->unique_pagename }}">
     <meta property="og:description" content="Facesmash | Sign up now!">
     <meta property="og:image" content="{{ URL::to("") }}">
     <meta name="theme-color" content="#ffffff">
