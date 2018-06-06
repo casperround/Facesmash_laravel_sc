@@ -11,7 +11,7 @@ class Channels extends Eloquent
 
     protected $table = 'channels';
 
-    protected $fillable = ["id", "uid", "unique_channelname", "owner_id", "category", "about", "website", "twitter", "facebook", "youtube", "discord_invite", "banner_path", "page_img_path","post_date","post_time","visibility"];
+    protected $fillable = ["id", "uid", "unique_channelname", "owner_id", "category", "about", "website", "twitter", "facebook", "youtube", "discord_invite", "banner_img_path","file_extension_banner", "channel_img_path","file_extension_profile","post_date","post_time","visibility","channel_type"];
 
     public $timestamps = false;
 
