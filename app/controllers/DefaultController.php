@@ -527,6 +527,12 @@ class DefaultController extends BaseController {
     public function userChannelsPage() {
         return View::make("channels.userchannel");
     }
+    public function channelsviewPage($unique_channelname) {
+        return View::make("channels.channelview", [
+            "unique_channelname" => $unique_channelname
+        ]);
+
+    }
     public function userChannelsNewPage() {
 
         if (Input::hasFile("file_upload_banner") OR Input::hasFile("file_upload_profile")) {
@@ -709,12 +715,7 @@ class DefaultController extends BaseController {
             "unique_channelname" => Input::get("unique_channelname")
         ]);
     }
-    public function channelsviewPage($unique_channelname) {
-        return View::make("channels.channelview", [
-            "unique_channelname" => $unique_channelname
-        ]);
 
-    }
 //==============================================
 // Pictures Controller
 //==============================================
