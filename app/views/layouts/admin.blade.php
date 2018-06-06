@@ -21,6 +21,7 @@
 
     <link href="{{ URL::to("/assets/staff_assets/vendors/base/vendors.bundle.css") }}" rel="stylesheet" type="text/css" />
     <link href="{{ URL::to("/assets/staff_assets/demo/demo12/base/style.bundle.css") }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="shortcut icon" href="{{ URL::to("/assets/staff_assets/demo/demo12/media/img/logo/favicon.ico") }}" />
 
 </head>
@@ -130,6 +131,15 @@
                             <i class="m-menu__link-icon flaticon-line-graph"></i>
                             <span class="m-menu__link-text">
                                 Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="m-menu__item " aria-haspopup="true" >
+                        <a href="{{ URL::route("admin.users") }}" class="m-menu__link ">
+                            <span class="m-menu__item-here"></span>
+                            <i class="m-menu__link-icon flaticon-line-graph"></i>
+                            <span class="m-menu__link-text">
+                                Users
                             </span>
                         </a>
                     </li>

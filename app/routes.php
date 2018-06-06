@@ -224,3 +224,7 @@ Route::get('/admin', [
     "as" => "admin.index",
     "uses" => "AdminController@index"
 ]);
+Route::get('/admin/users', [
+    "as" => "admin.users",
+    "uses" => "AdminController@users"
+]);

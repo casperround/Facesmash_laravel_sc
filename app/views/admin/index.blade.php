@@ -25,14 +25,14 @@
                     <div class="m-widget24">
                         <div class="m-widget24__item">
                             <h4 class="m-widget24__title">
-                                Different Value
+                                Total Posts
                             </h4>
                             <br>
                             <span class="m-widget24__desc">
-                                Something else
+                                Total Site Posts
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                276
+                                0
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -49,7 +49,7 @@
                                 Something else
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                276
+                                0
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -66,7 +66,7 @@
                                 Something else
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                276
+                                0
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -88,7 +88,6 @@
                         </div>
                     </div>
                 </div>
-                {{ var_dump($cfDecoded) }}
                 <div class="m-portlet__body">
                     <div class="tab-content">
                         <div class="tab-pane active" id="m_widget4_tab1_content">

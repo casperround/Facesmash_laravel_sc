@@ -20,4 +20,14 @@ class AdminController extends BaseController
         ]);
     }
 
+    public function users() {
+
+        $users = User::orderBy("id", "DESC")->limit(100)->get();
+
+        return View::make("admin.users.users", [
+            "users" => $users
+        ]);
+
+    }
+
 }

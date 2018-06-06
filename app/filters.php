@@ -74,7 +74,7 @@ Route::filter('auth.admin', function()
 {
     if (Auth::check())
     {
-        if (Auth::user()->role != "admin")
+        if (Auth::user()->role !== "admin")
         {
             return Redirect::route("index");
         }
@@ -84,8 +84,7 @@ Route::filter('auth.admin', function()
     }
 });
 
-Route::when('admin/*', 'auth.admin');
-
+Route::when('admin*', 'auth.admin');
 
 /*
 |--------------------------------------------------------------------------
