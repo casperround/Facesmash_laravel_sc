@@ -34,7 +34,7 @@
                                                     <input name="relation_id" type="hidden" value="{{ $channels->id }}" >
                                                     <input name="unique_channelname" type="hidden" value="{{ $channels->unique_channelname }}" >
 
-                                                    <video id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image"></video>
+                                                    <video controls id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image"></video>
                                                     <script>
                                                         function readURL(input) {
                                                             if (input.files && input.files[0]) {
@@ -57,37 +57,7 @@
                                     </div>
                                 @endif
                                 @foreach(Posts::where("relation_id", "=", $channels->id)->where("relation", "=", "channel")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
-                                    @if ($post->media_type == 'text')
-                                        <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
-                                            <div class="row" style="width:100%;margin:0px;position: relative;">
-                                                <div class="col-1">
-                                                    @if ($post->author_id == $channels->owner_id)
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($channels->channel_img_path) }}"/>
-                                                    @else
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{URL::to(User::where("id", "=", $post->author_id)->limit(1)->pluck("profile_img_path"))}}"/>
-                                                    @endif
-                                                </div>
-                                                <div class="col-2">
-                                                    <i style="color:#FFCE54" class="fas fa-pencil-alt"></i>
-                                                    @if ($channels->author_id == $channels->owner_id)
-                                                        <span>{{ $channels->unique_channelname }}</span>
-                                                    @else
-                                                        <span>{{User::where("id", "=", $post->author_id)->pluck("username");}}</span>
-                                                    @endif
-                                                </div>
-                                                <div class="col-2">
-                                                    <span>{{ $post->post_date }}</span>
-                                                </div>
-
-                                            </div>
-                                            <div class="card-group" style="color:black;">
-                                                <div class="card" style="padding:15px;">
-                                                    {{ $post->text }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endif
-                                    @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
+                                    @if ($post->media_type == 'mp4' OR $post->media_type == 'MP4')
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
                                                 <div class="col-1">
@@ -116,7 +86,7 @@
                                             </div>
                                             <div class="card-group" style="color:black;">
                                                 <div class="card">
-                                                    <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
+                                                    <video controls style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
                                             </div>
                                         </div>
