@@ -10,13 +10,13 @@
                         @endif
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                             @foreach(Channels::where("unique_channelname", "=", $unique_channelname)->limit(1)->get() as $channels)
-                                <div class="card">
+                                <div class="card" style="background:#5d3bae;">
                                     <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($channels->channel_img_path) }}" alt="Card image cap">
                                     <div class="card-body">
                                         <center>
                                             <img style="height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
                                             <i style="color:#A0D468" class="fas fa-tv"></i>
-                                            <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_channelname }}</p>
+                                            <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
                                         </center>
                                     </div>
                                 </div>
