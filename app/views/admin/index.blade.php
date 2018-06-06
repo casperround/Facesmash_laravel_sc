@@ -119,6 +119,84 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="m-portlet m-portlet--full-height  m-portlet--unair">
+                <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                            <h3 class="m-portlet__head-text">
+                                Discover Page Views
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-portlet__body">
+                    <div style="width:100%;">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+@stop
+
+@section("js")
+    <script>
+        var config = {
+            type: 'line',
+            data: {
+                labels: ['7 Days Ago', '6 Days Ago', '5 Days Ago', '4 Days Ago', '3 Days Ago', 'Yesterday', 'Today'],
+                datasets: [{
+                    label: 'Discover Views',
+                    backgroundColor: "#c60000",
+                    borderColor: "#c60000",
+                    data: [
+                        {{{ $mainDiscoverViews['7dayVisitors'] }}},
+                        {{{ $mainDiscoverViews['6dayVisitors'] }}},
+                        {{{ $mainDiscoverViews['5dayVisitors'] }}},
+                        {{{ $mainDiscoverViews['4dayVisitors'] }}},
+                        {{{ $mainDiscoverViews['3dayVisitors'] }}},
+                        {{{ $mainDiscoverViews['yesterdayVisitors'] }}},
+                        {{{ $mainDiscoverViews['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Channel Views',
+                    fill: false,
+                    backgroundColor: "#1A22C6",
+                    borderColor: "#1a22c6",
+                    data: [
+                        {{{ $discoverChannelViews['7dayVisitors'] }}},
+                        {{{ $discoverChannelViews['6dayVisitors'] }}},
+                        {{{ $discoverChannelViews['5dayVisitors'] }}},
+                        {{{ $discoverChannelViews['4dayVisitors'] }}},
+                        {{{ $discoverChannelViews['3dayVisitors'] }}},
+                        {{{ $discoverChannelViews['yesterdayVisitors'] }}},
+                        {{{ $discoverChannelViews['todayVisitors'] }}}
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Discover Pages Views (Non Logged in Users)'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+            }
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+        };
+    </script>
 @stop

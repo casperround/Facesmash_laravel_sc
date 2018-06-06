@@ -154,6 +154,8 @@
     </div>
 </div>
 <script src="{{ URL::to("/assets/staff_assets/vendors/base/vendors.bundle.js") }}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 <script src="{{ URL::to("/assets/staff_assets/demo/demo12/base/scripts.bundle.js") }}" type="text/javascript"></script>
+@yield("js")
 </body>
 </html>

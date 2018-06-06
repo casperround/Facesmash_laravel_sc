@@ -182,7 +182,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -202,7 +202,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -221,7 +221,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -240,7 +240,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -259,7 +259,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -278,7 +278,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
@@ -297,7 +297,7 @@ class DefaultController extends BaseController {
 
             OpenDiscoverViews::create([
                 "time" => date("H:i:s"),
-                "date" => date("d-m-Y"),
+                "date" => date("Y-m-d"),
                 "ip" => $visitor_ip,
                 "discover_page" => $discover_page
             ]);
