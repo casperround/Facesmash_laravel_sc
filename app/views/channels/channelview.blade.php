@@ -34,7 +34,7 @@
                                                     <input name="relation_id" type="hidden" value="{{ $channels->id }}" >
                                                     <input name="unique_channelname" type="hidden" value="{{ $channels->unique_channelname }}" >
 
-                                                    <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
+                                                    <video id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image"></video>
                                                     <script>
                                                         function readURL(input) {
                                                             if (input.files && input.files[0]) {
