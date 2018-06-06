@@ -1,15 +1,13 @@
 @extends('layouts.public', ["title" => "Discover", "sidebar" => false])
-@foreach(Pages::where("unique_pagename", "=", $unique_pagename)->limit(1)->get() as $pages)
 @section("in-head")
     <meta property="og:url" content="https://www.facesmash.co.uk/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{{ $pages->unique_pagename }}}">
+    <meta property="og:title" content="{{{ $page->unique_pagename }}}">
     <meta property="og:description" content="Facesmash | Sign up now!">
     <meta property="og:image" content="{{ URL::to("") }}">
     <meta name="theme-color" content="#ffffff">
     <meta content="Casper Round" name="author">
 @stop
-@endforeach
 @section("content")
     @if (Auth::check())
         <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
