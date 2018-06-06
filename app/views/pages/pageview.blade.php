@@ -68,16 +68,16 @@
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
                                                 <div class="col-1">
-                                                    @if ($post->author_id == $pages->owner_id)
-                                                    <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($pages->page_img_path) }}"/>
+                                                    @if ($post->author_id == $page->owner_id)
+                                                    <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($page->page_img_path) }}"/>
                                                     @else
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{URL::to(User::where("id", "=", $post->author_id)->limit(1)->pluck("profile_img_path"))}}"/>
+                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{URL::to(User::where("id", "=", $page->author_id)->limit(1)->pluck("profile_img_path"))}}"/>
                                                     @endif
                                                 </div>
                                                 <div class="col-2">
                                                     <i style="color:#FFCE54" class="fas fa-pencil-alt"></i>
-                                                    @if ($post->author_id == $pages->owner_id)
-                                                        <span>{{ $pages->unique_pagename }}</span>
+                                                    @if ($post->author_id == $page->owner_id)
+                                                        <span>{{ $page->unique_pagename }}</span>
                                                     @else
                                                         <span>{{User::where("id", "=", $post->author_id)->pluck("username");}}</span>
                                                     @endif
@@ -98,15 +98,15 @@
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
                                                 <div class="col-1">
-                                                    @if ($post->author_id == $pages->owner_id)
-                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($pages->page_img_path) }}"/>
+                                                    @if ($post->author_id == $page->owner_id)
+                                                        <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($page->page_img_path) }}"/>
                                                     @else
                                                         <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{URL::to(User::where("id", "=", $post->author_id)->limit(1)->pluck("profile_img_path"))}}"/>
                                                     @endif                                                </div>
                                                 <div class="col-2">
                                                     <i style="color:#48CFAD" class="far fa-image"></i>
-                                                    @if ($post->author_id == $pages->owner_id)
-                                                        <span>{{ $pages->unique_pagename }}</span>
+                                                    @if ($post->author_id == $page->owner_id)
+                                                        <span>{{ $page->unique_pagename }}</span>
                                                     @else
                                                         <span>{{User::where("id", "=", $post->author_id)->pluck("username");}}</span>
                                                     @endif
