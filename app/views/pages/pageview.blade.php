@@ -63,7 +63,7 @@
                                         </form>
                                     </div>
                                 @endif
-                                @foreach(Posts::where("relation_id", "=", $pages->id)->where("relation", "=", "page")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+                                @foreach(Posts::where("relation_id", "=", $page->id)->where("relation", "=", "page")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
                                     @if ($post->media_type == 'text')
                                         <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
                                             <div class="row" style="width:100%;margin:0px;position: relative;">
