@@ -82,12 +82,12 @@
 
                                             </div>
                                             <div class="card-group" style="color:black;">
-                                                <div class="card" style="background:#5d3bae;border:0px;padding:15px;color:white;">
+                                                <div class="card" style="background:white;border:0px;padding:15px;color:black;">
                                                     {{ $post->text }}
                                                 </div>
                                             </div>
-                                            <div class="card-group" style="background:#5d3bae;border:0px;color:black;">
-                                                <div class="card" style="background:#5d3bae;border:0px;">
+                                            <div class="card-group" style="background:white;border:0px;color:black;">
+                                                <div class="card" style="background:white;border:0px;">
                                                     <video controls style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
                                             </div>
