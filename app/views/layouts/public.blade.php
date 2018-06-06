@@ -38,6 +38,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL::route("contact") }}">Contact</a>
                     </li>
+                @if (Auth::check() && Auth::user()->role == "admin")
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ URL::route("admin.index") }}">Admin</a>
+                    </li>
+                @endif
                 @if (Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" href="{{ URL::route("auth.logout") }}">Logout</a>
@@ -47,6 +52,7 @@
                         <a class="nav-link" href="{{ URL::route("index") }}">Login</a>
                     </li>
                 @endif
+
             </ul>
             <form class="form-inline" action="search.php" method="GET">
                 <input class="form-control mr-sm-2" type="text" name="query" placeholder="Search" aria-label="Search">
