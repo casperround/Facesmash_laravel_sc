@@ -429,9 +429,9 @@ class DefaultController extends BaseController {
 
     }
 
-    public function pagesViewPage($unique_page) {
+    public function pagesViewPage($unique_pagename) {
 
-        $page = Pages::where("unique_pagename", "=", $unique_page)->get();
+        $page = Pages::where("unique_pagename", "=", $unique_pagename)->get();
 
         return View::make("pageview", [
             "unique_pagename" => $unique_pagename,
