@@ -176,17 +176,6 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverPage() {
 
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "discover";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
 
         return View::make("discover");
     }
@@ -196,36 +185,12 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverChannelPage() {
 
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "channel";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
-
         return View::make("discover.channel");
     }
 //==============================================
 //Discover Gif Controller
 //==============================================
     public function discoverGifPage() {
-
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "gif";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
 
         return View::make("discover.gif");
     }
@@ -234,18 +199,6 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverGroupPage() {
 
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "group";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
-
         return View::make("discover.group");
     }
 //==============================================
@@ -253,36 +206,12 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverPagesPage() {
 
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "pages";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
-
         return View::make("discover.page");
     }
 //==============================================
 //Discover Photo Controller
 //==============================================
     public function discoverPhotoPage() {
-
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "photo";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
 
         return View::make("discover.photo");
     }
@@ -299,18 +228,6 @@ class DefaultController extends BaseController {
 //Discover Video Controller
 //==============================================
     public function discoverVideoPage() {
-
-//        if(!Auth::check()) {
-//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "photo";
-//
-//            OpenDiscoverViews::create([
-//                "time" => date("H:i:s"),
-//                "date" => date("Y-m-d"),
-//                "ip" => $visitor_ip,
-//                "discover_page" => $discover_page
-//            ]);
-//        }
 
         return View::make("discover.video");
     }
