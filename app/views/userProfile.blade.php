@@ -355,7 +355,7 @@
             @else
                 <div class="container-fluid">
                     @endif
-                    <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
+                    <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:auto;">
         <aside class="profile-card">
             <header style="height:250px">
                 <div class="user-profile">
