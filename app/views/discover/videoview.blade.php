@@ -21,7 +21,7 @@
                                 <div class="card-body">
                                     <center>
                                         <video style="height:auto;width:70%;" class="card-img-top" controls src="{{ URL::to($post->file_path) }}" alt="Card image cap"></video><br/>
-                                        <i style="color:#ED5565" class="far fa-file-alt"></i><br/>
+                                        <i style="color:#AC92EC" class="fas fa-video"></i>
                                         <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $post->text }}</p>
                                     </center>
                                 </div>
