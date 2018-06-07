@@ -33,7 +33,7 @@
                             </div>
                             @endif
                             @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
-                                    <a href="{{ URL::route("photo.photoView", $post->post_id) }}"><div class="col-md">
+                                    <a href="{{ URL::route("discover.photoView", $post->post_id) }}"><div class="col-md">
                                         <div class="card">
                                             <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
                                             <div class="card-body" style="color: black">
