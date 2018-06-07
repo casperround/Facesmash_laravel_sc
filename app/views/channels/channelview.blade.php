@@ -11,7 +11,7 @@
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                             @foreach(Channels::where("unique_channelname", "=", $unique_channelname)->limit(1)->get() as $channels)
                                 <div class="card" style="background:#5d3bae;">
-                                    <div class="card-body" style="    background-position: 73%;
+                                    <div class="card-body" style="padding:0px;    background-position: 73%;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
