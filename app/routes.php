@@ -110,6 +110,10 @@ Route::get('/discover/photo', [
     "as" => "discover.photo",
     "uses" => "DefaultController@discoverPhotoPage"
 ]);
+Route::get('/discover/photo/{post_id}', [
+    "as" => "discover.photoView",
+    "uses" => "DefaultController@discoverPhotoViewPage"
+]);
 //==============================================
 //Discover Video Routes
 //==============================================

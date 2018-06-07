@@ -286,6 +286,15 @@ class DefaultController extends BaseController {
 
         return View::make("discover.photo");
     }
+    public function discoverPhotoViewPage($post_id) {
+
+        $post = Posts::where("post_id", "=", $post_id)->get()->first();
+
+        return View::make("discover.photoview", [
+            "post" => $post
+        ]);
+
+    }
 //==============================================
 //Discover Video Controller
 //==============================================
