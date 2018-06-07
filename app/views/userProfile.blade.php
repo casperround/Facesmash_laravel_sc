@@ -173,7 +173,7 @@
     .user-profile {
         margin: auto;
         width: 25em;
-        height: 11em;
+        height: auto;
         background: #fff;
         border-radius: .3em;
     }
@@ -269,8 +269,6 @@
                 </div>
 
 
-                <h1>{{{ $user->first_name }}} {{{ $user->last_name }}}</h1>
-                <h2>{{{ $user->username }}}</h2>
             </header>
 
             <br>
