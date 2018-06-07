@@ -269,49 +269,49 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="profile-social-links">
-                    @if ($user->youtube != "")
-                        <li>
-                            <a href="{{{ $user->youtube }}}">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    @endif
 
-                    @if ($user->facebook != "")
-                        <li>
-                            <a href="{{{ $user->facebook }}}">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                        </li>
-                    @endif
-
-                    @if ($user->twitter != "")
-                        <li>
-                            <a href="{{{ $user->twitter }}}">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                    @endif
-
-                    @if ($user->tumblr != "")
-                        <li>
-                            <a href="{{{ $user->tumblr }}}">
-                                <i class="fab fa-tumblr-square"></i>
-                            </a>
-                        </li>
-                    @endif
-                    @if ($user->website != "")
-                        <li>
-                            <a href="{{{ $user->website }}}">
-                                <i class="fas fa-desktop"></i>
-                            </a>
-                        </li>
-                    @endif
-                </ul>
 
             </header>
+            <ul class="profile-social-links">
+                @if ($user->youtube != "")
+                    <li>
+                        <a href="{{{ $user->youtube }}}">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                @endif
 
+                @if ($user->facebook != "")
+                    <li>
+                        <a href="{{{ $user->facebook }}}">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                @endif
+
+                @if ($user->twitter != "")
+                    <li>
+                        <a href="{{{ $user->twitter }}}">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                @endif
+
+                @if ($user->tumblr != "")
+                    <li>
+                        <a href="{{{ $user->tumblr }}}">
+                            <i class="fab fa-tumblr-square"></i>
+                        </a>
+                    </li>
+                @endif
+                @if ($user->website != "")
+                    <li>
+                        <a href="{{{ $user->website }}}">
+                            <i class="fas fa-desktop"></i>
+                        </a>
+                    </li>
+                @endif
+            </ul>
             <br>
 
             <div class="profile-bio">
