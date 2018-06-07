@@ -382,7 +382,7 @@
 
             </header>
             <ul class="profile-social-links">
-                <div class="social-btns"><a class="btn facebook" href="#"><i  class="fab fa-facebook-f"></i></a><a  class="btn twitter" href="#"><i class="fab fa-twitter-f"></i></a><a   class="btn google" href="#"><i class="fab fa-google-f"></i></a><a class="btn dribbble" href="#"><i class="fab fa-dribble-f"></i></a><a class="btn skype" href="#"><i class="fab fa-skype-f"></i></a>
+                <div class="social-btns"><a class="btn facebook" href="#"><i  class="fab fa-facebook-f"></i></a><a  class="btn twitter" href="#"><i class="fab fa-twitter"></i></a><a   class="btn google" href="#"><i class="fab fa-google"></i></a><a class="btn dribbble" href="#"><i class="fab fa-dribble"></i></a><a class="btn skype" href="#"><i class="fab fa-skype"></i></a>
                 </div>
                 @if ($user->youtube != "")
                     <li>
