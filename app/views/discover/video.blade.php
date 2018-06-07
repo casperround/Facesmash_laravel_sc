@@ -7,7 +7,7 @@
             <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                 @include("includes.discover-top")
                 <div class="card-columns">
-                    @foreach(Posts::where("media_type", "=", "videos")->get() as $post)
+                    @foreach(Posts::where("media_type", "=", "mp4")where("visibility", "=", "1")->get() as $post)
                         <div class="col-md">
                             <div class="card">
                                 <video class="card-img-top" src="{{ URL::to($post->file_path) }}"></video>
