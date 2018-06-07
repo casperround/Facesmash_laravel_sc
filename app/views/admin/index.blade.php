@@ -152,7 +152,7 @@
                     ],
                     fill: false,
                 }, {
-                    label: 'Gifs Views',
+                    label: 'Gif Views',
                     backgroundColor: "#5800c6",
                     borderColor: "#5800c6",
                     data: [
@@ -166,7 +166,7 @@
                     ],
                     fill: false,
                 }, {
-                    label: 'Groups Views',
+                    label: 'Group Views',
                     backgroundColor: "#00a7c6",
                     borderColor: "#00a7c6",
                     data: [
@@ -180,7 +180,7 @@
                     ],
                     fill: false,
                 }, {
-                    label: 'Pages Views',
+                    label: 'Page Views',
                     backgroundColor: "#00c605",
                     borderColor: "#00c605",
                     data: [
@@ -194,7 +194,7 @@
                     ],
                     fill: false,
                 }, {
-                    label: 'Photos Views',
+                    label: 'Photo Views',
                     backgroundColor: "#00c605",
                     borderColor: "#00c605",
                     data: [
@@ -245,12 +245,104 @@
             data: {
                 labels: ['7 Days Ago', '6 Days Ago', '5 Days Ago', '4 Days Ago', '3 Days Ago', 'Yesterday', 'Today'],
                 datasets: [{
-                    label: 'Discover Views',
+                    label: 'Main Views',
                     backgroundColor: "#c60000",
                     borderColor: "#c60000",
-
+                    data: [
+                        {{{ $mainDiscoverynonLoggedIn['7dayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['6dayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['5dayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['4dayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['3dayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $mainDiscoverynonLoggedIn['todayVisitors'] }}}
+                    ],
                     fill: false,
-                },]
+                }, {
+                    label: 'Channel Views',
+                    backgroundColor: "#c6008a",
+                    borderColor: "#c6008a",
+                    data: [
+                        {{{ $channelsnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $channelsnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Gif Views',
+                    backgroundColor: "#5800c6",
+                    borderColor: "#5800c6",
+                    data: [
+                        {{{ $gifsnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $gifsnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Group Views',
+                    backgroundColor: "#00a7c6",
+                    borderColor: "#00a7c6",
+                    data: [
+                        {{{ $groupsnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $groupsnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Page Views',
+                    backgroundColor: "#00c605",
+                    borderColor: "#00c605",
+                    data: [
+                        {{{ $pagesnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $pagesnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Photo Views',
+                    backgroundColor: "#00c605",
+                    borderColor: "#00c605",
+                    data: [
+                        {{{ $photosnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $photosnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Video Views',
+                    backgroundColor: "#c6ba00",
+                    borderColor: "#c6ba00",
+                    data: [
+                        {{{ $videosnonLoggedIn['7dayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['6dayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['5dayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['4dayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['3dayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $videosnonLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }]
             },
             options: {
                 responsive: true,
