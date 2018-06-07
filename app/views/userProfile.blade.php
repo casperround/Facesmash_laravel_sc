@@ -14,8 +14,6 @@
         margin: 0 auto;
         background: #fff;
         border-radius: 5px;
-        border: 1px solid;
-        border-color: #e5e6e9 #dfe0e4 #d0d1d5;
     }
     header {
         height:250px;
@@ -91,7 +89,6 @@
         text-align: center;
         margin: -50px 0 0 0;
         padding: 5px 0 5px 0;
-        background: #fff;
         border-top: 1px solid #e5e5e5;
 
         transition: all 0.5s ease-in-out;
