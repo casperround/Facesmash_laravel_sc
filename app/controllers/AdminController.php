@@ -71,6 +71,16 @@ class AdminController extends BaseController
             "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
         ];
 
+        $videosLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "videos")->where("authed_user", "=", 1)->count(),
+        ];
+
 
         $totalSiteUsers = User::all()->count();
         $totalSitePosts = Posts::all()->count();
@@ -88,7 +98,8 @@ class AdminController extends BaseController
             "gifsLoggedIn" => $gifsLoggedIn,
             "groupsLoggedIn" => $groupsLoggedIn,
             "pagesLoggedIn" => $pagesLoggedIn,
-            "photosLoggedIn" => $photosLoggedIn
+            "photosLoggedIn" => $photosLoggedIn,
+            "videosLoggedIn" => $videosLoggedIn
         ]);
     }
 

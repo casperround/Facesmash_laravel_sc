@@ -207,6 +207,20 @@
                         {{{ $photosLoggedIn['todayVisitors'] }}}
                     ],
                     fill: false,
+                }, {
+                    label: 'Video Views',
+                    backgroundColor: "#c6ba00",
+                    borderColor: "#c6ba00",
+                    data: [
+                        {{{ $videosLoggedIn['7dayVisitors'] }}},
+                        {{{ $videosLoggedIn['6dayVisitors'] }}},
+                        {{{ $videosLoggedIn['5dayVisitors'] }}},
+                        {{{ $videosLoggedIn['4dayVisitors'] }}},
+                        {{{ $videosLoggedIn['3dayVisitors'] }}},
+                        {{{ $videosLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $videosLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
                 }]
             },
             options: {
