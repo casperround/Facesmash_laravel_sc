@@ -181,7 +181,7 @@ class DefaultController extends BaseController {
             $time = date("H:i:s");
             $date = date("Y-m-d");
             $content_type = "discover";
-            $content_id = "main_page";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -197,7 +197,7 @@ class DefaultController extends BaseController {
             $time = date("H:i:s");
             $date = date("Y-m-d");
             $content_type = "discover";
-            $content_id = "main_page";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([

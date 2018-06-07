@@ -179,6 +179,20 @@
                         {{{ $mainDiscoveryLoggedIn['todayVisitors'] }}}
                     ],
                     fill: false,
+                }, {
+                    label: 'Channel Views',
+                    backgroundColor: "#c6008a",
+                    borderColor: "#c6008a",
+                    data: [
+                        {{{ $channelsLoggedIn['7dayVisitors'] }}},
+                        {{{ $channelsLoggedIn['6dayVisitors'] }}},
+                        {{{ $channelsLoggedIn['5dayVisitors'] }}},
+                        {{{ $channelsLoggedIn['4dayVisitors'] }}},
+                        {{{ $channelsLoggedIn['3dayVisitors'] }}},
+                        {{{ $channelsLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $channelsLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
                 },]
             },
             options: {

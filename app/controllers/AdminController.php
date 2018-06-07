@@ -12,13 +12,23 @@ class AdminController extends BaseController
     public function index() {
 
         $mainDiscoveryLoggedIn = [
-            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_id", "=", "main_page")->where("content_type", "=", "discover")->count(),
-            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->count(),
-            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->count(),
-            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->count(),
-            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->count(),
-            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->count(),
-            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->count(),
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "discover")->where("authed_user", "=", 1)->count(),
+        ];
+
+        $channelsLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
         ];
 
         $totalSiteUsers = User::all()->count();
@@ -27,7 +37,8 @@ class AdminController extends BaseController
         return View::make("admin.index", [
             "totalSiteUsers" => $totalSiteUsers,
             "newest100Users" => $newest100Users,
-            "mainDiscoveryLoggedIn" => $mainDiscoveryLoggedIn
+            "mainDiscoveryLoggedIn" => $mainDiscoveryLoggedIn,
+            "channelsLoggedIn" => $channelsLoggedIn
         ]);
     }
 

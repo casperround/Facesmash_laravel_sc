@@ -15,14 +15,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="3579" />
+          <entry key="php" value="3686" />
           <entry key="txt" value="336" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="1834" />
-          <entry key="PHP" value="1745" />
+          <entry key="Blade" value="1842" />
+          <entry key="PHP" value="1844" />
           <entry key="PLAIN_TEXT" value="336" />
         </counts>
       </usages-collector>
