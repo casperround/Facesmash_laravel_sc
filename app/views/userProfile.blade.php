@@ -382,8 +382,7 @@
                 <div class="social-btns">
                     <a class="btn facebook" href="#"><i  class="fab fa-facebook-f"></i></a>
                     <a  class="btn twitter" href="#"><i class="fab fa-twitter"></i></a>
-                    <a   class="btn google" href="#"><i class="fab fa-google"></i></a>
-                    <a class="btn dribbble" href="#"><i class="fab fa-tumblr"></i></a>
+                    <a class="btn facebook" href="#"><i class="fab fa-tumblr"></i></a>
                     <a class="btn google" href="#"><i class="fab fa-youtube"></i></a>
                 </div>
                 @if ($user->youtube != "")
