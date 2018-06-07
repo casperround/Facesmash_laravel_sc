@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="card-body" style="padding:20px;background:white;">
                                         <i style="color:#A0D468" class="fas fa-tv"></i>
-                                        <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
+                                        <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $channels->unique_channelname }}</p>
                                     </div>
                                 </div>
                                 @if (Auth::check())
