@@ -20,7 +20,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <center>
-                                        <img style="height:auto;width:80%;" class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap"><br/>
+                                        <img style="height:auto;width:70%;" class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap"><br/>
                                         <i style="color:#ED5565" class="far fa-file-alt"></i><br/>
                                         <p style="font-size:20px;font-weight:bold;color:black" class="card-text">{{ $post->text }}</p>
                                     </center>
