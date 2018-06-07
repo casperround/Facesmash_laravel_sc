@@ -3,13 +3,13 @@
 <meta name="Description" content="Facesmash - Sign up now!">
 <meta name="Keywords" content="facesmash,social,network,networking,chat,upload,pictures,media,picture,video,videos">
 
-<meta property="og:url" content="https://www.facesmash.co.uk">
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Login | Facesmash">
-<meta property="og:description" content="Facesmash | Sign up now!">
-<meta property="og:image" content="{{ URL::to("") }}">
-<meta name="theme-color" content="#ffffff">
-<meta content="Casper Round" name="author">
+{{--<meta property="og:url" content="https://www.facesmash.co.uk">--}}
+{{--<meta property="og:type" content="website"/>--}}
+{{--<meta property="og:title" content="Login | Facesmash">--}}
+{{--<meta property="og:description" content="Facesmash | Sign up now!">--}}
+{{--<meta property="og:image" content="{{ URL::to("") }}">--}}
+{{--<meta name="theme-color" content="#ffffff">--}}
+{{--<meta content="Casper Round" name="author">--}}
 
 <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::to("/assets/img/favicons/apple-touch-icon.png") }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to("/assets/img/favicons/favicon-32x32.png") }}">
