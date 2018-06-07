@@ -99,7 +99,7 @@
                                             </div>
                                             <div class="card-group" style="background:#efefef;border:0px;color:black;">
                                                 <div class="card" style="background:#efefef;border:0px;">
-                                                    <video controls style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
+                                                    <video controls style="width: 100%;height: auto;padding: 0px;" src="{{ URL::to($post->file_path) }}">
                                                 </div>
                                             </div>
                                         </div>
