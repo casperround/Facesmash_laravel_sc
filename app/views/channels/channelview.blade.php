@@ -10,7 +10,7 @@
                         @endif
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                             @foreach(Channels::where("unique_channelname", "=", $unique_channelname)->limit(1)->get() as $channels)
-                                <div class="card" style="background:#5d3bae;">
+                                <div class="card" style="border:0px;background:#5d3bae;">
                                     <div class="card-body" style="padding:0px;    background-position: 73%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,12 +23,13 @@
                                         <center>
 
                                             <img style="top: -150px;position:relative;height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
-                                            <i style="color:#A0D468" class="fas fa-tv"></i>
-                                            <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
+
                                         </center>
                                     </div>
-
-                                </div>
+                                    <div class="card-body" style="padding:0px;">
+                                        <i style="color:#A0D468" class="fas fa-tv"></i>
+                                        <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
+                                    </div>
                                 @if (Auth::check())
 
                                     <div class="Post_Container">
