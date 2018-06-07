@@ -1,4 +1,4 @@
-@extends('layouts.admin', ["title" => "User:" . $user->username, "sidebar" => false])
+@extends('layouts.admin', ["title" => "User: " . $user->username, "sidebar" => false])
 
 @section('content')
     <h1>User: {{{ $user->username }}}</h1>
@@ -52,6 +52,47 @@
                         <div class="form-group">
                             <label>About</label>
                             <textarea rows="5" class="form-control" name="about">{{{ $user->about }}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Youtube</label>
+                            <input class="form-control" name="youtube" value="{{{ $user->youtube }}}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="m-portlet m-portlet--unair">
+                <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                            <h3 class="m-portlet__head-text">
+                                Users Social Media
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-portlet__body">
+                    <form class="form-control" src="" method="post">
+                        <div class="form-group">
+                            <label>Youtube</label>
+                            <input class="form-control" name="youtube" value="{{{ $user->youtube }}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Facebook</label>
+                            <input class="form-control" name="facebook" value="{{{ $user->facebook }}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Tumblr</label>
+                            <input class="form-control" name="tumblr" value="{{{ $user->tumblr }}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Twitter</label>
+                            <input class="form-control" name="twitter" value="{{{ $user->twitter }}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Website</label>
+                            <input class="form-control" name="website" value="{{{ $user->website }}}">
                         </div>
                     </form>
                 </div>
