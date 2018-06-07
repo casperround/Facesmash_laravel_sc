@@ -187,8 +187,9 @@ class DefaultController extends BaseController {
                 "discover_page" => $discover_page
             ]);
         }
-
-        return View::make("discover");
+        else {
+            return View::make("discover");
+        }
     }
 
 //==============================================
