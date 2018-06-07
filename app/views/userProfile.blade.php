@@ -355,7 +355,7 @@
             @else
                 <div class="container-fluid">
                     @endif
-                    <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:auto;">
+                    <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;color:black;">
         <aside class="profile-card">
             <header style="height:250px">
                 <div class="user-profile">
@@ -532,12 +532,8 @@
                             <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                         </div>
                     </div>
-                    @if (!Auth::check())
                 </div>
-                @endif
             @endif
         @endforeach
-                    @if (Auth::check())
     </div>
-        @endif
 @stop
