@@ -12,7 +12,7 @@
                             <div class="card">
                                 <video controls class="card-img-top" src="{{ URL::to($post->file_path) }}"></video>
                                 <div class="card-body" style="color: black">
-                                    <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
+                                    <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->pluck("username") }}} | {{{ $post->post_date }}}</h4>
                                     <p class="card-text">{{{ $post->text }}}</p>
                                 </div>
                             </div>
