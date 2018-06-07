@@ -355,13 +355,11 @@
             <header style="height:250px">
                 <div class="user-profile">
                     <img style="position:relative;margin:0px;" src="{{ URL::to($user->profile_img_path) }}">
-                    <div class="username">Will Smith</div>
+                    <div class="username">{{{ $user->username }}}</div>
                     <div class="bio">
-                        Senior UI Designer
                     </div>
                     <div class="description">
-                        I use to design websites and applications
-                        for the web.
+                        {{{ $user->about }}}
                     </div>
                     <ul class="data">
                         <li>
@@ -380,50 +378,20 @@
             </header>
             <ul class="profile-social-links">
                 <div class="social-btns">
-                    <a class="btn facebook" href="#"><i  class="fab fa-facebook-f"></i></a>
-                    <a  class="btn twitter" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn facebook" href="#"><i class="fab fa-tumblr"></i></a>
-                    <a class="btn google" href="#"><i class="fab fa-youtube"></i></a>
+                        @if ($user->facebook != "")
+                    <a class="btn facebook" href="{{{ $user->facebook }}}"><i  class="fab fa-facebook-f"></i></a>
+                        @endif
+                        @if ($user->twitter != "")
+                    <a  class="btn twitter" href="{{{ $user->twitter }}}"><i class="fab fa-twitter"></i></a>
+                        @endif
+                         @if ($user->tumblr != "")
+                    <a class="btn facebook" href="{{{ $user->tumblr }}}"><i class="fab fa-tumblr"></i></a>
+                        @endif
+                        @if ($user->youtube != "")
+                    <a class="btn google" href="{{{ $user->youtube }}}"><i class="fab fa-youtube"></i></a>
+                            @endif
+
                 </div>
-                @if ($user->youtube != "")
-                    <li>
-                        <a href="{{{ $user->youtube }}}">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                @endif
-
-                @if ($user->facebook != "")
-                    <li>
-                        <a href="{{{ $user->facebook }}}">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                @endif
-
-                @if ($user->twitter != "")
-                    <li>
-                        <a href="{{{ $user->twitter }}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                @endif
-
-                @if ($user->tumblr != "")
-                    <li>
-                        <a href="{{{ $user->tumblr }}}">
-                            <i class="fab fa-tumblr-square"></i>
-                        </a>
-                    </li>
-                @endif
-                @if ($user->website != "")
-                    <li>
-                        <a href="{{{ $user->website }}}">
-                            <i class="fas fa-desktop"></i>
-                        </a>
-                    </li>
-                @endif
-            </ul>
             <br>
 
             <div class="profile-bio">
