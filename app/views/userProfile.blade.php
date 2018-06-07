@@ -226,6 +226,7 @@
         padding: 1.30em;
         width: 33.33334%;
         display: table-cell;
+
         text-align: center;
     }
 
@@ -252,6 +253,7 @@
     .social-btns .btn .fab {
         -webkit-transform: scale(0.8);
         transform: scale(0.8);
+        font-size: 35px;
     }
     .social-btns .btn.facebook:before {
         background-color: #3b5998;
@@ -311,6 +313,7 @@
         width: 40px;
         height: 40px;
         line-height: 30px;
+        padding:5px;
         margin: 0px 30px;
         text-align: center;
         position: relative;
