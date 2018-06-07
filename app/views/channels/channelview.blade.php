@@ -26,7 +26,7 @@
 
                                         </center>
                                     </div>
-                                    <div class="card-body" style="padding:0px;">
+                                    <div class="card-body" style="padding:20px;background:white;">
                                         <i style="color:#A0D468" class="fas fa-tv"></i>
                                         <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
                                     </div>
