@@ -11,7 +11,6 @@
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
                             @foreach(Channels::where("unique_channelname", "=", $unique_channelname)->limit(1)->get() as $channels)
                                 <div class="card" style="background:#5d3bae;">
-                                    <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($channels->channel_img_path) }}" alt="Card image cap">
                                     <div class="card-body" style="    background-position: 73%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +18,10 @@
     max-height: 200px;
     max-width: 1000px;
     overflow: hidden;">
+                                        <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($channels->channel_img_path) }}" alt="Card image cap">
+
                                         <center>
+
                                             <img style="top: -150px;position:relative;height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
                                             <i style="color:#A0D468" class="fas fa-tv"></i>
                                             <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
