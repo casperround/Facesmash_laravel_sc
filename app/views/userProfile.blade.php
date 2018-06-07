@@ -485,7 +485,7 @@
             </form>
         </div>
         @endif
-                    @endif
+
         @foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
             @if ($post->media_type == 'text')
                 <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
@@ -532,8 +532,12 @@
                             <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
                         </div>
                     </div>
+                    @if (!Auth::check())
                 </div>
+                @endif
             @endif
         @endforeach
+                    @if (Auth::check())
     </div>
+        @endif
 @stop
