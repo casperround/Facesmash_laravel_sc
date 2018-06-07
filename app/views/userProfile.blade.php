@@ -398,14 +398,15 @@
 
                 </div>
             <br>
-
+        </aside>
+                    </div>
         <style>
             .Post_Container {
                 height:auto;
                 width:90%;
                 border-radius: 5px;
                 margin:10px;
-                padding:10px;
+                padding:40px;
                 box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
                 background:#E6E9ED;
             }
@@ -533,7 +534,5 @@
                 </div>
             @endif
         @endforeach
-        </aside>
-                    </div>
     </div>
 @stop
