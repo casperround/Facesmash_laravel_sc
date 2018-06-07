@@ -176,20 +176,19 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverPage() {
 
-        if(!Auth::check()) {
-            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-            $discover_page = "discover";
+//        if(!Auth::check()) {
+//            $visitor_ip = $_SERVER['REMOTE_ADDR'];
+//            $discover_page = "discover";
+//
+//            OpenDiscoverViews::create([
+//                "time" => date("H:i:s"),
+//                "date" => date("Y-m-d"),
+//                "ip" => $visitor_ip,
+//                "discover_page" => $discover_page
+//            ]);
+//        }
 
-            OpenDiscoverViews::create([
-                "time" => date("H:i:s"),
-                "date" => date("Y-m-d"),
-                "ip" => $visitor_ip,
-                "discover_page" => $discover_page
-            ]);
-        }
-        else {
-            return View::make("discover");
-        }
+        return View::make("discover");
     }
 
 //==============================================
