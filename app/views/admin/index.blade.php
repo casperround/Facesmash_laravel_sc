@@ -165,7 +165,49 @@
                         {{{ $gifsLoggedIn['todayVisitors'] }}}
                     ],
                     fill: false,
-                },]
+                }, {
+                    label: 'Groups Views',
+                    backgroundColor: "#00a7c6",
+                    borderColor: "#00a7c6",
+                    data: [
+                        {{{ $groupsLoggedIn['7dayVisitors'] }}},
+                        {{{ $groupsLoggedIn['6dayVisitors'] }}},
+                        {{{ $groupsLoggedIn['5dayVisitors'] }}},
+                        {{{ $groupsLoggedIn['4dayVisitors'] }}},
+                        {{{ $groupsLoggedIn['3dayVisitors'] }}},
+                        {{{ $groupsLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $groupsLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Pages Views',
+                    backgroundColor: "#00c605",
+                    borderColor: "#00c605",
+                    data: [
+                        {{{ $pagesLoggedIn['7dayVisitors'] }}},
+                        {{{ $pagesLoggedIn['6dayVisitors'] }}},
+                        {{{ $pagesLoggedIn['5dayVisitors'] }}},
+                        {{{ $pagesLoggedIn['4dayVisitors'] }}},
+                        {{{ $pagesLoggedIn['3dayVisitors'] }}},
+                        {{{ $pagesLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $pagesLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Photos Views',
+                    backgroundColor: "#00c605",
+                    borderColor: "#00c605",
+                    data: [
+                        {{{ $photosLoggedIn['7dayVisitors'] }}},
+                        {{{ $photosLoggedIn['6dayVisitors'] }}},
+                        {{{ $photosLoggedIn['5dayVisitors'] }}},
+                        {{{ $photosLoggedIn['4dayVisitors'] }}},
+                        {{{ $photosLoggedIn['3dayVisitors'] }}},
+                        {{{ $photosLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $photosLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }]
             },
             options: {
                 responsive: true,

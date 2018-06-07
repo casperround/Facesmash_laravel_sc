@@ -41,6 +41,37 @@ class AdminController extends BaseController
             "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
         ];
 
+        $groupsLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "groups")->where("authed_user", "=", 1)->count(),
+        ];
+
+        $pagesLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "pages")->where("authed_user", "=", 1)->count(),
+        ];
+
+        $photosLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "photos")->where("authed_user", "=", 1)->count(),
+        ];
+
+
         $totalSiteUsers = User::all()->count();
         $totalSitePosts = Posts::all()->count();
         $totalSiteGroups = Groups::all()->count();
@@ -54,7 +85,10 @@ class AdminController extends BaseController
             "totalSiteChannels" => $totalSiteChannels,
             "mainDiscoveryLoggedIn" => $mainDiscoveryLoggedIn,
             "channelsLoggedIn" => $channelsLoggedIn,
-            "gifsLoggedIn" => $gifsLoggedIn
+            "gifsLoggedIn" => $gifsLoggedIn,
+            "groupsLoggedIn" => $groupsLoggedIn,
+            "pagesLoggedIn" => $pagesLoggedIn,
+            "photosLoggedIn" => $photosLoggedIn
         ]);
     }
 
