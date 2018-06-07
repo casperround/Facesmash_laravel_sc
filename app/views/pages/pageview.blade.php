@@ -1,12 +1,12 @@
-@extends('layouts.public', ["title" => "Discover", "sidebar" => false])
+@extends('layouts.public', ["title" => $page->unique_pagename, "sidebar" => false])
 @section("in-head")
-    <meta property="og:url" content="https://www.facesmash.co.uk/">
-    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.facesmash.co.uk/page/{{ $page->unique_pagename }}">
+    {{--<meta property="og:type" content="website">--}}
     <meta property="og:title" content="{{ $page->unique_pagename }}">
-    <meta property="og:description" content="Facesmash | Sign up now!">
-    <meta property="og:image" content="{{ URL::to("") }}">
-    <meta name="theme-color" content="#ffffff">
-    <meta content="Casper Round" name="author">
+    <meta property="og:description" content="{{ $page->about }}">
+    <meta property="og:image" content="{{ URL::to($page->banner_img_path) }}">
+    {{--<meta name="theme-color" content="#ffffff">--}}
+    {{--<meta content="Casper Round" name="author">--}}
 @stop
 @section("content")
     @if (Auth::check())
