@@ -328,7 +328,7 @@
         transform: rotate(45deg);
     }
     .social-btns .btn .fa {
-        font-size: 38px;
+        font-size: 34px;
         vertical-align: middle;
     }
 
