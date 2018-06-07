@@ -33,7 +33,7 @@
                             </div>
                             @endif
                             @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
-                                    <div class="col-md">
+                                    <a href="{{ URL::route("photoview", $post->post_id) }}"><div class="col-md">
                                         <div class="card">
                                             <img class="card-img-top" src="{{ URL::to($post->file_path) }}" alt="Card image cap">
                                             <div class="card-body" style="color: black">
@@ -42,7 +42,7 @@
                                                 <p class="card-text">{{{ $post->text }}}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                        </div></a>
                             @endif
                         @endforeach
                 </div>
