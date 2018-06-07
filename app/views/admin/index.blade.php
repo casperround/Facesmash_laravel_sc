@@ -119,20 +119,38 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
             <div class="m-portlet m-portlet--full-height  m-portlet--unair">
                 <div class="m-portlet__head">
                     <div class="m-portlet__head-caption">
                         <div class="m-portlet__head-title">
                             <h3 class="m-portlet__head-text">
-                                Discover Page Views
+                                Logged In Content Views
                             </h3>
                         </div>
                     </div>
                 </div>
                 <div class="m-portlet__body">
                     <div style="width:100%;">
-                        <canvas id="canvas"></canvas>
+                        <canvas id="Loggedcanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="m-portlet m-portlet--full-height  m-portlet--unair">
+                <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                            <h3 class="m-portlet__head-text">
+                                Non Logged In Content Views
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-portlet__body">
+                    <div style="width:100%;">
+                        <canvas id="nonLoggedcanvas"></canvas>
                     </div>
                 </div>
             </div>
@@ -143,7 +161,7 @@
 
 @section("js")
     <script>
-        var config = {
+        var configloggedIn = {
             type: 'line',
             data: {
                 labels: ['7 Days Ago', '6 Days Ago', '5 Days Ago', '4 Days Ago', '3 Days Ago', 'Yesterday', 'Today'],
@@ -152,106 +170,47 @@
                     backgroundColor: "#c60000",
                     borderColor: "#c60000",
                     data: [
-                        {{{ $mainDiscoverViews['7dayVisitors'] }}},
-                        {{{ $mainDiscoverViews['6dayVisitors'] }}},
-                        {{{ $mainDiscoverViews['5dayVisitors'] }}},
-                        {{{ $mainDiscoverViews['4dayVisitors'] }}},
-                        {{{ $mainDiscoverViews['3dayVisitors'] }}},
-                        {{{ $mainDiscoverViews['yesterdayVisitors'] }}},
-                        {{{ $mainDiscoverViews['todayVisitors'] }}}
+
                     ],
                     fill: false,
-                }, {
-                    label: 'Channel Views',
-                    fill: false,
-                    backgroundColor: "#1A22C6",
-                    borderColor: "#1a22c6",
-                    data: [
-                        {{{ $discoverChannelViews['7dayVisitors'] }}},
-                        {{{ $discoverChannelViews['6dayVisitors'] }}},
-                        {{{ $discoverChannelViews['5dayVisitors'] }}},
-                        {{{ $discoverChannelViews['4dayVisitors'] }}},
-                        {{{ $discoverChannelViews['3dayVisitors'] }}},
-                        {{{ $discoverChannelViews['yesterdayVisitors'] }}},
-                        {{{ $discoverChannelViews['todayVisitors'] }}}
-                    ],
-                }, {
-                    label: 'Gif Views',
-                    fill: false,
-                    backgroundColor: "#00c622",
-                    borderColor: "#00C622",
-                    data: [
-                        {{{ $discoverGifViews['7dayVisitors'] }}},
-                        {{{ $discoverGifViews['6dayVisitors'] }}},
-                        {{{ $discoverGifViews['5dayVisitors'] }}},
-                        {{{ $discoverGifViews['4dayVisitors'] }}},
-                        {{{ $discoverGifViews['3dayVisitors'] }}},
-                        {{{ $discoverGifViews['yesterdayVisitors'] }}},
-                        {{{ $discoverGifViews['todayVisitors'] }}}
-                    ],
-                }, {
-                    label: 'Group Views',
-                    fill: false,
-                    backgroundColor: "#c6b600",
-                    borderColor: "#c6b600",
-                    data: [
-                        {{{ $discoverGroupViews['7dayVisitors'] }}},
-                        {{{ $discoverGroupViews['6dayVisitors'] }}},
-                        {{{ $discoverGroupViews['5dayVisitors'] }}},
-                        {{{ $discoverGroupViews['4dayVisitors'] }}},
-                        {{{ $discoverGroupViews['3dayVisitors'] }}},
-                        {{{ $discoverGroupViews['yesterdayVisitors'] }}},
-                        {{{ $discoverGroupViews['todayVisitors'] }}}
-                    ],
-                }, {
-                    label: 'Page Views',
-                    fill: false,
-                    backgroundColor: "#c60393",
-                    borderColor: "#c60393",
-                    data: [
-                        {{{ $discoverPagesViews['7dayVisitors'] }}},
-                        {{{ $discoverPagesViews['6dayVisitors'] }}},
-                        {{{ $discoverPagesViews['5dayVisitors'] }}},
-                        {{{ $discoverPagesViews['4dayVisitors'] }}},
-                        {{{ $discoverPagesViews['3dayVisitors'] }}},
-                        {{{ $discoverPagesViews['yesterdayVisitors'] }}},
-                        {{{ $discoverPagesViews['todayVisitors'] }}}
-                    ],
-                }, {
-                    label: 'Photo Views',
-                    fill: false,
-                    backgroundColor: "#88aaff",
-                    borderColor: "#88aaff",
-                    data: [
-                        {{{ $discoverPhotoViews['7dayVisitors'] }}},
-                        {{{ $discoverPhotoViews['6dayVisitors'] }}},
-                        {{{ $discoverPhotoViews['5dayVisitors'] }}},
-                        {{{ $discoverPhotoViews['4dayVisitors'] }}},
-                        {{{ $discoverPhotoViews['3dayVisitors'] }}},
-                        {{{ $discoverPhotoViews['yesterdayVisitors'] }}},
-                        {{{ $discoverPhotoViews['todayVisitors'] }}}
-                    ],
-                }, {
-                    label: 'Video Views',
-                    fill: false,
-                    backgroundColor: "#ff5000",
-                    borderColor: "#ff5000",
-                    data: [
-                        {{{ $discoverVideoViews['7dayVisitors'] }}},
-                        {{{ $discoverVideoViews['6dayVisitors'] }}},
-                        {{{ $discoverVideoViews['5dayVisitors'] }}},
-                        {{{ $discoverVideoViews['4dayVisitors'] }}},
-                        {{{ $discoverVideoViews['3dayVisitors'] }}},
-                        {{{ $discoverVideoViews['yesterdayVisitors'] }}},
-                        {{{ $discoverVideoViews['todayVisitors'] }}}
-                    ],
-                }]
+                },]
             },
             options: {
                 responsive: true,
                 title: {
                     display: true,
-                    text: 'Discover Pages Views (Non Logged in Users)'
+                    text: 'Content Views (Logged in Users)'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+            }
+        };
+
+        var confignonloggedin = {
+            type: 'line',
+            data: {
+                labels: ['7 Days Ago', '6 Days Ago', '5 Days Ago', '4 Days Ago', '3 Days Ago', 'Yesterday', 'Today'],
+                datasets: [{
+                    label: 'Discover Views',
+                    backgroundColor: "#c60000",
+                    borderColor: "#c60000",
+                    data: [
+
+                    ],
+                    fill: false,
+                },]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Content Views (Non Logged in Users)'
                 },
                 tooltips: {
                     mode: 'index',
@@ -265,8 +224,11 @@
         };
 
         window.onload = function() {
-            var ctx = document.getElementById('canvas').getContext('2d');
-            window.myLine = new Chart(ctx, config);
+            var ctxnon = document.getElementById('Loggedcanvas').getContext('2d');
+            window.myLine = new Chart(ctxnon, configloggedIn);
+
+            var ctx = document.getElementById('nonLoggedcanvas').getContext('2d');
+            window.myLine = new Chart(ctx, confignonloggedin);
         };
     </script>
 @stop
