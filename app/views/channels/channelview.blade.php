@@ -49,8 +49,8 @@
                                                 </div>
                                                 <div class="col">
                                                     <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
-                                                    <input name="relation_id" type="hidden" value="{{ $channels->id }}" >
-                                                    <input name="unique_channelname" type="hidden" value="{{ $channels->unique_channelname }}" >
+                                                    <input name="relation_id" type="hidden" value="{{ $channel->id }}" >
+                                                    <input name="unique_channelname" type="hidden" value="{{ $channel->unique_channelname }}" >
 
                                                     <video controls id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image"></video>
                                                     <script>
