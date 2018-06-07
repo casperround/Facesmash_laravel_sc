@@ -3,8 +3,8 @@
     <meta property="og:url" content="https://www.facesmash.co.uk/channel/{{ $channel->unique_channelname }}">
     {{--<meta property="og:type" content="website">--}}
     <meta property="og:title" content="{{ $channel->unique_channelname }}">
-    <meta property="og:description" content="{{ URL::to($channel->about) }}">
-    <meta property="og:image" content="{{ URL::to($channel->channel_img_path) }}">
+    <meta property="og:description" content="{{ $channel->about }}">
+    <meta property="og:image" content="{{ URL::to($channel->banner_img_path) }}">
     {{--<meta name="theme-color" content="#ffffff">--}}
     {{--<meta content="Casper Round" name="author">--}}
 @stop
