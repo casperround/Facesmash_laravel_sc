@@ -8,7 +8,7 @@
                 @include("includes.discover-top")
                 <div class="card-columns">
                     @foreach(Posts::where("media_type", "=", "mp4")->where("visibility", "=", "1")->get() as $post)
-                        <div class="col-md">
+                        <a href="{{ URL::route("discover.videoView", $post->post_id) }}"><div class="col-md">
                             <div class="card">
                                 <video controls class="card-img-top" src="{{ URL::to($post->file_path) }}"></video>
                                 <div class="card-body" style="color: black">
@@ -16,7 +16,7 @@
                                     <p class="card-text">{{{ $post->text }}}</p>
                                 </div>
                             </div>
-                        </div>
+                            </div></a>
                     @endforeach
                 </div>
             </div>
