@@ -2,7 +2,7 @@
 @section("in-head")
     <meta property="og:url" content="https://www.facesmash.co.uk/page/{{ $post->post_id }}">
     {{--<meta property="og:type" content="website">--}}
-    <meta property="og:title" content="{{URL::to(User::where("id", "=", $post->author_id)->limit(1)->pluck("username"))}}">
+    <meta property="og:title" content="{{User::where("id", "=", $post->author_id)->limit(1)->pluck("username")}}">
     <meta property="og:description" content="{{ $post->text }}">
     <meta property="og:image" content="{{ URL::to($post->file_path) }}">
     {{--<meta name="theme-color" content="#ffffff">--}}
