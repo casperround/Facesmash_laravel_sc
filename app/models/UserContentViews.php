@@ -11,7 +11,7 @@ class UserContentViews extends Eloquent
 
     protected $table = 'user_content_views';
 
-    protected $fillable = ["id", "time", "date", "content_type", "content_id", "authed_user"];
+    protected $fillable = ["id", "time", "date", "IP", "content_type", "content_id", "authed_user"];
 
     public $timestamps = false;
 

@@ -176,6 +176,39 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverPage() {
 
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "main_page";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "main_page";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
 
         return View::make("discover");
     }
@@ -185,12 +218,80 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverChannelPage() {
 
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "channels";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "channels";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
+
         return View::make("discover.channel");
     }
 //==============================================
 //Discover Gif Controller
 //==============================================
     public function discoverGifPage() {
+
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "gifs";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "gifs";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
 
         return View::make("discover.gif");
     }
@@ -199,6 +300,40 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverGroupPage() {
 
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "groups";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "groups";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
+
         return View::make("discover.group");
     }
 //==============================================
@@ -206,12 +341,80 @@ class DefaultController extends BaseController {
 //==============================================
     public function discoverPagesPage() {
 
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "pages";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "pages";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
+
         return View::make("discover.page");
     }
 //==============================================
 //Discover Photo Controller
 //==============================================
     public function discoverPhotoPage() {
+
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "photos";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "photos";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
 
         return View::make("discover.photo");
     }
@@ -228,6 +431,40 @@ class DefaultController extends BaseController {
 //Discover Video Controller
 //==============================================
     public function discoverVideoPage() {
+
+        if (Auth::check()) {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "videos";
+            $authed_user = 1;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        } else {
+            $client_IP = $_SERVER['REMOTE_ADDR'];
+            $time = date("H:i:s");
+            $date = date("Y-m-d");
+            $content_type = "discover";
+            $content_id = "videos";
+            $authed_user = 0;
+
+            UserContentViews::create([
+                "time" => $time,
+                "date" => $date,
+                "IP" => $client_IP,
+                "content_type" => $content_type,
+                "content_id" => $content_id,
+                "authed_user" => $authed_user
+            ]);
+        }
 
         return View::make("discover.video");
     }
@@ -292,9 +529,6 @@ class DefaultController extends BaseController {
             $post_date = date("d-m-Y");
             $visibility = Input::get("visibility");
 
-
-
-
             Pages::create([
                 "unique_pagename" => $unique_pagename,
                 "uid" => $uid,
@@ -353,14 +587,6 @@ class DefaultController extends BaseController {
             ]);
             return Redirect::route("pages.userpage");
         }
-
-
-
-
-
-
-
-
 
     }
 
