@@ -396,11 +396,13 @@
         </aside>
         <style>
             .Post_Container {
-                height:150px;
+                height:auto;
                 width:90%;
                 border-radius: 5px;
                 margin:10px;
-                padding:5px;
+                padding:10px;
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+                background:white;
             }
             body ::-webkit-input-placeholder {
                 /* WebKit browsers */
