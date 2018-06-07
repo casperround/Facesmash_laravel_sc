@@ -362,15 +362,15 @@
                         {{{ $user->about }}}
                     </div>
                     <ul class="data">
-                        <li>
-                            <span class="entypo-heart"> 127</span>
-                        </li>
-                        <li>
-                            <span class="entypo-eye"> 853</span>
-                        </li>
-                        <li>
-                            <span class="entypo-user"> 311</span>
-                        </li>
+                        {{--<li>--}}
+                            {{--<span class="entypo-heart"> 127</span>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<span class="entypo-eye"> 853</span>--}}
+                        {{--</li>--}}
+                        {{--<li>--}}
+                            {{--<span class="entypo-user"> 311</span>--}}
+                        {{--</li>--}}
                     </ul>
                 </div>
 
