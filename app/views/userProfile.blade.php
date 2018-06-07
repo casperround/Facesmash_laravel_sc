@@ -245,8 +245,9 @@
 @section("content")
     <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;color:black;">
         <aside class="profile-card">
+            <header>
                 <div class="user-profile">
-                    <img class="avatar" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s" alt="Ash" />
+                    <img src="{{ URL::to($user->profile_img_path) }}">
                     <div class="username">Will Smith</div>
                     <div class="bio">
                         Senior UI Designer
@@ -268,12 +269,10 @@
                     </ul>
                 </div>
 
-                <a href="#">
-                    <img src="{{ URL::to($user->profile_img_path) }}">
-                </a>
 
                 <h1>{{{ $user->first_name }}} {{{ $user->last_name }}}</h1>
                 <h2>{{{ $user->username }}}</h2>
+            </header>
 
             <br>
 
