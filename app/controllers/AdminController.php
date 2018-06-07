@@ -32,9 +32,9 @@ class AdminController extends BaseController
 
     public function user($id) {
 
-        $user = User::where("id", "=", $id)->get();
+        $user = User::where("id", "=", $id)->get()->first();
 
-        return View::make("admin.user", [
+        return View::make("admin.users.user", [
             "user" => $user
         ]);
 
