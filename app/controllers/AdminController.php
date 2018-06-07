@@ -210,7 +210,6 @@ class AdminController extends BaseController
                 return Redirect::route("admin.user", [$user->id]);
             }
 
-
             $user->update([
                 "username" => $username,
                 "email" => $email,
@@ -226,14 +225,27 @@ class AdminController extends BaseController
         }
 
         if (Input::has("role")) {
+            $role = Input::get("role");
 
-
-
+            $user->update([
+               "role" => $role
+            ]);
         }
 
         if (Input::has("twitter")) {
+            $youtube = Input::get("youtube");
+            $facebook = Input::get("facebook");
+            $tumblr = Input::get("tumblr");
+            $twitter = Input::get("twitter");
+            $website = Input::get("website");
 
-
+            $user->update([
+               "youtube" => $youtube,
+               "facebook" => $facebook,
+               "tumblr" => $tumblr,
+               "twitter" => $twitter,
+               "website" => $website
+            ]);
 
         }
 

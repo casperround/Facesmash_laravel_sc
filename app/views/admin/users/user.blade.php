@@ -61,7 +61,7 @@
                         </div>
                     </form>
                     <br>
-                    <form class="form-control" src="" method="post">
+                    <form class="form-control" src="{{ URL::route("admin.user.editData", [$user->id]) }}" method="post">
                         <div class="form-group">
                             <label>User Role</label>
                             <select class="form-control" name="role">
@@ -88,7 +88,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="height: 500px; overflow-y: scroll">
-                    <form class="form-control" src="" method="post">
+                    <form class="form-control" src="{{ URL::route("admin.user.editData", [$user->id]) }}" method="post">
                         <div class="form-group">
                             <label>Username</label>
                             <input class="form-control" name="username" value="{{{ $user->username }}}">
@@ -146,7 +146,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="height: 500px; overflow-y: scroll">
-                    <form class="form-control" src="" method="post">
+                    <form class="form-control" src="{{ URL::route("admin.user.editData", [$user->id]) }}" method="post">
                         <div class="form-group">
                             <label>Youtube</label>
                             <input class="form-control" name="youtube" value="{{{ $user->youtube }}}">
