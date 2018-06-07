@@ -1,5 +1,3 @@
-<link rel="icon" href="https://www.facesmash.co.uk/logo.png" type="image/png">
-
 <meta name="Description" content="Facesmash - Sign up now!">
 <meta name="Keywords" content="facesmash,social,network,networking,chat,upload,pictures,media,picture,video,videos">
 
