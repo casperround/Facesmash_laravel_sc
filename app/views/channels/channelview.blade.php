@@ -20,7 +20,7 @@
     max-width: 1000px;
     overflow: hidden;">
                                         <center>
-                                            <img style="top: -150px;height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
+                                            <img style="top: -150px;position:relative;height: 400px!important;" class="card-img-top" src="{{ URL::to($channels->banner_img_path) }}" alt="Card image cap">
                                             <i style="color:#A0D468" class="fas fa-tv"></i>
                                             <p style="font-size:20px;font-weight:bold;color:white" class="card-text">{{ $channels->unique_channelname }}</p>
                                         </center>
