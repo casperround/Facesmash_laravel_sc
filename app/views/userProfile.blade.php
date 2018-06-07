@@ -358,185 +358,185 @@
                     <div class="container-fluid">
                         @endif
                         <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
-        <aside class="profile-card">
-            <header style="height:250px">
-                <div class="user-profile">
-                    <img style="position:relative;margin:0px;" src="{{ URL::to($user->profile_img_path) }}">
-                    <div class="username">{{{ $user->username }}}</div>
-                    <div class="bio">
-                    </div>
-                    <div class="description">
-                        {{{ $user->about }}}
-                    </div>
-                    <ul class="data">
-                        {{--<li>--}}
-                            {{--<span class="entypo-heart"> 127</span>--}}
-                        {{--</li>--}}
-                        {{--<li>--}}
-                            {{--<span class="entypo-eye"> 853</span>--}}
-                        {{--</li>--}}
-                        {{--<li>--}}
-                            {{--<span class="entypo-user"> 311</span>--}}
-                        {{--</li>--}}
-                    </ul>
-                </div>
+                            <aside class="profile-card">
+                                <header style="height:250px">
+                                    <div class="user-profile">
+                                        <img style="position:relative;margin:0px;" src="{{ URL::to($user->profile_img_path) }}">
+                                        <div class="username">{{{ $user->username }}}</div>
+                                        <div class="bio">
+                                        </div>
+                                        <div class="description">
+                                            {{{ $user->about }}}
+                                        </div>
+                                        <ul class="data">
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-heart"> 127</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-eye"> 853</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-user"> 311</span>--}}
+                                            {{--</li>--}}
+                                        </ul>
+                                    </div>
 
 
-            </header>
-            <ul class="profile-social-links">
-                <div class="social-btns">
-                        @if ($user->facebook != "")
-                    <a class="btn facebook" href="{{{ $user->facebook }}}"><i  class="fab fa-facebook-f"></i></a>
-                        @endif
-                        @if ($user->twitter != "")
-                    <a  class="btn twitter" href="{{{ $user->twitter }}}"><i class="fab fa-twitter"></i></a>
-                        @endif
-                         @if ($user->tumblr != "")
-                    <a class="btn facebook" href="{{{ $user->tumblr }}}"><i class="fab fa-tumblr"></i></a>
-                        @endif
-                        @if ($user->youtube != "")
-                    <a class="btn google" href="{{{ $user->youtube }}}"><i class="fab fa-youtube"></i></a>
-                            @endif
+                                </header>
+                                <ul class="profile-social-links">
+                                    <div class="social-btns">
+                                            @if ($user->facebook != "")
+                                        <a class="btn facebook" href="{{{ $user->facebook }}}"><i  class="fab fa-facebook-f"></i></a>
+                                            @endif
+                                            @if ($user->twitter != "")
+                                        <a  class="btn twitter" href="{{{ $user->twitter }}}"><i class="fab fa-twitter"></i></a>
+                                            @endif
+                                             @if ($user->tumblr != "")
+                                        <a class="btn facebook" href="{{{ $user->tumblr }}}"><i class="fab fa-tumblr"></i></a>
+                                            @endif
+                                            @if ($user->youtube != "")
+                                        <a class="btn google" href="{{{ $user->youtube }}}"><i class="fab fa-youtube"></i></a>
+                                                @endif
 
-                </div>
-            <br>
-        </aside>
-                    </div>
-        <style>
-            .Post_Container {
-                height:auto;
-                width:90%;
-                border-radius: 5px;
-                margin:10px;
-                padding:10px;
-                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-                background:#E6E9ED;
-            }
-            body ::-webkit-input-placeholder {
-                /* WebKit browsers */
-                font-family: 'Source Sans Pro', sans-serif;
-                color: black;
-                font-weight: 300;
-            }
-            body :-moz-placeholder {
-                /* Mozilla Firefox 4 to 18 */
-                font-family: 'Source Sans Pro', sans-serif;
-                color: black;
-                opacity: 1;
-                font-weight: 300;
-            }
-            body ::-moz-placeholder {
-                /* Mozilla Firefox 19+ */
-                font-family: 'Source Sans Pro', sans-serif;
-                color: black;
-                opacity: 1;
-                font-weight: 300;
-            }
-            body :-ms-input-placeholder {
-                /* Internet Explorer 10+ */
-                font-family: 'Source Sans Pro', sans-serif;
-                color: black;
-                font-weight: 300;
-            }
-            .purp-button {
-                background-color: #5d3bae;
-                color: white;
-            }
-            .purp-button:hover {
-                background-color: #423385;
-                color: white;
-            }
-        </style>
-        @if (Auth::check())
-        <div class="Post_Container">
-            <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}" method="POST">
-                <div class="row">
-                    <div class="col-8">
-                        <textarea name="home_post" style="border:0px;width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
-                        <div class="form-group">
-                            <select class="form-control" name="visibility">
-                                <option value="1">Public</option>
-                                <option value="2">Friends & Friends of friends</option>
-                                <option value="3">Friends</option>
-                                <option value="4" selected>Only me</option>
-                            </select>
+                                    </div>
+                                <br>
+                            </aside>
                         </div>
-                        <button type="submit" class="btn purp-button">Post</button>
-                    </div>
-                    <div class="col">
-                        <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
-                        <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
-                        <script>
-                            function readURL(input) {
-                                if (input.files && input.files[0]) {
-                                    var reader = new FileReader();
-
-                                    reader.onload = function (e) {
-                                        $('#blah')
-                                            .attr('src', e.target.result)
-                                            .width(150)
-                                            .height(auto);
-                                    };
-                                    reader.readAsDataURL(input.files[0]);
+                            <style>
+                                .Post_Container {
+                                    height:auto;
+                                    width:90%;
+                                    border-radius: 5px;
+                                    margin:10px;
+                                    padding:10px;
+                                    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+                                    background:#E6E9ED;
                                 }
-                            }
-                        </script>
-                        {{ Form::token() }}
-                    </div>
-                </div>
-            </form>
-        </div>
-        @endif
+                                body ::-webkit-input-placeholder {
+                                    /* WebKit browsers */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    font-weight: 300;
+                                }
+                                body :-moz-placeholder {
+                                    /* Mozilla Firefox 4 to 18 */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    opacity: 1;
+                                    font-weight: 300;
+                                }
+                                body ::-moz-placeholder {
+                                    /* Mozilla Firefox 19+ */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    opacity: 1;
+                                    font-weight: 300;
+                                }
+                                body :-ms-input-placeholder {
+                                    /* Internet Explorer 10+ */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    font-weight: 300;
+                                }
+                                .purp-button {
+                                    background-color: #5d3bae;
+                                    color: white;
+                                }
+                                .purp-button:hover {
+                                    background-color: #423385;
+                                    color: white;
+                                }
+                            </style>
+                        @if (Auth::check())
+                        <div class="Post_Container">
+                            <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}" method="POST">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <textarea name="home_post" style="border:0px;width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
+                                        <div class="form-group">
+                                            <select class="form-control" name="visibility">
+                                                <option value="1">Public</option>
+                                                <option value="2">Friends & Friends of friends</option>
+                                                <option value="3">Friends</option>
+                                                <option value="4" selected>Only me</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn purp-button">Post</button>
+                                    </div>
+                                    <div class="col">
+                                        <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
+                                        <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
+                                        <script>
+                                            function readURL(input) {
+                                                if (input.files && input.files[0]) {
+                                                    var reader = new FileReader();
 
-        @foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
-            @if ($post->media_type == 'text')
-                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
-                    <div class="row" style="width:100%;margin:0px;position: relative;">
-                        <div class="col-1">
-                            <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
+                                                    reader.onload = function (e) {
+                                                        $('#blah')
+                                                            .attr('src', e.target.result)
+                                                            .width(150)
+                                                            .height(auto);
+                                                    };
+                                                    reader.readAsDataURL(input.files[0]);
+                                                }
+                                            }
+                                        </script>
+                                        {{ Form::token() }}
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col-2">
-                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
-                        </div>
-                        <div class="col-2">
-                            <span>{{ $post->post_date }}</span>
-                        </div>
+                        @endif
 
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card" style="padding:15px;">
-                            {{ $post->text }}
-                        </div>
-                    </div>
-                </div>
-            @endif
-            @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
-                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
-                    <div class="row" style="width:100%;margin:0px;position: relative;">
-                        <div class="col-1">
-                            <img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
-                        </div>
-                        <div class="col-2">
-                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
-                        </div>
-                        <div class="col-2">
-                            <span>{{ $post->post_date }}</span>
-                        </div>
+                        @foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+                            @if ($post->media_type == 'text')
+                                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
+                                    <div class="row" style="width:100%;margin:0px;position: relative;">
+                                        <div class="col-1">
+                                            <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{ $post->post_date }}</span>
+                                        </div>
 
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card" style="padding:15px;">
-                            {{ $post->text }}
-                        </div>
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card">
-                            <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
-                        </div>
-                    </div>
-                </div>
-            @endif
-        @endforeach
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card" style="padding:15px;">
+                                            {{ $post->text }}
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                            @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
+                                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
+                                    <div class="row" style="width:100%;margin:0px;position: relative;">
+                                        <div class="col-1">
+                                            <img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{ $post->post_date }}</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card" style="padding:15px;">
+                                            {{ $post->text }}
+                                        </div>
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card">
+                                            <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
     </div>
 @stop
