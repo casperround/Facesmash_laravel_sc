@@ -170,7 +170,7 @@
 
     .user-profile {
         margin: auto;
-        width: 25em;
+        width: 31em;
         height: auto;
         background: #fff;
         border-radius: .3em;
