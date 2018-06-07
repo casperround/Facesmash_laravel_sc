@@ -735,11 +735,14 @@ class DefaultController extends BaseController {
         }
     }
     public function channelsviewPage($unique_channelname) {
+        $channel = Channels::where("unique_channelname", "=", $unique_channelname)->get()->first();
+
         return View::make("channels.channelview", [
-            "unique_channelname" => $unique_channelname
+            "channel" => $channel
         ]);
 
     }
+
     public function channelsPageFormPost() {
 
         if (Input::hasFile("file_upload")) {
