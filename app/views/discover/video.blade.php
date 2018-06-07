@@ -10,7 +10,7 @@
                     @foreach(Posts::where("media_type", "=", "mp4")->where("visibility", "=", "1")->get() as $post)
                         <div class="col-md">
                             <div class="card">
-                                <video class="card-img-top" src="{{ URL::to($post->file_path) }}"></video>
+                                <video controls class="card-img-top" src="{{ URL::to($post->file_path) }}"></video>
                                 <div class="card-body" style="color: black">
                                     <h4 class="card-title">{{{ User::where("id", "=", $post->author_id)->first()->pluck("username") }}} | {{{ $post->post_date }}}</h4>
                                     <p class="card-text">{{{ $post->text }}}</p>
