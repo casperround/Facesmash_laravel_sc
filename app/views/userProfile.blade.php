@@ -398,8 +398,7 @@
 
                 </div>
             <br>
-        </aside>
-                    </div>
+
         <style>
             .Post_Container {
                 height:auto;
@@ -534,5 +533,7 @@
                 </div>
             @endif
         @endforeach
+        </aside>
+                    </div>
     </div>
 @stop
