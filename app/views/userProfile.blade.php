@@ -401,7 +401,6 @@
                                     </div>
                                 <br>
                             </aside>
-                        </div>
                             <style>
                                 .Post_Container {
                                     height:auto;
