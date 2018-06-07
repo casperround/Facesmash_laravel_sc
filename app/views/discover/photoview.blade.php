@@ -26,7 +26,6 @@
                                     </center>
                                 </div>
                             </div>
-                            @endforeach
 
                         </div>
 
