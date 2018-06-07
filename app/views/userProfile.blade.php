@@ -298,10 +298,9 @@
     }
     .social-btns {
         height: 90px;
-        margin: auto;
         font-size: 0;
         text-align: center;
-        position: absolute;
+        position: relative;
         top: 0;
         bottom: 0;
         left: 0;
@@ -313,7 +312,7 @@
         width: 40px;
         height: 40px;
         line-height: 30px;
-        padding:5px;
+        padding:3px;
         margin: 0px 30px;
         text-align: center;
         position: relative;
