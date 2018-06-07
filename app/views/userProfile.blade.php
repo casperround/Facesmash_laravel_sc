@@ -1,6 +1,6 @@
 @extends('layouts.public', ["title" => $user->username, "sidebar" => false])
 
-@section("content")
+@section("onpagecss")
 <style class="cp-pen-styles">
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
     .profile-card {
