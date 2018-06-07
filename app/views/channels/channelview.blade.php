@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => "Channel", "sidebar" => false])
+@extends('layouts.public', ["sidebar" => false])
 
 @section("content")
     @if (Auth::check())
