@@ -214,7 +214,6 @@
     }
 
     .user-profile ul.data {
-        margin: 2em auto;
         height: 3.70em;
         background: #4eb6b6;
         text-align: center;
