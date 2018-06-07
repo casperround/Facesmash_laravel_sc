@@ -1,4 +1,4 @@
-@extends('layouts.public', ["title" => $unique_channelname, "sidebar" => false])
+@extends('layouts.public', ["title" => $channel->unique_channelname, "sidebar" => false])
 @section("in-head")
     <meta property="og:url" content="https://www.facesmash.co.uk/">
     <meta property="og:type" content="website">
