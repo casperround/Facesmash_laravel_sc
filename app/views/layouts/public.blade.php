@@ -98,6 +98,7 @@
     }
 </style>
 
+
 <div class="row">
     @if (Auth::check())
         @include("includes.left-profile")
@@ -108,11 +109,11 @@
 </div>
 
 @if (Auth::check())
-<div class="col-2 Back" style="margin-top:60px;padding-top:10px;overflow-y:scroll;height:100vh;padding:0px;box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);">
+    <div class="col-2 Back" style="margin-top:60px;padding-top:10px;overflow-y:scroll;height:100vh;padding:0px;box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);">
         @include("includes.chat-container")
-</div>
+    </div>
 @endif
-    @yield("content")
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
