@@ -247,7 +247,7 @@
         <aside class="profile-card">
             <header>
                 <div class="user-profile">
-                    <img src="{{ URL::to($user->profile_img_path) }}">
+                    <img style="position:relative;" src="{{ URL::to($user->profile_img_path) }}">
                     <div class="username">Will Smith</div>
                     <div class="bio">
                         Senior UI Designer
