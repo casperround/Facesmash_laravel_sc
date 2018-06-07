@@ -308,14 +308,14 @@
     .social-btns .btn {
         display: inline-block;
         background-color: #fff;
-        width: 90px;
-        height: 90px;
-        line-height: 90px;
-        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+        line-height: 30px;
+        margin: 0px 30px;
         text-align: center;
         position: relative;
         overflow: hidden;
-        border-radius: 28%;
+        border-radius: 22%;
         box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
         opacity: 0.99;
     }
@@ -330,6 +330,24 @@
     .social-btns .btn .fa {
         font-size: 38px;
         vertical-align: middle;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 3px 10px;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
 </style>
 @stop
@@ -364,7 +382,7 @@
 
             </header>
             <ul class="profile-social-links">
-                <div class="social-btns"><a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a><a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a class="btn google" href="#"><i class="fa fa-google"></i></a><a class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a class="btn skype" href="#"><i class="fa fa-skype"></i></a>
+                <div class="social-btns"><a style="    padding: 3px 10px;" class="btn facebook" href="#"><i  class="fa fa-facebook"></i></a><a style="    padding: 3px 10px;" class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a  style="    padding: 3px 10px;" class="btn google" href="#"><i class="fa fa-google"></i></a><a style="    padding: 3px 10px;" class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a style="    padding: 3px 10px;" class="btn skype" href="#"><i class="fa fa-skype"></i></a>
                 </div>
                 @if ($user->youtube != "")
                     <li>
