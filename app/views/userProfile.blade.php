@@ -249,38 +249,38 @@
         top: 90%;
         left: -110%;
     }
-    .social-btns .btn .fa {
+    .social-btns .btn .fab {
         -webkit-transform: scale(0.8);
         transform: scale(0.8);
     }
     .social-btns .btn.facebook:before {
         background-color: #3b5998;
     }
-    .social-btns .btn.facebook .fa {
+    .social-btns .btn.facebook .fab {
         color: #3b5998;
     }
     .social-btns .btn.twitter:before {
         background-color: #3cf;
     }
-    .social-btns .btn.twitter .fa {
+    .social-btns .btn.twitter .fab {
         color: #3cf;
     }
     .social-btns .btn.google:before {
         background-color: #dc4a38;
     }
-    .social-btns .btn.google .fa {
+    .social-btns .btn.google .fab {
         color: #dc4a38;
     }
     .social-btns .btn.dribbble:before {
         background-color: #f26798;
     }
-    .social-btns .btn.dribbble .fa {
+    .social-btns .btn.dribbble .fab {
         color: #f26798;
     }
     .social-btns .btn.skype:before {
         background-color: #00aff0;
     }
-    .social-btns .btn.skype .fa {
+    .social-btns .btn.skype .fab {
         color: #00aff0;
     }
     .social-btns .btn:focus:before,
@@ -288,8 +288,8 @@
         top: -10%;
         left: -10%;
     }
-    .social-btns .btn:focus .fa,
-    .social-btns .btn:hover .fa {
+    .social-btns .btn:focus .fab,
+    .social-btns .btn:hover .fab {
         color: #fff;
         -webkit-transform: scale(1);
         transform: scale(1);
