@@ -18,7 +18,7 @@
     max-height: 200px;
     max-width: 1000px;
     overflow: hidden;">
-                                        <img class="card-img-top" style="height: 50px;width: 50px;" src="{{ URL::to($channels->channel_img_path) }}" alt="Card image cap">
+                                        <img class="card-img-top" style="z-index:10;position: relative;height: 50px;width: 50px;" src="{{ URL::to($channels->channel_img_path) }}" alt="Card image cap">
 
                                         <center>
 
