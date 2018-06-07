@@ -136,6 +136,12 @@
         <div id="m_aside_left" class="m-grid__item	m-aside-left  m-aside-left--skin-dark ">
             <div id="m_ver_menu" class="m-aside-menu  m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark " m-menu-vertical="1" m-menu-scrollable="0" m-menu-dropdown-timeout="500"  >
                 <ul class="m-menu__nav ">
+                    <li class="m-menu__section m-menu__section--first">
+                        <h4 class="m-menu__section-text">
+                            General
+                        </h4>
+                        <i class="m-menu__section-icon flaticon-more-v3"></i>
+                    </li>
                     <li class="m-menu__item " aria-haspopup="true" >
                         <a href="{{ URL::route("admin.index") }}" class="m-menu__link ">
                             <span class="m-menu__item-here"></span>
@@ -144,6 +150,12 @@
                                 Dashboard
                             </span>
                         </a>
+                    </li>
+                    <li class="m-menu__section m-menu__section--first">
+                        <h4 class="m-menu__section-text">
+                            User Management
+                        </h4>
+                        <i class="m-menu__section-icon flaticon-more-v3"></i>
                     </li>
                     <li class="m-menu__item " aria-haspopup="true" >
                         <a href="{{ URL::route("admin.users") }}" class="m-menu__link ">

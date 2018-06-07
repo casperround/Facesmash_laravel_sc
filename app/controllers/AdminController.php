@@ -190,12 +190,11 @@ class AdminController extends BaseController
 
     }
 
-    public function userPageUpdateInfo($id) {
+    public function userPageUpdate($id) {
 
         $user = User::where("id", "=", $id)->get()->first();
 
-        if (Input::has("username")) {
-
+        if (Input::has("username") OR Input::has("email")) {
             $username = Input::get("username");
             $email = Input::get("email");
             $first_name = Input::get("first_name");
@@ -232,7 +231,7 @@ class AdminController extends BaseController
             ]);
         }
 
-        if (Input::has("twitter")) {
+        if (Input::has("twitter") OR Input::has("youtube") OR Input::has("tumblr") OR Input::has("twitter") OR Input::has("website")) {
             $youtube = Input::get("youtube");
             $facebook = Input::get("facebook");
             $tumblr = Input::get("tumblr");

@@ -241,6 +241,6 @@ Route::get('/admin/user/{id}', [
     "uses" => "AdminController@user"
 ]);
 Route::post('/admin/userEdit/{id}', [
-    "as" => "admin.user.editData",
-    "uses" => "AdminController@userPageUpdateInfo"
+    "as" => "admin.userEdit",
+    "uses" => "AdminController@userPageUpdate"
 ]);

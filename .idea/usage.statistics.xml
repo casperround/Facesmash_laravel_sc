@@ -4,26 +4,26 @@
     <session id="2103099058">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="21" />
+          <entry key="php" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="12" />
+          <entry key="Blade" value="13" />
           <entry key="PHP" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="4646" />
-          <entry key="txt" value="507" />
+          <entry key="php" value="5066" />
+          <entry key="txt" value="583" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="2055" />
-          <entry key="PHP" value="2591" />
-          <entry key="PLAIN_TEXT" value="507" />
+          <entry key="Blade" value="2087" />
+          <entry key="PHP" value="2979" />
+          <entry key="PLAIN_TEXT" value="583" />
         </counts>
       </usages-collector>
     </session>
