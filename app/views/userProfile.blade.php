@@ -350,7 +350,12 @@
 @stop
 
 @section("content")
-    <div class="col-md" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;color:black;">
+    @if (Auth::check())
+        <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;color:black;">
+            @else
+                <div class="container-fluid">
+                    @endif
+                    <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
         <aside class="profile-card">
             <header style="height:250px">
                 <div class="user-profile">
@@ -394,6 +399,7 @@
                 </div>
             <br>
         </aside>
+                    </div>
         <style>
             .Post_Container {
                 height:auto;
