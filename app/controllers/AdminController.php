@@ -11,12 +11,23 @@ class AdminController extends BaseController
 
     public function index() {
 
+        $mainDiscoveryLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_id", "=", "main_page")->where("content_type", "=", "discover")->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->count(),
+        ];
+
         $totalSiteUsers = User::all()->count();
         $newest100Users = User::orderBy("id", "DESC")->limit(100)->get();
 
         return View::make("admin.index", [
             "totalSiteUsers" => $totalSiteUsers,
             "newest100Users" => $newest100Users,
+            "mainDiscoveryLoggedIn" => $mainDiscoveryLoggedIn
         ]);
     }
 

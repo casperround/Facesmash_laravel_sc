@@ -222,8 +222,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "channels";
+            $content_type = "channels";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -238,8 +238,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "channels";
+            $content_type = "channels";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([
@@ -263,8 +263,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "gifs";
+            $content_type = "gifs";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -279,8 +279,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "gifs";
+            $content_type = "gifs";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([
@@ -304,8 +304,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "groups";
+            $content_type = "groups";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -320,8 +320,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "groups";
+            $content_type = "groups";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([
@@ -345,8 +345,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "pages";
+            $content_type = "pages";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -361,8 +361,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "pages";
+            $content_type = "pages";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([
@@ -386,8 +386,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "photos";
+            $content_type = "photos";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -402,8 +402,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "photos";
+            $content_type = "photos";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([
@@ -436,8 +436,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "videos";
+            $content_type = "videos";
+            $content_id = "";
             $authed_user = 1;
 
             UserContentViews::create([
@@ -452,8 +452,8 @@ class DefaultController extends BaseController {
             $client_IP = $_SERVER['REMOTE_ADDR'];
             $time = date("H:i:s");
             $date = date("Y-m-d");
-            $content_type = "discover";
-            $content_id = "videos";
+            $content_type = "videos";
+            $content_id = "";
             $authed_user = 0;
 
             UserContentViews::create([

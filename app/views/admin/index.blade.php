@@ -166,11 +166,17 @@
             data: {
                 labels: ['7 Days Ago', '6 Days Ago', '5 Days Ago', '4 Days Ago', '3 Days Ago', 'Yesterday', 'Today'],
                 datasets: [{
-                    label: 'Discover Views',
+                    label: 'Main Views',
                     backgroundColor: "#c60000",
                     borderColor: "#c60000",
                     data: [
-
+                        {{{ $mainDiscoveryLoggedIn['7dayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['6dayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['5dayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['4dayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['3dayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $mainDiscoveryLoggedIn['todayVisitors'] }}}
                     ],
                     fill: false,
                 },]
@@ -200,9 +206,7 @@
                     label: 'Discover Views',
                     backgroundColor: "#c60000",
                     borderColor: "#c60000",
-                    data: [
 
-                    ],
                     fill: false,
                 },]
             },
