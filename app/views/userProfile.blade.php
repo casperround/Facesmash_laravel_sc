@@ -304,8 +304,8 @@
     .social-btns .btn {
         display: inline-block;
         background-color: #fff;
-        width: 40px;
-        height: 40px;
+        width: 46px;
+        height: 42px;
         line-height: 30px;
         padding:3px;
         margin: 0px 30px;
