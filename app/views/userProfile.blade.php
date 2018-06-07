@@ -297,7 +297,6 @@
         transform: scale(1);
     }
     .social-btns {
-        height: 90px;
         font-size: 0;
         text-align: center;
         position: relative;
