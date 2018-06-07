@@ -32,7 +32,7 @@
                                 Total Site Posts
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                0
+                                {{ $totalSitePosts }}
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -42,14 +42,14 @@
                     <div class="m-widget24">
                         <div class="m-widget24__item">
                             <h4 class="m-widget24__title">
-                                Different Value
+                                Total Groups
                             </h4>
                             <br>
                             <span class="m-widget24__desc">
-                                Something else
+                                Total Site Groups
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                0
+                                {{ $totalSiteGroups }}
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -59,14 +59,14 @@
                     <div class="m-widget24">
                         <div class="m-widget24__item">
                             <h4 class="m-widget24__title">
-                                Different Value
+                                Total Channels
                             </h4>
                             <br>
                             <span class="m-widget24__desc">
-                                Something else
+                                Total Site Channels
                             </span>
                             <span class="m-widget24__stats m--font-success">
-                                0
+                                {{ $totalSiteChannels }}
                             </span>
                             <div class="m--space-40"></div>
                         </div>
@@ -149,6 +149,20 @@
                         {{{ $channelsLoggedIn['3dayVisitors'] }}},
                         {{{ $channelsLoggedIn['yesterdayVisitors'] }}},
                         {{{ $channelsLoggedIn['todayVisitors'] }}}
+                    ],
+                    fill: false,
+                }, {
+                    label: 'Gifs Views',
+                    backgroundColor: "#5800c6",
+                    borderColor: "#5800c6",
+                    data: [
+                        {{{ $gifsLoggedIn['7dayVisitors'] }}},
+                        {{{ $gifsLoggedIn['6dayVisitors'] }}},
+                        {{{ $gifsLoggedIn['5dayVisitors'] }}},
+                        {{{ $gifsLoggedIn['4dayVisitors'] }}},
+                        {{{ $gifsLoggedIn['3dayVisitors'] }}},
+                        {{{ $gifsLoggedIn['yesterdayVisitors'] }}},
+                        {{{ $gifsLoggedIn['todayVisitors'] }}}
                     ],
                     fill: false,
                 },]

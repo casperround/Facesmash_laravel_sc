@@ -31,14 +31,30 @@ class AdminController extends BaseController
             "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "channels")->where("authed_user", "=", 1)->count(),
         ];
 
+        $gifsLoggedIn = [
+            "todayVisitors" => UserContentViews::whereDate("date", "=", date("Y-m-d"))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "yesterdayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-1 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "3dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-2 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "4dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-3 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "5dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-4 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "6dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-5 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+            "7dayVisitors" => UserContentViews::whereDate("date", "=", date('Y-m-d',strtotime("-6 days")))->where("content_type", "=", "gifs")->where("authed_user", "=", 1)->count(),
+        ];
+
         $totalSiteUsers = User::all()->count();
-        $newest100Users = User::orderBy("id", "DESC")->limit(100)->get();
+        $totalSitePosts = Posts::all()->count();
+        $totalSiteGroups = Groups::all()->count();
+        $totalSiteChannels = Channels::all()->count();
+
 
         return View::make("admin.index", [
             "totalSiteUsers" => $totalSiteUsers,
-            "newest100Users" => $newest100Users,
+            "totalSitePosts" => $totalSitePosts,
+            "totalSiteGroups" => $totalSiteGroups,
+            "totalSiteChannels" => $totalSiteChannels,
             "mainDiscoveryLoggedIn" => $mainDiscoveryLoggedIn,
-            "channelsLoggedIn" => $channelsLoggedIn
+            "channelsLoggedIn" => $channelsLoggedIn,
+            "gifsLoggedIn" => $gifsLoggedIn
         ]);
     }
 
