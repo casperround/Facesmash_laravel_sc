@@ -121,6 +121,10 @@ Route::get('/discover/video', [
     "as" => "discover.video",
     "uses" => "DefaultController@discoverVideoPage"
 ]);
+Route::get('/discover/video/{post_id}', [
+    "as" => "discover.videoView",
+    "uses" => "DefaultController@discoverVideoViewPage"
+]);
 //==============================================
 // Pages Routes
 //==============================================

@@ -302,7 +302,7 @@ class DefaultController extends BaseController {
 
 //        if(!Auth::check()) {
 //            $visitor_ip = $_SERVER['REMOTE_ADDR'];
-//            $discover_page = "video";
+//            $discover_page = "photo";
 //
 //            OpenDiscoverViews::create([
 //                "time" => date("H:i:s"),
@@ -312,7 +312,16 @@ class DefaultController extends BaseController {
 //            ]);
 //        }
 
-        return View::make("discover.videos");
+        return View::make("discover.video");
+    }
+    public function discoverVideoViewPage($post_id) {
+
+        $post = Posts::where("post_id", "=", $post_id)->get()->first();
+
+        return View::make("discover.videoview", [
+            "post" => $post
+        ]);
+
     }
 //==============================================
 // Pages Controller
