@@ -382,7 +382,7 @@
 
             </header>
             <ul class="profile-social-links">
-                <div class="social-btns"><a style="    padding: 3px 10px;" class="btn facebook" href="#"><i  class="fa fa-facebook"></i></a><a style="    padding: 3px 10px;" class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a  style="    padding: 3px 10px;" class="btn google" href="#"><i class="fa fa-google"></i></a><a style="    padding: 3px 10px;" class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a style="    padding: 3px 10px;" class="btn skype" href="#"><i class="fa fa-skype"></i></a>
+                <div class="social-btns"><a style="    padding: 3px 5px;" class="btn facebook" href="#"><i  class="fa fa-facebook"></i></a><a style="    padding: 3px 10px;" class="btn twitter" href="#"><i class="fa fa-twitter"></i></a><a  style="    padding: 3px 10px;" class="btn google" href="#"><i class="fa fa-google"></i></a><a style="    padding: 3px 10px;" class="btn dribbble" href="#"><i class="fa fa-dribbble"></i></a><a style="    padding: 3px 10px;" class="btn skype" href="#"><i class="fa fa-skype"></i></a>
                 </div>
                 @if ($user->youtube != "")
                     <li>
