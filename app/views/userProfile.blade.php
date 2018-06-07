@@ -439,7 +439,7 @@
                 color: white;
             }
         </style>
-
+        @if (Auth::check())
         <div class="Post_Container">
             <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}" method="POST">
                 <div class="row">
@@ -478,54 +478,55 @@
                 </div>
             </form>
         </div>
-        @foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
-            @if ($post->media_type == 'text')
-                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
-                    <div class="row" style="width:100%;margin:0px;position: relative;">
-                        <div class="col-1">
-                            <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
-                        </div>
-                        <div class="col-2">
-                            <span>{{Auth::user()->username}}</span>
-                        </div>
-                        <div class="col-2">
-                            <span>{{ $post->post_date }}</span>
-                        </div>
+        @endif
+        {{--@foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)--}}
+            {{--@if ($post->media_type == 'text')--}}
+                {{--<div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">--}}
+                    {{--<div class="row" style="width:100%;margin:0px;position: relative;">--}}
+                        {{--<div class="col-1">--}}
+                            {{--<img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-2">--}}
+                            {{--<span>{{Auth::user()->username}}</span>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-2">--}}
+                            {{--<span>{{ $post->post_date }}</span>--}}
+                        {{--</div>--}}
 
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card" style="padding:15px;">
-                            {{ $post->text }}
-                        </div>
-                    </div>
-                </div>
-            @endif
-            @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
-                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
-                    <div class="row" style="width:100%;margin:0px;position: relative;">
-                        <div class="col-1">
-                            <img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
-                        </div>
-                        <div class="col-2">
-                            <span>{{Auth::user()->username}}</span>
-                        </div>
-                        <div class="col-2">
-                            <span>{{ $post->post_date }}</span>
-                        </div>
+                    {{--</div>--}}
+                    {{--<div class="card-group" style="color:black;">--}}
+                        {{--<div class="card" style="padding:15px;">--}}
+                            {{--{{ $post->text }}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--@endif--}}
+            {{--@if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')--}}
+                {{--<div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">--}}
+                    {{--<div class="row" style="width:100%;margin:0px;position: relative;">--}}
+                        {{--<div class="col-1">--}}
+                            {{--<img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-2">--}}
+                            {{--<span>{{Auth::user()->username}}</span>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-2">--}}
+                            {{--<span>{{ $post->post_date }}</span>--}}
+                        {{--</div>--}}
 
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card" style="padding:15px;">
-                            {{ $post->text }}
-                        </div>
-                    </div>
-                    <div class="card-group" style="color:black;">
-                        <div class="card">
-                            <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
-                        </div>
-                    </div>
-                </div>
-            @endif
-        @endforeach
+                    {{--</div>--}}
+                    {{--<div class="card-group" style="color:black;">--}}
+                        {{--<div class="card" style="padding:15px;">--}}
+                            {{--{{ $post->text }}--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--<div class="card-group" style="color:black;">--}}
+                        {{--<div class="card">--}}
+                            {{--<img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--@endif--}}
+        {{--@endforeach--}}
     </div>
 @stop
