@@ -107,7 +107,7 @@
                                             <div class="card-group" style="background:#efefef;border:0px;color:black;">
                                                 <div class="card" style="background:#efefef;border:0px;">
                                                     <video id="my-video" class="video-js" controls preload="auto" width="100%" height="auto" style="width:100%;height:auto;position: relative;"
-                                                           poster="{{ URL::to($post->file_path) }}" data-setup="{}">
+                                                           poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
                                                         <source src="{{ URL::to($post->file_path) }}" type='video/mp4'>
                                                         <source src="{{ URL::to($post->file_path) }}" type='video/webm'>
                                                         <p class="vjs-no-js">
