@@ -105,6 +105,10 @@ class DefaultController extends BaseController {
 
         if (Input::hasFile("file_upload")) {
 
+
+
+
+
             $uid = str_random(10);
 
             $savePath = 'data_store/post_media/';
@@ -115,6 +119,20 @@ class DefaultController extends BaseController {
             $file->move($savePath, $filename);
             $filePath = $savePath . $filename;
 
+            if ($fileExtension == "mp4") {
+                $ffmpeg = FFMpeg\FFMpeg::create();
+                $video = $ffmpeg->open($file);
+                $video
+                    ->filters()
+                    ->resize(new FFMpeg\Coordinate\Dimension(320, 240))
+                    ->synchronize();
+                $video
+                    ->frame(FFMpeg\Coordinate\TimeCode::fromSeconds(10))
+                    ->save('frame.jpg');
+                $video
+                    ->save(new FFMpeg\Format\Video\WMV(), $savePath . $filename . '.wmv')
+                    ->save(new FFMpeg\Format\Video\WebM(), $savePath . $filename . '.webm');
+            }
             $media_type = $fileExtension;
             $home_post = Input::get("home_post");
             $author_id = Auth::user()->id;
@@ -786,19 +804,6 @@ class DefaultController extends BaseController {
     public function userChannelsNewPage() {
         
 
-        $ffmpeg = FFMpeg\FFMpeg::create();
-        $video = $ffmpeg->open('video.mpg');
-        $video
-            ->filters()
-            ->resize(new FFMpeg\Coordinate\Dimension(320, 240))
-            ->synchronize();
-        $video
-            ->frame(FFMpeg\Coordinate\TimeCode::fromSeconds(10))
-            ->save('frame.jpg');
-        $video
-            ->save(new FFMpeg\Format\Video\X264(), 'export-x264.mp4')
-            ->save(new FFMpeg\Format\Video\WMV(), 'export-wmv.wmv')
-            ->save(new FFMpeg\Format\Video\WebM(), 'export-webm.webm');
 
 
         if (Input::hasFile("file_upload_banner") OR Input::hasFile("file_upload_profile")) {
