@@ -15,3 +15,8 @@
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+<link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
+
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>

@@ -52,7 +52,7 @@
         <a href="{{ URL::route("register") }}"><p class="button_side">Or Register</p></a>
     </form>
 
-    <a href="{{ URL::route("discover") }}">
+    <a href="discover.php">
         <input type="submit" name="login" value="Discover?" class="button">
     </a>
 @stop

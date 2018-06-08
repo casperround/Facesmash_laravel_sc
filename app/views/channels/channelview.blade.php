@@ -106,7 +106,14 @@
                                             </div>
                                             <div class="card-group" style="background:#efefef;border:0px;color:black;">
                                                 <div class="card" style="background:#efefef;border:0px;">
-                                                    <video controls style="width: 100%;height: auto;padding: 0px;" src="{{ URL::to($post->file_path) }}">
+                                                    <video id="my-video" class="video-js" controls preload="auto" width="100%" height="auto" style="width:100%;height:auto;position: relative;"
+                                                           poster="http://vjs.zencdn.net/v/oceans.png" data-setup="{}">
+                                                        <source src="{{ URL::to($post->file_path) }}" type='video/mp4'>
+                                                        <source src="{{ URL::to($post->file_path) }}" type='video/webm'>
+                                                        <p class="vjs-no-js">
+                                                            To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                                        </p>
+                                                    </video>
                                                 </div>
                                             </div>
                                         </div>
