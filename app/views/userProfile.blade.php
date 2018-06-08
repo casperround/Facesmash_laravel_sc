@@ -12,12 +12,11 @@
         width: 90%;
         height: auto;
         margin: 0 auto;
-        background: #fff;
         border-radius: 5px;
-        border: 1px solid;
-        border-color: #e5e6e9 #dfe0e4 #d0d1d5;
     }
-
+    header {
+        height:250px;
+    }
     .profile-card::before {
         content: '';
         height: 3px;
@@ -89,7 +88,6 @@
         text-align: center;
         margin: -50px 0 0 0;
         padding: 5px 0 5px 0;
-        background: #fff;
         border-top: 1px solid #e5e5e5;
 
         transition: all 0.5s ease-in-out;
@@ -158,67 +156,386 @@
     i {
         font-size: 25px;
     }
+
+
+
+    .title-pen {
+        color: #333;
+        font-family: "Coda", sans-serif;
+        text-align: center;
+    }
+    .title-pen span {
+        color: #55acee;
+    }
+
+    .user-profile {
+        margin: auto;
+        width: 31em;
+        height: auto;
+        background: #fff;
+        border-radius: .3em;
+    }
+
+    .user-profile  .username {
+        margin: auto;
+        margin-top: -4.40em;
+        margin-left: 5.80em;
+        color: #658585;
+        font-size: 1.53em;
+        font-family: "Coda", sans-serif;
+        font-weight: bold;
+    }
+    .user-profile  .bio {
+        margin: auto;
+        display: inline-block;
+        margin-left: 10.43em;
+        color: #e76043;
+        font-size: .87em;
+        font-family: "varela round", sans-serif;
+    }
+    .user-profile > .description {
+        margin: auto;
+        margin-top: 1.35em;
+        margin-right: 4.43em;
+        width: 14em;
+        color: #c0c5c5;
+        font-size: .87em;
+        font-family: "varela round", sans-serif;
+    }
+    .user-profile > img.avatar {
+        padding: .7em;
+        margin-left: .3em;
+        margin-top: .3em;
+        height: 6.23em;
+        width: 6.23em;
+        border-radius: 18em;
+    }
+
+    .user-profile ul.data {
+        height: 3.70em;
+        background: #4eb6b6;
+        text-align: center;
+        border-radius: 0 0 .3em .3em;
+    }
+    .user-profile li {
+        margin: 0 auto;
+        padding: 1.30em;
+        width: 33.33334%;
+        display: table-cell;
+
+        text-align: center;
+    }
+
+    .user-profile span {
+        font-family: "varela round", sans-serif;
+        color: #e3eeee;
+        white-space: nowrap;
+        font-size: 1.27em;
+        font-weight: bold;
+    }
+    .user-profile span:hover {
+        color: #daebea;
+    }
+    .social-btns .btn,
+    .social-btns .btn:before,
+    .social-btns .btn .fa {
+        transition: all 0.35s;
+        transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+    }
+    .social-btns .btn:before {
+        top: 90%;
+        left: -110%;
+    }
+    .social-btns .btn .fab {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        font-size: 35px;
+    }
+    .social-btns .btn.facebook:before {
+        background-color: #3b5998;
+    }
+    .social-btns .btn.facebook .fab {
+        color: #3b5998;
+    }
+    .social-btns .btn.twitter:before {
+        background-color: #3cf;
+    }
+    .social-btns .btn.twitter .fab {
+        color: #3cf;
+    }
+    .social-btns .btn.google:before {
+        background-color: #dc4a38;
+    }
+    .social-btns .btn.google .fab {
+        color: #dc4a38;
+    }
+    .social-btns .btn.dribbble:before {
+        background-color: #f26798;
+    }
+    .social-btns .btn.dribbble .fab {
+        color: #f26798;
+    }
+    .social-btns .btn.skype:before {
+        background-color: #00aff0;
+    }
+    .social-btns .btn.skype .fab {
+        color: #00aff0;
+    }
+    .social-btns .btn:focus:before,
+    .social-btns .btn:hover:before {
+        top: -10%;
+        left: -10%;
+    }
+    .social-btns .btn:focus .fab,
+    .social-btns .btn:hover .fab {
+        color: #fff;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .social-btns {
+        font-size: 0;
+        text-align: center;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .social-btns .btn {
+        display: inline-block;
+        background-color: #fff;
+        width: 46px;
+        height: 42px;
+        line-height: 30px;
+        padding:3px;
+        margin: 0px 30px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 22%;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+        opacity: 0.99;
+    }
+    .social-btns .btn:before {
+        content: '';
+        width: 120%;
+        height: 120%;
+        position: absolute;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .social-btns .btn .fa {
+        font-size: 34px;
+        vertical-align: middle;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 3px 10px;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
 </style>
 @stop
 
 @section("content")
-    <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;color:black;">
-        <aside class="profile-card">
-            <header>
-                <a href="#">
-                    <img src="{{ URL::to($user->profile_img_path) }}">
-                </a>
+    @if (Auth::check())
+        <div class="col-8" style="overflow-y:scroll;margin-top:60px;padding:10px;background:#efefef;height:100vh;">
+            @else
+                <div class="col-12" style="margin-top:60px;padding:10px;background:#efefef;height:100vh;">
 
-                <h1>{{{ $user->first_name }}} {{{ $user->last_name }}}</h1>
-                <h2>{{{ $user->username }}}</h2>
-            </header>
+                    <div class="container-fluid">
+                        @endif
+                        <div class="col-md" style="overflow-y:scroll;margin-top:10px;padding:10px;background:#efefef;height:100vh;">
+                            <aside class="profile-card">
+                                <header style="height:250px">
+                                    <div class="user-profile">
+                                        <img style="position:relative;margin:0px;" src="{{ URL::to($user->profile_img_path) }}">
+                                        <div class="username">{{{ $user->username }}}</div>
+                                        <div class="bio">
+                                        </div>
+                                        <div class="description">
+                                            {{{ $user->about }}}
+                                        </div>
+                                        <ul class="data">
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-heart"> 127</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-eye"> 853</span>--}}
+                                            {{--</li>--}}
+                                            {{--<li>--}}
+                                                {{--<span class="entypo-user"> 311</span>--}}
+                                            {{--</li>--}}
+                                        </ul>
+                                    </div>
 
-            <br>
 
-            <div class="profile-bio">
-                <p>{{{ $user->about }}}</p>
-            </div>
+                                </header>
+                                <ul class="profile-social-links">
+                                    <div class="social-btns">
+                                            @if ($user->facebook != "")
+                                        <a class="btn facebook" href="{{{ $user->facebook }}}"><i  class="fab fa-facebook-f"></i></a>
+                                            @endif
+                                            @if ($user->twitter != "")
+                                        <a  class="btn twitter" href="{{{ $user->twitter }}}"><i class="fab fa-twitter"></i></a>
+                                            @endif
+                                             @if ($user->tumblr != "")
+                                        <a class="btn facebook" href="{{{ $user->tumblr }}}"><i class="fab fa-tumblr"></i></a>
+                                            @endif
+                                            @if ($user->youtube != "")
+                                        <a class="btn google" href="{{{ $user->youtube }}}"><i class="fab fa-youtube"></i></a>
+                                                @endif
 
-            <ul class="profile-social-links">
-                @if ($user->youtube != "")
-                    <li>
-                        <a href="{{{ $user->youtube }}}">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                @endif
+                                    </div>
+                                <br>
+                            </aside>
+                            <style>
+                                .Post_Container {
+                                    height:auto;
+                                    width:90%;
+                                    border-radius: 5px;
+                                    margin:10px;
+                                    padding:10px;
+                                    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+                                    background:#E6E9ED;
+                                }
+                                body ::-webkit-input-placeholder {
+                                    /* WebKit browsers */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    font-weight: 300;
+                                }
+                                body :-moz-placeholder {
+                                    /* Mozilla Firefox 4 to 18 */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    opacity: 1;
+                                    font-weight: 300;
+                                }
+                                body ::-moz-placeholder {
+                                    /* Mozilla Firefox 19+ */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    opacity: 1;
+                                    font-weight: 300;
+                                }
+                                body :-ms-input-placeholder {
+                                    /* Internet Explorer 10+ */
+                                    font-family: 'Source Sans Pro', sans-serif;
+                                    color: black;
+                                    font-weight: 300;
+                                }
+                                .purp-button {
+                                    background-color: #5d3bae;
+                                    color: white;
+                                }
+                                .purp-button:hover {
+                                    background-color: #423385;
+                                    color: white;
+                                }
+                            </style>
+                        @if (Auth::check())
+                        <div class="Post_Container">
+                            <form enctype="multipart/form-data" action="{{ URL::route("home.createNewPost") }}" method="POST">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <textarea name="home_post" style="border:0px;width:100%;height:50px;resize: none;border-radius: 5px;background:#efefef;border-color: #5d3bae;" placeholder="Write something about your day..."></textarea>
+                                        <div class="form-group">
+                                            <select class="form-control" name="visibility">
+                                                <option value="1">Public</option>
+                                                <option value="2">Friends & Friends of friends</option>
+                                                <option value="3">Friends</option>
+                                                <option value="4" selected>Only me</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn purp-button">Post</button>
+                                    </div>
+                                    <div class="col">
+                                        <input name="file_upload" class="form-control" type="file" onchange="readURL(this);" >
+                                        <img id="blah" src="#" style="box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);margin: 20px;" alt="your image">
+                                        <script>
+                                            function readURL(input) {
+                                                if (input.files && input.files[0]) {
+                                                    var reader = new FileReader();
 
-                @if ($user->facebook != "")
-                    <li>
-                        <a href="{{{ $user->facebook }}}">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                @endif
+                                                    reader.onload = function (e) {
+                                                        $('#blah')
+                                                            .attr('src', e.target.result)
+                                                            .width(150)
+                                                            .height(auto);
+                                                    };
+                                                    reader.readAsDataURL(input.files[0]);
+                                                }
+                                            }
+                                        </script>
+                                        {{ Form::token() }}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        @endif
 
-                @if ($user->twitter != "")
-                    <li>
-                        <a href="{{{ $user->twitter }}}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                @endif
+                        @foreach(Posts::where("author_id", "=", $user->id)->where("relation", "=", "feed")->orderBy('post_time', 'DESC')->orderBy('post_date', 'DESC')->get() as $post)
+                            @if ($post->media_type == 'text')
+                                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
+                                    <div class="row" style="width:100%;margin:0px;position: relative;">
+                                        <div class="col-1">
+                                            <img class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{ $post->post_date }}</span>
+                                        </div>
 
-                @if ($user->tumblr != "")
-                    <li>
-                        <a href="{{{ $user->tumblr }}}">
-                            <i class="fab fa-tumblr-square"></i>
-                        </a>
-                    </li>
-                @endif
-                @if ($user->website != "")
-                    <li>
-                        <a href="{{{ $user->website }}}">
-                            <i class="fas fa-desktop"></i>
-                        </a>
-                    </li>
-                @endif
-            </ul>
-        </aside>
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card" style="padding:15px;">
+                                            {{ $post->text }}
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                            @if ($post->media_type == 'jpg' OR $post->media_type == 'png' OR $post->media_type == 'PNG' OR $post->media_type == 'JPG')
+                                <div style="box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);color:black;border-radius: 5px;margin-top:20px;">
+                                    <div class="row" style="width:100%;margin:0px;position: relative;">
+                                        <div class="col-1">
+                                            <img  class="img" style="height:40px;width:40px;border-radius: 50px;" src="{{ URL::to($user->profile_img_path) }}"/>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{{ User::where("id", "=", $post->author_id)->pluck("username") }}}</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <span>{{ $post->post_date }}</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card" style="padding:15px;">
+                                            {{ $post->text }}
+                                        </div>
+                                    </div>
+                                    <div class="card-group" style="color:black;">
+                                        <div class="card">
+                                            <img style="width: 100%;height: auto;padding: 10px;" src="{{ URL::to($post->file_path) }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
     </div>
 @stop
