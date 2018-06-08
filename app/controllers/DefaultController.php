@@ -123,15 +123,8 @@ class DefaultController extends BaseController {
                 $ffmpeg = FFMpeg\FFMpeg::create();
                 $video = $ffmpeg->open($file);
                 $video
-                    ->filters()
-                    ->resize(new FFMpeg\Coordinate\Dimension(320, 240))
-                    ->synchronize();
-                $video
                     ->frame(FFMpeg\Coordinate\TimeCode::fromSeconds(10))
-                    ->save('frame.jpg');
-                $video
-                    ->save(new FFMpeg\Format\Video\WMV(), $savePath . $filename . '.wmv')
-                    ->save(new FFMpeg\Format\Video\WebM(), $savePath . $filename . '.webm');
+                    ->save($savePath . $filename . '.jpg');
             }
             $media_type = $fileExtension;
             $home_post = Input::get("home_post");
