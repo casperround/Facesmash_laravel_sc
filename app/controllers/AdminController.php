@@ -251,4 +251,46 @@ class AdminController extends BaseController
         return Redirect::route("admin.user", [$user->id]);
     }
 
+    public function userEditGeneralPage($id) {
+
+        $user = User::where("id", "=", $id)->get()->first() ;
+
+        return View::make("admin.users.editGeneralData",[
+            "user" => $user
+        ]);
+    }
+
+    public function doUserEditGeneralPage($id) {
+        $user = User::where("id", "=", $id)->get()->first();
+
+        $username = Input::get("username");
+        $email = Input::get("email");
+        $first_name = Input::get("first_name");
+        $last_name = Input::get("last_name");
+        $date_birth = Input::get("date_birth");
+        $country = Input::get("country");
+        $theme = Input::get("theme");
+        $gender = Input::get("gender");
+        $about = Input::get("about");
+
+        if (!$user->username == $username) {
+            if (User::where("username", "=", $username)->count() > 0) {
+                return Redirect::route("admin.user", [$user->id]);
+            }
+        }
+
+        $user->update([
+            "username" => $username,
+            "email" => $email,
+            "first_name" => $first_name,
+            "last_name" => $last_name,
+            "date_birth" => $date_birth,
+            "country" => $country,
+            "theme" => $theme,
+            "gender" => $gender,
+            "about" => $about
+        ]);
+        return Redirect::route("admin.user", [$user->id]);
+    }
+
 }

@@ -240,7 +240,11 @@ Route::get('/admin/user/{id}', [
     "as" => "admin.user",
     "uses" => "AdminController@user"
 ]);
-Route::post('/admin/userEdit/{id}', [
-    "as" => "admin.userEdit",
-    "uses" => "AdminController@userPageUpdate"
+Route::get('/admin/userEditGeneral/{id}', [
+    "as" => "admin.userEditGeneral",
+    "uses" => "AdminController@userEditGeneralPage"
+]);
+Route::post('/admin/userEditGeneral/{id}', [
+    "as" => "admin.userEditGeneral.do",
+    "uses" => "AdminController@doUserEditGeneralPage"
 ]);
